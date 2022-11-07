@@ -1,0 +1,56 @@
+.container {
+  display: grid;
+  position: absolute;
+  grid-template-columns: repeat(7, 160px);
+  grid-template-rows: repeat(5, 90px);
+  grid-gap: 20px;
+  padding-top: 260px;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.matlaltik,
+.estuario,
+.spline,
+.ts,
+.viga,
+.xitle {
+  background-color: cornflowerblue;
+  background-size: cover;
+}
+
+.matlaltik {
+  grid-column: 1;
+  grid-row: 5;
+}
+
+.estuario {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.spline {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+.ts {
+  grid-column: 7;
+  grid-row: 3;
+}
+
+.viga {
+  grid-column: 6;
+  grid-row: 5;
+}
+
+.xitle {
+  grid-column: 5;
+  grid-row: 1;
+}

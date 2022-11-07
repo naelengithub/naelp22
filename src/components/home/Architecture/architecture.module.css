@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  position: absolute;
+  left: 458px;
+  top: 420px;
+  font-size: 64px;
+  z-index: 0;
+}
