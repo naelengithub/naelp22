@@ -5,8 +5,8 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(8, 60px);
-  grid-template-rows: repeat(20, 60px);
-  position: absolute;
+  grid-template-rows: repeat(18, 60px);
+  margin-bottom: 60px;
 }
 
 .project1 {
