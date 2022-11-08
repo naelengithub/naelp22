@@ -1,0 +1,14 @@
+.toggle {
+  background-color: violet;
+  position: relative;
+  margin: 0;
+  right: 0;
+}
+
+.linkBox {
+  color: yellow;
+}
+
+.link:hover {
+  background-color: coral;
+}

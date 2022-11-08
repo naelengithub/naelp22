@@ -1,6 +1,8 @@
 import * as React from "react";
 import Image from "next/image";
 
+import styles from "./projectImage.module.css";
+
 export interface ProjectImageProps {
   className?: string;
   alt: string;
