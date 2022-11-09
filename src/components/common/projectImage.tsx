@@ -5,8 +5,9 @@ export interface ProjectImageProps {
   className?: string;
   alt: string;
   src: any;
-  height: number;
-  width: number;
+  height: any;
+  width: any;
+  left: any;
 }
 
 /**

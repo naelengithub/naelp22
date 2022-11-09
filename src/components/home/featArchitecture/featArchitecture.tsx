@@ -1,11 +1,7 @@
 import * as React from "react";
 import Image from "next/image";
 
-import {
-  Data,
-  dataEstuario,
-  dataMatlaltik,
-} from "../../common/ferrisWheel/dataEstuario";
+import { Data, dataEstuario, dataMatlaltik } from "./dataEstuario";
 
 import { ProjectReps } from "../../common/ferrisWheel/ferrisWheel";
 import { ProjectImage } from "../../common/projectImage";
@@ -69,16 +65,16 @@ export const FeatArchitecture = (props: FeatArchitectureProps) => {
           <ProjectImage src="/ojoVert.JPG" alt="ojo" height={240} width={120} />
         </div>
         <div className={styles.project2} onClick={handleClickScrollMatlaltik}>
-          <ProjectImage src="/ojo.jpg" alt="ojo" height={120} width={240} />
+          <ProjectImage src="/R1.jpg" alt="ojo" height={120} width={240} />
         </div>
         <div className={styles.project3}>
-          <ProjectImage src="/ojo.jpg" alt="ojo" height={120} width={240} />
+          <ProjectImage src="/R1.jpg" alt="ojo" height={120} width={240} />
         </div>
         <div className={styles.project4}>
-          <ProjectImage src="/ojo.jpg" alt="ojo" height={120} width={240} />
+          <ProjectImage src="/R1.jpg" alt="ojo" height={120} width={240} />
         </div>
         <div className={styles.project5}>
-          <ProjectImage src="/ojo.jpg" alt="ojo" height={120} width={240} />
+          <ProjectImage src="/R1.jpg" alt="ojo" height={120} width={240} />
         </div>
         <div className={styles.project6}>
           <ProjectImage src="/ojoVert.JPG" alt="ojo" height={240} width={120} />
