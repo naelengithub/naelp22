@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  z-index: 1;
+}
+
+.toggleContainer {
+  display: flex;
+  align-items: flex-end;
+}
