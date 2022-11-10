@@ -1,10 +1,10 @@
 import * as React from "react";
 import Image from "next/image";
 
-import { Data, dataEstuario, dataMatlaltik } from "../dataEstuario";
+import { Data, dataEstuario, dataMatlaltik } from "../detailsData";
 
-import { ProjectReps } from "../../../common/ferrisWheel/ferrisWheel";
-import { ProjectImage } from "../../../common/projectImage";
+import { ProjectReps } from "../projectReps";
+import { ProjectImage } from "../projectImage";
 import { useWindowSize } from "../../../../hooks/useWindowSize";
 
 import styles from "./overview.module.css";
@@ -21,11 +21,16 @@ export const FeatArch = (props: FeatArchProps) => {
   const { className } = props;
 
   // Hooks
-  const [isSelected, setIsSelected] = React.useState(false);
+  const [estuarioIsSelected, setEstuarioIsSelected] = React.useState(false);
+  const [matlaltikIsSelected, setMatlaltikIsSelected] = React.useState(false);
+  const [xitleIsSelected, setXitleIsSelected] = React.useState(false);
+  const [vigaIsSelected, setVigaIsSelected] = React.useState(false);
+  const [splineIsSelected, setSplineIsSelected] = React.useState(false);
+  const [tsIsSelected, setTsIsSelected] = React.useState(false);
 
   // Handlers
   const handleClickScrollEstuario = () => {
-    setIsSelected(!isSelected);
+    setEstuarioIsSelected(!estuarioIsSelected);
     const element = document.getElementById("estuario-details");
     if (element) {
       // Will scroll smoothly to the top of the next section
@@ -34,7 +39,7 @@ export const FeatArch = (props: FeatArchProps) => {
   };
 
   const handleClickXitle = () => {
-    setIsSelected(!isSelected);
+    setXitleIsSelected(!xitleIsSelected);
     const element = document.getElementById("xitle-details");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -42,8 +47,32 @@ export const FeatArch = (props: FeatArchProps) => {
   };
 
   const handleClickMatlaltik = () => {
-    setIsSelected(!isSelected);
+    setMatlaltikIsSelected(!matlaltikIsSelected);
     const element = document.getElementById("matlaltik-details");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleClickViga = () => {
+    setVigaIsSelected(!vigaIsSelected);
+    const element = document.getElementById("viga-details");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleClickTs = () => {
+    setTsIsSelected(!tsIsSelected);
+    const element = document.getElementById("ts-details");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleClickSpline = () => {
+    setSplineIsSelected(!splineIsSelected);
+    const element = document.getElementById("spline-details");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -170,25 +199,23 @@ export const FeatArch = (props: FeatArchProps) => {
           <div
             style={{
               marginTop: (screenWidthSize / 8) * 22,
+              width: "100%",
             }}
           >
-            <div>
-              <h1
-                style={{
-                  margin: "0",
-                  transform: "rotate(-45deg)",
-                  fontSize: "5rem",
-                  position: "absolute",
-                  top: screenWidthSize / 1.5,
-                  left: "0",
-                }}
-              >
-                architecture
-              </h1>
-            </div>
+            <h1
+              style={{
+                margin: "0",
+                transform: "rotate(-90deg)",
+                fontSize: "3rem",
+                position: "absolute",
+                top: screenWidthSize / 1.5,
+              }}
+            >
+              architecture
+            </h1>
           </div>
           <div id="estuario-details">
-            {isSelected ? (
+            {estuarioIsSelected ? (
               <div>
                 <div className={styles.content}>
                   {dataEstuario.map(renderData)}
@@ -203,7 +230,7 @@ export const FeatArch = (props: FeatArchProps) => {
             ) : null}
           </div>
           <div id="matlaltik-details">
-            {isSelected ? (
+            {matlaltikIsSelected ? (
               <div>
                 <div className={styles.content}>
                   {dataMatlaltik.map(renderData)}

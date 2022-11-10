@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import styles from "./index.module.css";
+import styles from "./projectReps.module.css";
 
 export interface ProjectRepsProps {
   className?: string;
