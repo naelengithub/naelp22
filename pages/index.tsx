@@ -4,6 +4,7 @@ import { NavBar } from "../src/components/navbar/navbar";
 import styles from "../styles/Home.module.css";
 import { useWindowSize } from "../src/hooks/useWindowSize";
 import { HomeGrid } from "../src/components/home/featArchitecture/homeGrid";
+import { FeatArch } from "../src/components/home/featArchitecture/Overview/overview";
 
 export default function Home() {
   const size = useWindowSize();
@@ -13,8 +14,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <NavBar />
-      <HomeGrid />
-      {/* <FeatArchitecture /> */}
+
+      <FeatArch />
       <Footer />
     </div>
   );

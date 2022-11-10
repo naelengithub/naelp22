@@ -1,9 +1,15 @@
+import internal from "stream";
 import { useWindowSize } from "../../../hooks/useWindowSize";
+
+export interface ImagePosition {
+  top: number;
+  left: number;
+}
 
 export function PositionMainImages() {
   const size = useWindowSize();
   if (size.width > 480) {
-    grid: [
+    [
       {
         top: 0,
         left: 0,

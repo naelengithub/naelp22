@@ -26,7 +26,7 @@ export const NavBar = (props: NavBarProps) => {
   return (
     <nav>
       <div className={styles.container}>
-        <div className={styles.logo}>
+        <div>
           <h1>nael</h1>
         </div>
         <h3 onClick={handleClick}>{isOpen ? "." : "..."}</h3>

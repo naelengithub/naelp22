@@ -2,6 +2,7 @@ import * as React from "react";
 import Image from "next/image";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { MainImages, dataMainImages } from "./featArchitecture/mainImages";
+import { PositionMainImages } from "./featArchitecture/positionMainImages";
 
 export interface HomeImagesProps {
   className?: string;
@@ -37,5 +38,5 @@ export const HomeImages = (props: HomeImagesProps) => {
     }
   };
 
-  return <div>{dataMainImages.map(renderImage)}</div>;
+  return <div>{renderImage(dataMainImages[0], 1)}</div>;
 };

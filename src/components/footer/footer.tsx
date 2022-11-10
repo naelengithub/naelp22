@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import styles from "./Footer.module.css";
+import styles from "./footer.module.css";
 
 export interface FooterProps {
   className?: string;
@@ -16,8 +16,8 @@ export const Footer = (props: FooterProps) => {
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
-        <p>mit &hearts; in Mexiko-Stadt hergestellt</p>
-        <p>copyright © 2022 nael</p>
+        <p className={styles.p}>copyright © 2022 nael</p>
+        <p className={styles.p}>mit &hearts; in Mexiko-Stadt hergestellt</p>
       </div>
     </div>
   );

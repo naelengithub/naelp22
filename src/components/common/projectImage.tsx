@@ -7,7 +7,6 @@ export interface ProjectImageProps {
   src: any;
   height: any;
   width: any;
-  left: any;
 }
 
 /**
