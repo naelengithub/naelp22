@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import styles from "./Toggle.module.css";
+import styles from "./toggle.module.css";
 
 export interface ToggleProps {
   className?: string;
