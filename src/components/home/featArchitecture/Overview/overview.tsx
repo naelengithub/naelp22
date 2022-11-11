@@ -1,7 +1,13 @@
 import * as React from "react";
 import Image from "next/image";
 
-import { Data, dataEstuario, dataMatlaltik } from "../detailsData";
+import {
+  Data,
+  dataEstuario,
+  dataMatlaltik,
+  dataSpline,
+  dataXitle,
+} from "../detailsData";
 
 import { ProjectReps } from "../projectReps";
 import { ProjectImage } from "../projectImage";
@@ -38,17 +44,17 @@ export const FeatArch = (props: FeatArchProps) => {
     }
   };
 
-  const handleClickXitle = () => {
-    setXitleIsSelected(!xitleIsSelected);
-    const element = document.getElementById("xitle-details");
+  const handleClickMatlaltik = () => {
+    setMatlaltikIsSelected(!matlaltikIsSelected);
+    const element = document.getElementById("matlaltik-details");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  const handleClickMatlaltik = () => {
-    setMatlaltikIsSelected(!matlaltikIsSelected);
-    const element = document.getElementById("matlaltik-details");
+  const handleClickXitle = () => {
+    setXitleIsSelected(!xitleIsSelected);
+    const element = document.getElementById("xitle-details");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -120,8 +126,8 @@ export const FeatArch = (props: FeatArchProps) => {
             />
           </div>
           <div
-            id="xitle"
-            onClick={handleClickXitle}
+            id="matlaltik"
+            onClick={handleClickMatlaltik}
             style={{
               position: "absolute",
               top: "0",
@@ -130,14 +136,14 @@ export const FeatArch = (props: FeatArchProps) => {
           >
             <ProjectImage
               src="/G4.JPG"
-              alt="Xitle project."
+              alt="Matlaltik project."
               height={screenWidthSize / 4}
               width={screenWidthSize / 2}
             />
           </div>
           <div
-            id="matlaltik"
-            onClick={handleClickMatlaltik}
+            id="xitle"
+            // onClick={handleClickXitle}
             style={{
               position: "absolute",
               top: (screenWidthSize / 8) * 5,
@@ -146,12 +152,14 @@ export const FeatArch = (props: FeatArchProps) => {
           >
             <ProjectImage
               src="/G3.JPG"
-              alt="Matlaltik Project"
+              alt="Xitle project"
               height={screenWidthSize / 4}
               width={screenWidthSize / 2}
             />
           </div>
           <div
+            id="spline"
+            onClick={handleClickSpline}
             style={{
               position: "absolute",
               top: (screenWidthSize / 8) * 9,
@@ -161,7 +169,7 @@ export const FeatArch = (props: FeatArchProps) => {
             <ProjectImage
               className={styles.projectImage}
               src="/G2.JPG"
-              alt="ojo"
+              alt="Spline project"
               height={screenWidthSize / 4}
               width={screenWidthSize / 2}
             />
@@ -237,6 +245,34 @@ export const FeatArch = (props: FeatArchProps) => {
                 </div>
                 <ProjectReps
                   projectName="Matlaltik"
+                  projectYear={2018}
+                  projectCollabs="Armando Ramos, Julieta García, Zamantha García"
+                />
+              </div>
+            ) : null}
+          </div>
+          <div id="xitle-details">
+            {xitleIsSelected ? (
+              <div>
+                <div className={styles.content}>
+                  {dataXitle.map(renderData)}
+                </div>
+                <ProjectReps
+                  projectName="Xitle"
+                  projectYear={2018}
+                  projectCollabs="Armando Ramos, Julieta García, Zamantha García"
+                />
+              </div>
+            ) : null}
+          </div>
+          <div id="spline-details">
+            {xitleIsSelected ? (
+              <div>
+                <div className={styles.content}>
+                  {dataSpline.map(renderData)}
+                </div>
+                <ProjectReps
+                  projectName="Spline"
                   projectYear={2018}
                   projectCollabs="Armando Ramos, Julieta García, Zamantha García"
                 />

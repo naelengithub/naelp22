@@ -59,3 +59,57 @@ export const dataMatlaltik: Data[] = [
     height: 200,
   },
 ];
+
+export const dataXitle: Data[] = [
+  {
+    image: "/xitle/Render1.jpg",
+    title: "Farm project render.",
+    width: 475,
+    height: 200,
+  },
+  {
+    image: "/xitle/planta.jpg",
+    title: "Farm project eye view.",
+    width: 312,
+    height: 200,
+  },
+  {
+    image: "/xitle/Transito.jpg",
+    title: "Project urban transit diagram.",
+    width: 188,
+    height: 200,
+  },
+  {
+    image: "/xitle/Render2.jpg",
+    title: "Farm project render.",
+    width: 356,
+    height: 200,
+  },
+];
+
+export const dataSpline: Data[] = [
+  {
+    image: "/spline/3d.png",
+    title: "Farm project render.",
+    width: 475,
+    height: 200,
+  },
+  {
+    image: "/spline/Perspectiva2.png",
+    title: "Perspective from inside the project.",
+    width: 154,
+    height: 200,
+  },
+  {
+    image: "/spline/planta.jpg",
+    title: "Birds eye view of the project.",
+    width: 157,
+    height: 200,
+  },
+  {
+    image: "/spline/prev.png",
+    title: "Urban area current state.",
+    width: 500,
+    height: 200,
+  },
+];
