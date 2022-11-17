@@ -9,7 +9,7 @@
 .text {
   transform: rotate(-45deg);
   font-size: 50px;
-  z-index: -6;
+  z-index: 0;
 }
 
 .textH1 {

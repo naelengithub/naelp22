@@ -27,7 +27,7 @@ export const NavBar = (props: NavBarProps) => {
     <nav>
       <div className={styles.container}>
         <div>
-          <h1>nael</h1>
+          <h1>ana elisa</h1>
         </div>
         <h3 onClick={handleClick}>{isOpen ? "." : "..."}</h3>
       </div>
