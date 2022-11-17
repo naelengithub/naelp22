@@ -1,0 +1,113 @@
+import * as React from "react";
+import { useWindowSize } from "../../../../../hooks/useWindowSize";
+import Image from "next/image";
+
+export interface SpineProps {
+  className?: string;
+}
+
+/**
+ * @name Spine
+ * @description Spine desktop on hover information component.
+ */
+export const Spine = (props: SpineProps) => {
+  const { className } = props;
+
+  const size = useWindowSize();
+  const screenWidthSize = size.width;
+
+  if (!screenWidthSize) {
+    return null;
+  } else {
+    return (
+      <div
+        style={{
+          backgroundColor: "white",
+          display: "flex",
+          position: "absolute",
+          top: -(screenWidthSize / 10) * 3.5,
+          left: screenWidthSize / 10,
+          alignItems: "end",
+        }}
+      >
+        <div
+          style={{
+            position: "relative",
+            width: (screenWidthSize / 10) * 4.5,
+            height: (screenWidthSize / 10) * 5.5,
+          }}
+        >
+          <Image
+            src="/spline/3D2Views.pdf.jpg"
+            alt="3D model and perspective of project."
+            layout="fill"
+          />
+        </div>
+        <div>
+          <h1
+            style={{
+              fontSize: "90px",
+              writingMode: "vertical-lr",
+              margin: "0",
+            }}
+          >
+            spine
+          </h1>
+          <p style={{ textAlign: "right" }}>
+            _2018_Berlin
+            <br />
+            __collaboration with
+            <br />
+            Barbara Sula
+            <br />
+            Fabian Prissok,
+            <br />
+            and Pia Drewes
+          </p>
+        </div>
+      </div>
+      //   <div
+      //     style={{
+      //       backgroundColor: "white",
+      //       width: (screenWidthSize / 10) * 3,
+      //       paddingRight: "1rem",
+      //     }}
+      //   >
+      //     <p style={{ textAlign: "right" }}>
+      //       _2018_Berlin
+      //       <br />
+      //       __collaboration with Barbara Sula
+      //       <br />
+      //       Fabian Prissok, and Pia Drewes
+      //     </p>
+      //     <div
+      //       style={{
+      //         position: "relative",
+      //         width: (screenWidthSize / 10) * 3,
+      //         height: (screenWidthSize / 10) * 3.5,
+      //       }}
+      //     >
+      //       <Image
+      //         src="/spline/planta.jpg"
+      //         alt="Birds eye view of the project."
+      //         layout="fill"
+      //       />
+      //     </div>
+      //   </div>
+      //   <div style={{ width: screenWidthSize / 10 }}>
+      //     <h1
+      //       style={{
+      //         fontSize: "90px",
+      //         writingMode: "vertical-lr",
+      //         margin: "0",
+      //         marginBottom: (screenWidthSize / 10) * 3.6,
+      //       }}
+      //     >
+      //       spine
+      //     </h1>
+      //   </div>
+
+      // </div>
+    );
+  }
+};

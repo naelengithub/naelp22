@@ -5,6 +5,11 @@ import { useWindowSize } from "../../../../hooks/useWindowSize";
 
 import styles from "./overview.module.css";
 import Link from "next/link";
+import { Matlaltik } from "../details/desktop/matlaltik";
+import { ProjectItem } from "../details/desktop/ProjectItem";
+import { Estuario } from "../details/desktop/estuario";
+import { Spine } from "../details/desktop/spine";
+import { Xitle } from "../details/desktop/xitle";
 
 export interface FeatArchProps {
   className?: string;
@@ -18,18 +23,27 @@ export const FeatArch = (props: FeatArchProps) => {
   const { className } = props;
 
   // Hooks
+  const [isSelected, setIsSelected] = React.useState(false);
 
   // Handlers
   const size = useWindowSize();
   const screenWidthSize = size.width;
   console.log(JSON.stringify(screenWidthSize));
 
+  const handleOnMouseEnter = () => {
+    setIsSelected(true);
+  };
+
+  const handleOnMouseLeave = () => {
+    setIsSelected(false);
+  };
+
   if (!screenWidthSize) {
     return null;
   } else {
-    return (
-      <div className={styles.container}>
-        <div>
+    if (screenWidthSize < 1024) {
+      return (
+        <div className={styles.container}>
           <div
             id="estuario"
             style={{
@@ -153,6 +167,143 @@ export const FeatArch = (props: FeatArchProps) => {
                 fontSize: "3rem",
                 position: "absolute",
                 top: screenWidthSize / 1.5,
+              }}
+            >
+              architecture
+            </h1>
+          </div>
+        </div>
+      );
+    }
+  }
+  {
+    return (
+      <div className={styles.container}>
+        <div>
+          <div
+            style={{
+              position: "relative",
+              top: (screenWidthSize / 10) * 2,
+              left: (screenWidthSize / 10) * 2,
+              width: screenWidthSize / 10,
+              zIndex: "1",
+            }}
+          >
+            <ProjectItem
+              alt="Estuario project."
+              src="/G1.JPG"
+              width={screenWidthSize / 10}
+              height={screenWidthSize / 20}
+            >
+              <Estuario />
+            </ProjectItem>
+          </div>
+          <div
+            style={{
+              position: "relative",
+              top: screenWidthSize / 10,
+              left: (screenWidthSize / 10) * 6,
+              width: screenWidthSize / 10,
+              zIndex: "1",
+            }}
+          >
+            <ProjectItem
+              alt="Xitle project."
+              src="/G4.JPG"
+              width={screenWidthSize / 10}
+              height={screenWidthSize / 20}
+            >
+              <Xitle
+                style={{
+                  zIndex: "1",
+                }}
+              />
+            </ProjectItem>
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              top: (screenWidthSize / 10) * 3.5,
+              left: (screenWidthSize / 10) * 3,
+              width: screenWidthSize / 10,
+              zIndex: "1",
+            }}
+          >
+            <ProjectItem
+              alt="Spine project."
+              src="/G3.JPG"
+              width={screenWidthSize / 10}
+              height={screenWidthSize / 20}
+            >
+              <Spine />
+            </ProjectItem>
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              top: (screenWidthSize / 10) * 4.5,
+              left: screenWidthSize / 10,
+              width: screenWidthSize / 10,
+              zIndex: "1",
+            }}
+          >
+            <ProjectItem
+              alt="Matlaltik project."
+              src="/G2.JPG"
+              width={screenWidthSize / 10}
+              height={screenWidthSize / 20}
+            >
+              <Matlaltik />
+            </ProjectItem>
+          </div>
+
+          <div
+            id="viga755"
+            style={{
+              position: "absolute",
+              top: (screenWidthSize / 10) * 4.5,
+              left: (screenWidthSize / 10) * 7,
+            }}
+          >
+            <ProjectImage
+              className={styles.projectImage}
+              src="/G5.JPG"
+              alt="ojo"
+              height={screenWidthSize / 20}
+              width={screenWidthSize / 10}
+            />
+          </div>
+
+          <div
+            id="ts"
+            style={{
+              position: "absolute",
+              top: (screenWidthSize / 10) * 3,
+              left: (screenWidthSize / 10) * 8,
+            }}
+          >
+            <ProjectImage
+              className={styles.projectImage}
+              src="/G6.JPG"
+              alt="ojo"
+              height={screenWidthSize / 20}
+              width={screenWidthSize / 10}
+            />
+          </div>
+          <div
+            style={{
+              marginBottom: (screenWidthSize / 10) * 4.5,
+              width: "100%",
+              backgroundColor: "tomato",
+            }}
+          >
+            <h1
+              style={{
+                margin: "0",
+                fontSize: "4rem",
+                position: "absolute",
+                top: (screenWidthSize / 10) * 2.5,
+                left: (screenWidthSize / 10) * 4,
               }}
             >
               architecture
