@@ -29,29 +29,15 @@ export const ProjectItem = (props: ProjectItemProps) => {
     <div>
       <div
         onMouseEnter={() => {
-          console.log("entered", src);
           setIsSelected(true);
         }}
         onMouseLeave={() => {
-          console.log("left", src);
           setIsSelected(false);
         }}
       >
         <ProjectImage src={src} alt={alt} width={width} height={height} />
       </div>
-      <div
-        onMouseEnter={() => {
-          console.log("entered", src);
-          setIsSelected(true);
-        }}
-        onMouseLeave={() => {
-          console.log("left", src);
-          setIsSelected(false);
-        }}
-        onClick={() => setIsSelected(false)}
-      >
-        {isSelected ? children : null}
-      </div>
+      <div>{isSelected ? children : null}</div>
     </div>
   );
 };

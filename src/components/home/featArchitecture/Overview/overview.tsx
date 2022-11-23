@@ -10,6 +10,7 @@ import { ProjectItem } from "../details/desktop/ProjectItem";
 import { Estuario } from "../details/desktop/estuario";
 import { Spine } from "../details/desktop/spine";
 import { Xitle } from "../details/desktop/xitle";
+import { Fica } from "../details/desktop/fica";
 
 export interface FeatArchProps {
   className?: string;
@@ -204,6 +205,7 @@ export const FeatArch = (props: FeatArchProps) => {
               top: screenWidthSize / 10,
               left: (screenWidthSize / 10) * 6,
               width: screenWidthSize / 10,
+              height: (screenWidthSize / 10) * 0.5,
               zIndex: "1",
             }}
           >
@@ -273,23 +275,25 @@ export const FeatArch = (props: FeatArchProps) => {
               width={screenWidthSize / 10}
             />
           </div>
-
           <div
-            id="ts"
             style={{
               position: "absolute",
               top: (screenWidthSize / 10) * 3,
               left: (screenWidthSize / 10) * 8,
+              width: screenWidthSize / 10,
+              zIndex: "1",
             }}
           >
-            <ProjectImage
-              className={styles.projectImage}
+            <ProjectItem
+              alt="Fica project."
               src="/G6.JPG"
-              alt="ojo"
-              height={screenWidthSize / 20}
               width={screenWidthSize / 10}
-            />
+              height={screenWidthSize / 20}
+            >
+              <Fica />
+            </ProjectItem>
           </div>
+
           <div
             style={{
               marginBottom: (screenWidthSize / 10) * 4.5,

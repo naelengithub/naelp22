@@ -25,17 +25,18 @@ export const Estuario = (props: EstuarioProps) => {
           //CONTAINER
           style={{
             boxSizing: "border-box",
+            backgroundColor: "white",
             display: "flex",
             alignItems: "end",
             position: "absolute",
             top: "0",
-            left: -(screenWidthSize / 10) * 2,
+            left: screenWidthSize / 10,
             width: (screenWidthSize / 10) * 9,
             height: (screenWidthSize / 10) * 3.5,
             zIndex: "1",
           }}
         >
-          <div
+          {/* <div
             style={{
               position: "relative",
               width: (screenWidthSize / 10) * 3,
@@ -47,11 +48,10 @@ export const Estuario = (props: EstuarioProps) => {
               alt="Birds eye view of the project."
               layout="fill"
             />
-          </div>
+          </div> */}
           <div
             style={{
               backgroundColor: "cornflowerblue",
-              marginLeft: "1rem",
             }}
           >
             <div
@@ -68,8 +68,8 @@ export const Estuario = (props: EstuarioProps) => {
             <div
               style={{
                 position: "relative",
-                width: (screenWidthSize / 10) * 5,
-                height: (screenWidthSize / 10) * 3.5,
+                width: (screenWidthSize / 10) * 6,
+                height: (screenWidthSize / 10) * 4.5,
               }}
             >
               <Image
@@ -79,17 +79,22 @@ export const Estuario = (props: EstuarioProps) => {
               />
             </div>
           </div>
-          <h1
+          <div
             style={{
               backgroundColor: "white",
-              fontSize: "90px",
-              margin: "0",
-              writingMode: "vertical-rl",
               width: screenWidthSize / 10,
             }}
           >
-            estuario
-          </h1>
+            <h1
+              style={{
+                fontSize: "90px",
+                margin: "0",
+                writingMode: "vertical-rl",
+              }}
+            >
+              estuario
+            </h1>
+          </div>
         </div>
       </div>
     );

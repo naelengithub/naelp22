@@ -78,7 +78,7 @@ export const Matlaltik = (props: MatlaltikProps) => {
             />
           </div>
         </div>
-        <div
+        {/* <div
           style={{
             position: "absolute",
             top: "0",
@@ -92,7 +92,7 @@ export const Matlaltik = (props: MatlaltikProps) => {
             alt="Collage of the main park section of the project."
             layout="fill"
           />
-        </div>
+        </div> */}
       </div>
     );
   }
