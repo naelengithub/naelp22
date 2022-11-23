@@ -16,7 +16,7 @@ export const Footer = (props: FooterProps) => {
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
-        <p className={styles.p}>copyright © 2022 nael</p>
+        <p className={styles.p}>copyright © 2022 ana elisa</p>
         <p className={styles.p}>mit &hearts; in Mexiko-Stadt hergestellt</p>
       </div>
     </div>

@@ -183,11 +183,10 @@ export const FeatArch = (props: FeatArchProps) => {
         <div>
           <div
             style={{
-              position: "relative",
+              position: "absolute",
               top: (screenWidthSize / 10) * 2,
               left: (screenWidthSize / 10) * 2,
               width: screenWidthSize / 10,
-              zIndex: "1",
             }}
           >
             <ProjectItem
@@ -201,12 +200,12 @@ export const FeatArch = (props: FeatArchProps) => {
           </div>
           <div
             style={{
-              position: "relative",
+              position: "absolute",
               top: screenWidthSize / 10,
               left: (screenWidthSize / 10) * 6,
               width: screenWidthSize / 10,
               height: (screenWidthSize / 10) * 0.5,
-              zIndex: "1",
+              margin: "0",
             }}
           >
             <ProjectItem
@@ -215,11 +214,7 @@ export const FeatArch = (props: FeatArchProps) => {
               width={screenWidthSize / 10}
               height={screenWidthSize / 20}
             >
-              <Xitle
-                style={{
-                  zIndex: "1",
-                }}
-              />
+              <Xitle />
             </ProjectItem>
           </div>
           <div
@@ -228,7 +223,6 @@ export const FeatArch = (props: FeatArchProps) => {
               top: (screenWidthSize / 10) * 3.5,
               left: (screenWidthSize / 10) * 3,
               width: screenWidthSize / 10,
-              zIndex: "1",
             }}
           >
             <ProjectItem
@@ -246,7 +240,6 @@ export const FeatArch = (props: FeatArchProps) => {
               top: (screenWidthSize / 10) * 4.5,
               left: screenWidthSize / 10,
               width: screenWidthSize / 10,
-              zIndex: "1",
             }}
           >
             <ProjectItem
@@ -281,7 +274,6 @@ export const FeatArch = (props: FeatArchProps) => {
               top: (screenWidthSize / 10) * 3,
               left: (screenWidthSize / 10) * 8,
               width: screenWidthSize / 10,
-              zIndex: "1",
             }}
           >
             <ProjectItem
@@ -293,26 +285,23 @@ export const FeatArch = (props: FeatArchProps) => {
               <Fica />
             </ProjectItem>
           </div>
-
-          <div
+        </div>
+        <div
+          style={{
+            height: (screenWidthSize / 10) * 5,
+          }}
+        >
+          <h1
             style={{
-              marginBottom: (screenWidthSize / 10) * 4.5,
-              width: "100%",
-              backgroundColor: "tomato",
+              margin: "0",
+              fontSize: "3.5rem",
+              position: "absolute",
+              top: (screenWidthSize / 10) * 2.5,
+              left: (screenWidthSize / 10) * 4,
             }}
           >
-            <h1
-              style={{
-                margin: "0",
-                fontSize: "4rem",
-                position: "absolute",
-                top: (screenWidthSize / 10) * 2.5,
-                left: (screenWidthSize / 10) * 4,
-              }}
-            >
-              architecture
-            </h1>
-          </div>
+            architecture
+          </h1>
         </div>
       </div>
     );
