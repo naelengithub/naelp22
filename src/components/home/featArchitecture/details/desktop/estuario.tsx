@@ -150,7 +150,7 @@ export const Estuario = (props: EstuarioProps) => {
               textAlign: "end",
             }}
           >
-            Estuario
+            estuario
           </h1>
         </div>
         <div>

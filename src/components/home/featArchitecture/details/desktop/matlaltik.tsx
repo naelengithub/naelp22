@@ -30,7 +30,7 @@ export const Matlaltik = (props: MatlaltikProps) => {
           position: "absolute",
           top: -(screenWidthSize / 10) * 5,
           left: screenWidthSize / 10,
-          width: (screenWidthSize / 10) * 8,
+          width: (screenWidthSize / 10) * 5,
           height: (screenWidthSize / 10) * 6,
           zIndex: "1",
         }}

@@ -44,7 +44,12 @@ export const FeatArch = (props: FeatArchProps) => {
   } else {
     if (screenWidthSize < 1024) {
       return (
-        <div className={styles.container}>
+        <div
+          style={{
+            width: screenWidthSize,
+            height: (screenWidthSize / 8) * 22,
+          }}
+        >
           <div
             id="estuario"
             style={{
@@ -56,14 +61,13 @@ export const FeatArch = (props: FeatArchProps) => {
             <Link href={"projects/estuario"}>
               <ProjectImage
                 className={styles.projectImage}
-                src="/G1.JPG"
+                src="/overview/estuarioMobile.png"
                 alt="Estuario project."
                 height={screenWidthSize / 2}
                 width={screenWidthSize / 4}
               />
             </Link>
           </div>
-
           <div
             id="xitle"
             style={{
@@ -72,10 +76,9 @@ export const FeatArch = (props: FeatArchProps) => {
               left: screenWidthSize / 2,
             }}
           >
-            {" "}
             <Link href={"projects/xitle"}>
               <ProjectImage
-                src="/G4.JPG"
+                src="/overview/xitle.png"
                 alt="Xitle project."
                 height={screenWidthSize / 4}
                 width={screenWidthSize / 2}
@@ -92,7 +95,7 @@ export const FeatArch = (props: FeatArchProps) => {
           >
             <Link href={"projects/spine"}>
               <ProjectImage
-                src="/G3.JPG"
+                src="/overview/spine.png"
                 alt="Spine project."
                 height={screenWidthSize / 4}
                 width={screenWidthSize / 2}
@@ -110,7 +113,7 @@ export const FeatArch = (props: FeatArchProps) => {
             <Link href={"projects/matlaltik"}>
               <ProjectImage
                 className={styles.projectImage}
-                src="/G2.JPG"
+                src="/overview/matlaltik.png"
                 alt="Matlaltik projec.t"
                 height={screenWidthSize / 4}
                 width={screenWidthSize / 2}
@@ -125,11 +128,10 @@ export const FeatArch = (props: FeatArchProps) => {
               left: screenWidthSize / 2,
             }}
           >
-            {" "}
             <Link href={"projects/viga755"}>
               <ProjectImage
                 className={styles.projectImage}
-                src="/G5.JPG"
+                src="/overview/755.png"
                 alt="ojo"
                 height={screenWidthSize / 4}
                 width={screenWidthSize / 2}
@@ -144,30 +146,25 @@ export const FeatArch = (props: FeatArchProps) => {
               left: screenWidthSize / 8,
             }}
           >
-            {" "}
             <Link href={"projects/ts"}>
               <ProjectImage
                 className={styles.projectImage}
-                src="/G6.JPG"
+                src="/overview/ficaMobile.png"
                 alt="ojo"
                 height={screenWidthSize / 2}
                 width={screenWidthSize / 4}
               />
             </Link>
           </div>
-          <div
-            style={{
-              marginTop: (screenWidthSize / 8) * 22,
-              width: "100%",
-            }}
-          >
+          <div>
             <h1
               style={{
                 margin: "0",
                 transform: "rotate(-90deg)",
-                fontSize: "3rem",
+                fontSize: "5rem",
                 position: "absolute",
-                top: screenWidthSize / 1.5,
+                top: (screenWidthSize / 8) * 5,
+                left: (screenWidthSize / 8) * 5,
               }}
             >
               architecture
@@ -179,7 +176,7 @@ export const FeatArch = (props: FeatArchProps) => {
   }
   {
     return (
-      <div className={styles.container}>
+      <div style={{ backgroundColor: "white" }}>
         <div>
           <div
             style={{
@@ -189,14 +186,18 @@ export const FeatArch = (props: FeatArchProps) => {
               width: screenWidthSize / 10,
             }}
           >
-            <ProjectItem
-              alt="Estuario project."
-              src="/G1.JPG"
-              width={screenWidthSize / 10}
-              height={screenWidthSize / 20}
-            >
-              <Estuario />
-            </ProjectItem>
+            <div>
+              <ProjectItem
+                alt="Estuario project."
+                src="/overview/estuario.png"
+                width={screenWidthSize / 10}
+                height={screenWidthSize / 20}
+              >
+                <div style={{ zIndex: "350" }}>
+                  <Estuario />
+                </div>
+              </ProjectItem>
+            </div>
           </div>
           <div
             style={{
@@ -210,7 +211,7 @@ export const FeatArch = (props: FeatArchProps) => {
           >
             <ProjectItem
               alt="Xitle project."
-              src="/G4.JPG"
+              src="/overview/xitle.png"
               width={screenWidthSize / 10}
               height={screenWidthSize / 20}
             >
@@ -227,7 +228,7 @@ export const FeatArch = (props: FeatArchProps) => {
           >
             <ProjectItem
               alt="Spine project."
-              src="/G3.JPG"
+              src="/overview/spine.png"
               width={screenWidthSize / 10}
               height={screenWidthSize / 20}
             >
@@ -244,7 +245,7 @@ export const FeatArch = (props: FeatArchProps) => {
           >
             <ProjectItem
               alt="Matlaltik project."
-              src="/G2.JPG"
+              src="/overview/matlaltik.png"
               width={screenWidthSize / 10}
               height={screenWidthSize / 20}
             >
@@ -262,7 +263,7 @@ export const FeatArch = (props: FeatArchProps) => {
           >
             <ProjectImage
               className={styles.projectImage}
-              src="/G5.JPG"
+              src="/overview/755.png"
               alt="ojo"
               height={screenWidthSize / 20}
               width={screenWidthSize / 10}
@@ -278,7 +279,7 @@ export const FeatArch = (props: FeatArchProps) => {
           >
             <ProjectItem
               alt="Fica project."
-              src="/G6.JPG"
+              src="/overview/fica.png"
               width={screenWidthSize / 10}
               height={screenWidthSize / 20}
             >
@@ -288,7 +289,7 @@ export const FeatArch = (props: FeatArchProps) => {
         </div>
         <div
           style={{
-            height: (screenWidthSize / 10) * 5,
+            height: (screenWidthSize / 10) * 5.5,
           }}
         >
           <h1
