@@ -54,7 +54,7 @@ export const Spine = (props: SpineProps) => {
             spine
           </h1>
           <p style={{ textAlign: "right" }}>
-            _2018_Berlin
+            _2021_Berlin
             <br />
             __collaboration with
             <br />
@@ -66,48 +66,6 @@ export const Spine = (props: SpineProps) => {
           </p>
         </div>
       </div>
-      //   <div
-      //     style={{
-      //       backgroundColor: "white",
-      //       width: (screenWidthSize / 10) * 3,
-      //       paddingRight: "1rem",
-      //     }}
-      //   >
-      //     <p style={{ textAlign: "right" }}>
-      //       _2018_Berlin
-      //       <br />
-      //       __collaboration with Barbara Sula
-      //       <br />
-      //       Fabian Prissok, and Pia Drewes
-      //     </p>
-      //     <div
-      //       style={{
-      //         position: "relative",
-      //         width: (screenWidthSize / 10) * 3,
-      //         height: (screenWidthSize / 10) * 3.5,
-      //       }}
-      //     >
-      //       <Image
-      //         src="/spline/planta.jpg"
-      //         alt="Birds eye view of the project."
-      //         layout="fill"
-      //       />
-      //     </div>
-      //   </div>
-      //   <div style={{ width: screenWidthSize / 10 }}>
-      //     <h1
-      //       style={{
-      //         fontSize: "90px",
-      //         writingMode: "vertical-lr",
-      //         margin: "0",
-      //         marginBottom: (screenWidthSize / 10) * 3.6,
-      //       }}
-      //     >
-      //       spine
-      //     </h1>
-      //   </div>
-
-      // </div>
     );
   }
 };

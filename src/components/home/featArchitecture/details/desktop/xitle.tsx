@@ -25,26 +25,34 @@ export const Xitle = (props: XitleProps) => {
         //CONTAINER
         style={{
           boxSizing: "border-box",
-          backgroundColor: "green",
+          backgroundColor: "white",
           display: "flex",
+          flexDirection: "column",
           alignItems: "end",
           position: "absolute",
-          top: -(screenWidthSize / 10) * 0.5,
-          left: -(screenWidthSize / 10) * 5,
+          bottom: -(screenWidthSize / 10) * 3,
+          right: screenWidthSize / 10,
+          paddingRight: "0.5rem",
         }}
       >
-        <div style={{ backgroundColor: "white" }}>
+        <div
+          style={{
+            height: screenWidthSize / 10,
+            display: "flex",
+            alignItems: "end",
+          }}
+        >
           <h1
             style={{
               fontSize: "90px",
               margin: "0",
-              paddingRight: "1rem",
-              textAlign: "right",
-              height: screenWidthSize / 10,
+              textAlign: "end",
             }}
           >
             xitle
           </h1>
+        </div>
+        <div>
           <div
             style={{
               position: "relative",
@@ -54,12 +62,15 @@ export const Xitle = (props: XitleProps) => {
           >
             <Image
               src="/xitle/Render2.jpg"
-              alt="3D render of farming section."
+              alt="3D render of project farming section."
               layout="fill"
-              style={{ paddingRight: "1rem" }}
             />
           </div>
-          <p style={{ paddingRight: "1rem", textAlign: "right" }}>
+        </div>
+        <div
+          style={{ height: (screenWidthSize / 10) * 0.5, alignItems: "center" }}
+        >
+          <p style={{ textAlign: "right", marginBottom: "0" }}>
             _2019_CDMX, Mexico
             <br />
             _colaboration with Alejandro Palacio,
