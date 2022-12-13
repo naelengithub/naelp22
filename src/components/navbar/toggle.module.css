@@ -1,17 +1,17 @@
 .toggle {
-  background-color: violet;
+  background-color: #5ec694;
   position: fixed;
   right: 0;
   height: 100%;
-  width: 40%;
+  width: 100%;
+  margin-top: 60px;
   z-index: 2;
 }
 
 .linkBox {
-  color: yellow;
-  background-color: green;
+  font-size: 80px;
 }
 
-.link:hover {
-  background-color: coral;
+.linkBox:hover {
+  background-color: #b38bfa;
 }

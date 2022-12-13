@@ -24,6 +24,7 @@ export const Fica = (props: FicaProps) => {
         style={{
           backgroundColor: "white",
           display: "flex",
+          flexDirection: "row-reverse",
           position: "absolute",
           right: screenWidthSize / 10,
           bottom: -(screenWidthSize / 10) * 1.5,
@@ -51,13 +52,14 @@ export const Fica = (props: FicaProps) => {
           </div>
         </div>
         <div
-          style={{ width: (screenWidthSize / 10) * 2, paddingLeft: "0.5rem" }}
+          style={{
+            width: (screenWidthSize / 10) * 2,
+            paddingRight: "0.5rem",
+            textAlign: "end",
+          }}
         >
           <p>_2018_CDMX</p>
-          <span style={{ display: "flex" }}>
-            <p>__</p>
-            <h1 style={{ margin: "0" }}>TO</h1>
-          </span>
+          <p style={{ fontSize: screenWidthSize / 50 }}>__TO</p>
           <p style={{ marginTop: "0" }}>José Amozurrutia + Carlos Facio</p>
           <p>Mariana Brito, Úrsula Rebollar, Álvaro Martínez</p>
           <p style={{ marginBottom: "0" }}>
