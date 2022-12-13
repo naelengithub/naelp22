@@ -28,7 +28,7 @@ export const Matlaltik = (props: MatlaltikProps) => {
           alignItems: "end",
           backgroundColor: "white",
           position: "absolute",
-          top: -(screenWidthSize / 10) * 5,
+          top: -(screenWidthSize / 10) * 5.5,
           left: screenWidthSize / 10,
           width: (screenWidthSize / 10) * 5,
           height: (screenWidthSize / 10) * 6,

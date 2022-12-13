@@ -30,7 +30,7 @@ export const DetailedMatlaltik = (props: DetailedMatlaltikPropsProps) => {
             <p>The description for this project is currently unavailable.</p>
             <p>
               This project was designed by Ivana Arvizu, Julieta Cabadilla,
-              Zamantha Garcias, and myself.
+              Zamantha Garcia, and myself.
             </p>
           </div>
           <div style={{ gap: ".5rem" }}>

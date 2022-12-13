@@ -20,3 +20,8 @@ p {
 * {
   box-sizing: border-box;
 }
+
+button {
+  font-family: Rufina;
+  font-size: 1rem;
+}
