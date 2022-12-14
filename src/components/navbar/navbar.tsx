@@ -1,4 +1,5 @@
 import * as React from "react";
+import Link from "next/link";
 
 import styles from "./navbar.module.css";
 import { Toggle } from "./toggle";
@@ -27,7 +28,9 @@ export const NavBar = (props: NavBarProps) => {
     <nav>
       <div className={styles.container}>
         <div>
-          <h1>ana elisa</h1>
+          <Link href="/">
+            <h1>ana elisa</h1>
+          </Link>
         </div>
         <h3 onClick={handleClick}>{isOpen ? "." : "..."}</h3>
       </div>

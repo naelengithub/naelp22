@@ -60,7 +60,7 @@ export const FeatArch = (props: FeatArchProps) => {
             <Link href={"projects/estuario"}>
               <ProjectImage
                 className={styles.projectImage}
-                src="/overview/estuarioMobile.png"
+                src="/overview/purpleEstuarioVertical.png"
                 alt="Estuario project."
                 height={screenWidthSize / 2}
                 width={screenWidthSize / 4}
@@ -77,7 +77,7 @@ export const FeatArch = (props: FeatArchProps) => {
           >
             <Link href={"projects/xitle"}>
               <ProjectImage
-                src="/overview/xitle.png"
+                src="/overview/purpleXitle.png"
                 alt="Xitle project."
                 height={screenWidthSize / 4}
                 width={screenWidthSize / 2}
@@ -94,7 +94,7 @@ export const FeatArch = (props: FeatArchProps) => {
           >
             <Link href={"projects/spine"}>
               <ProjectImage
-                src="/overview/spine.png"
+                src="/overview/purpleSpine.png"
                 alt="Spine project."
                 height={screenWidthSize / 4}
                 width={screenWidthSize / 2}
@@ -112,7 +112,7 @@ export const FeatArch = (props: FeatArchProps) => {
             <Link href={"projects/matlaltik"}>
               <ProjectImage
                 className={styles.projectImage}
-                src="/overview/matlaltik.png"
+                src="/overview/purpleMatlaltik.png"
                 alt="Matlaltik project"
                 height={screenWidthSize / 4}
                 width={screenWidthSize / 2}
@@ -130,7 +130,7 @@ export const FeatArch = (props: FeatArchProps) => {
             <Link href={"projects/fica"}>
               <ProjectImage
                 className={styles.projectImage}
-                src="/overview/ficaMobile.png"
+                src="/overview/purpleFicaVertical.png"
                 alt="FICA Project"
                 height={screenWidthSize / 2}
                 width={screenWidthSize / 4}

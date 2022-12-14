@@ -12,7 +12,9 @@ export default function Home() {
     <div>
       <NavBar />
       <FeatArch />
-      <Footer />
+      <div style={{ marginTop: widthSize / 16 }}>
+        <Footer />
+      </div>
     </div>
   );
 }
