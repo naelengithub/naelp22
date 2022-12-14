@@ -23,7 +23,9 @@ export default function Contact() {
         </div>
         <Collapsing />
       </div>
-      <Footer />
+      <div style={{ position: "absolute", bottom: 0 }}>
+        <Footer />
+      </div>
     </div>
   );
 }
