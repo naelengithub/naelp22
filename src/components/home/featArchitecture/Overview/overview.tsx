@@ -47,6 +47,7 @@ export const FeatArch = (props: FeatArchProps) => {
         <div
           style={{
             height: (screenWidthSize / 8) * 16,
+            marginBottom: screenWidthSize / 16,
           }}
         >
           <div
