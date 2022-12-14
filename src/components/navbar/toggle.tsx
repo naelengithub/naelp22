@@ -1,3 +1,4 @@
+import Link from "next/link";
 import * as React from "react";
 
 import styles from "./toggle.module.css";
@@ -25,14 +26,14 @@ export const Toggle = (props: ToggleProps) => {
     <div>
       <div className={styles.toggle}>
         <div className={styles.linkBox}>
-          <a className={styles.link} href="/about">
+          <Link className={styles.link} href="/about">
             about
-          </a>
+          </Link>
         </div>
         <div className={styles.linkBox}>
-          <a className={styles.link} href="/contact">
+          <Link className={styles.link} href="/contact">
             contact
-          </a>
+          </Link>
         </div>
       </div>
     </div>
