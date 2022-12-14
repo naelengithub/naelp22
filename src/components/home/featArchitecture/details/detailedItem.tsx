@@ -1,5 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
+import { NavBar } from "../../../navbar/navbar";
+import { Footer } from "../../../footer/footer";
 
 export interface DetailedItemProps {
   className?: string;
@@ -18,28 +20,30 @@ export const DetailedItem = (props: DetailedItemProps) => {
 
   return (
     <div>
-      <div style={{ padding: "1rem" }}>
-        <h1>{title}</h1>
-        <span>
-          __{date}_{location}
-        </span>
+      <NavBar />
+      <div style={{ marginTop: "60px" }}>
+        <div style={{ padding: "1rem", paddingTop: 0 }}>
+          <h1>{title}</h1>
+          <span>
+            __{date}_{location}
+          </span>
+        </div>
+        <div>{children}</div>
+        <div style={{ backgroundColor: "#B38BFA" }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              fontSize: "2rem",
+            }}
+          >
+            <Link href="/about">about</Link>
+            <Link href="/">home</Link>
+            <Link href="/contact">contact</Link>
+          </div>
+        </div>
       </div>
-      <div>{children}</div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          width: "100%",
-        }}
-      >
-        <span>nael</span>
-        <span>© 2022</span>
-      </div>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <Link href="/about">About</Link>
-        <Link href="/">Home</Link>
-        <Link href="/contact">Contact</Link>
-      </div>
+      <Footer />
     </div>
   );
 };

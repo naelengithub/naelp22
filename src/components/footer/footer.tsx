@@ -19,6 +19,7 @@ export const Footer = (props: FooterProps) => {
   return (
     <div
       style={{
+        backgroundColor: "#B38BFA",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -26,14 +27,21 @@ export const Footer = (props: FooterProps) => {
       }}
     >
       <div
-        style={{ margin: "1rem", display: "block", justifyContent: "center" }}
+        style={{
+          display: "flex",
+          margin: "1rem",
+          justifyContent: "space-between",
+        }}
       >
-        <p style={{ display: "flex", justifyContent: "center" }}>
-          copyright © 2022 ana elisa
-        </p>
-        <p style={{ display: "flex", justifyContent: "center" }}>
-          mit &hearts; in Mexiko-Stadt hergestellt
-        </p>
+        <p>copyright © 2022, built with &hearts; in Mexico City</p>
+        <button
+          onClick={() => {
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+          }}
+          style={{ backgroundColor: "transparent", border: "none" }}
+        >
+          scroll to top &uarr;
+        </button>
       </div>
     </div>
   );

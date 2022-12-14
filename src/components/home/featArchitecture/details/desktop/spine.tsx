@@ -30,41 +30,41 @@ export const Spine = (props: SpineProps) => {
           alignItems: "end",
         }}
       >
-        <div
-          style={{
-            position: "relative",
-            width: (screenWidthSize / 10) * 4.5,
-            height: (screenWidthSize / 10) * 5.5,
-          }}
-        >
-          <Image
-            src="/spline/3D2Views.pdf.jpg"
-            alt="3D model and perspective of project."
-            layout="fill"
-          />
-        </div>
         <div>
           <h1
             style={{
               fontSize: "90px",
-              writingMode: "vertical-lr",
               margin: "0",
             }}
           >
             spine
           </h1>
-          <p style={{ textAlign: "right" }}>
-            _2021_Berlin
-            <br />
-            __collaboration with
-            <br />
-            Barbara Sula
-            <br />
-            Fabian Prissok,
-            <br />
-            and Pia Drewes
-          </p>
+          <div
+            style={{
+              position: "relative",
+              width: (screenWidthSize / 10) * 4,
+              height: (screenWidthSize / 10) * 4.2,
+            }}
+          >
+            <Image
+              src="/spline/plantaCopy.jpg"
+              alt="3D model and perspective of project."
+              layout="fill"
+            />
+          </div>
         </div>
+
+        <p style={{ textAlign: "right" }}>
+          _2021_Berlin
+          <br />
+          __collaboration with
+          <br />
+          Barbara Sula
+          <br />
+          Fabian Prissok,
+          <br />
+          and Pia Drewes
+        </p>
       </div>
     );
   }
