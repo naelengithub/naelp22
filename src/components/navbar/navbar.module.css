@@ -13,3 +13,11 @@
   display: flex;
   align-items: flex-end;
 }
+
+.container h1 {
+  margin-bottom: 0;
+}
+
+.container p {
+  margin-top: 0;
+}

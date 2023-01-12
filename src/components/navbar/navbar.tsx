@@ -31,6 +31,7 @@ export const NavBar = (props: NavBarProps) => {
           <Link href="/">
             <h1>ana elisa</h1>
           </Link>
+          <p>software developer, skin coach, architect</p>
         </div>
         <h3 onClick={handleClick}>{isOpen ? "." : "..."}</h3>
       </div>

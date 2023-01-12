@@ -25,7 +25,6 @@ export const Xitle = (props: XitleProps) => {
         //CONTAINER
         style={{
           boxSizing: "border-box",
-          backgroundColor: "white",
           display: "flex",
           flexDirection: "column",
           alignItems: "end",
@@ -33,6 +32,7 @@ export const Xitle = (props: XitleProps) => {
           bottom: -(screenWidthSize / 10) * 3,
           right: screenWidthSize / 10,
           paddingRight: "0.5rem",
+          zIndex: 20,
         }}
       >
         <div

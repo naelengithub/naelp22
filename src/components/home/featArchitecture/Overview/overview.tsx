@@ -275,8 +275,6 @@ export const FeatArch = (props: FeatArchProps) => {
           </h1>
           <h1
             style={{
-              color: "white",
-              backgroundColor: "#B38BFA",
               margin: "0",
               fontSize: screenWidthSize / 5.75,
               position: "absolute",

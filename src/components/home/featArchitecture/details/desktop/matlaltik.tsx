@@ -27,12 +27,11 @@ export const Matlaltik = (props: MatlaltikProps) => {
           display: "flex",
           flexDirection: "column",
           alignItems: "end",
-          backgroundColor: "white",
           position: "absolute",
           bottom: 0,
           left: screenWidthSize / 10,
           width: (screenWidthSize / 10) * 6,
-          zIndex: "1",
+          zIndex: 20,
         }}
       >
         <h1
@@ -43,7 +42,7 @@ export const Matlaltik = (props: MatlaltikProps) => {
         >
           matlaltik
         </h1>
-        <p style={{ margin: 0, textAlign: "end" }}>
+        <p style={{ backgroundColor: "white", margin: 0, textAlign: "end" }}>
           _2018_CDMX, Mexico
           <br />
           __collaborators: Ivana Arvizu, Julieta Cabadilla, and Zamantha Garcia

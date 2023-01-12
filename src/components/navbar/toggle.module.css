@@ -4,14 +4,16 @@
   right: 0;
   height: 100%;
   width: 100%;
-  margin-top: 60px;
+  margin-top: 70px;
   z-index: 2;
-}
-
-.linkBox {
-  font-size: 80px;
+  text-align: right;
 }
 
 .linkBox:hover {
   background-color: #b38bfa;
+}
+
+.linkBox p {
+  margin: 0;
+  font-size: 80px;
 }

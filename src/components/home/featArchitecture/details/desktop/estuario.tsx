@@ -134,6 +134,7 @@ export const Estuario = (props: EstuarioProps) => {
           position: "absolute",
           top: -(screenWidthSize / 10) * 2,
           left: screenWidthSize / 10,
+          zIndex: 20,
         }}
       >
         <div
