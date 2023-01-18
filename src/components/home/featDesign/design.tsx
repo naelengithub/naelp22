@@ -19,7 +19,7 @@ export const FeatDesign = (props: FeatDesignProps) => {
     <div>
       <div
         style={{
-          backgroundColor: "green",
+          backgroundColor: "#FFCCB4",
           display: "flex",
           height: screenWidthSize,
           justifyContent: "center",

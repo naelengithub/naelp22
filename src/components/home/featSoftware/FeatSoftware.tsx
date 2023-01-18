@@ -21,7 +21,7 @@ export const FeatSoftware = (props: FeatSoftwareProps) => {
         backgroundColor: "pink",
         display: "flex",
         position: "relative",
-        height: screenWidthSize / 1.4,
+        height: screenWidthSize / 1.2,
         alignItems: "flex-end",
         borderBottom: "solid 3px",
       }}
@@ -49,7 +49,7 @@ export const FeatSoftware = (props: FeatSoftwareProps) => {
             margin: "0",
             fontSize: screenWidthSize / 40,
             position: "absolute",
-            top: screenWidthSize / 3.3,
+            top: screenWidthSize / 2.4,
             left: "1rem",
           }}
         >

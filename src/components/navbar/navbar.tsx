@@ -34,17 +34,19 @@ export const NavBar = (props: NavBarProps) => {
     if (screenWidthSize < 1024) {
       return (
         <nav>
-          <div className={styles.container}>
-            <div>
-              <Link href="/">
-                <h1>ana elisa</h1>
-              </Link>
-              <p>software developer, architect, skin coach</p>
+          <div style={{ display: "flex", position: "relative", zIndex: 100 }}>
+            <div className={styles.container}>
+              <div>
+                <Link href="/">
+                  <h1>ana elisa</h1>
+                </Link>
+                <p>software developer, architect, skin coach</p>
+              </div>
+              <h3 onClick={handleClick}>{isOpen ? "." : "..."}</h3>
             </div>
-            <h3 onClick={handleClick}>{isOpen ? "." : "..."}</h3>
-          </div>
-          <div className={styles.toggleContainer}>
-            {isOpen ? <Toggle /> : null}
+            <div className={styles.toggleContainer}>
+              {isOpen ? <Toggle /> : null}
+            </div>
           </div>
         </nav>
       );
@@ -92,7 +94,7 @@ export const NavBar = (props: NavBarProps) => {
             <button
               onClick={() => {
                 window.scrollTo({
-                  top: screenWidthSize * 2.5,
+                  top: screenWidthSize * 1.9,
                   left: 0,
                   behavior: "smooth",
                 });
@@ -105,7 +107,7 @@ export const NavBar = (props: NavBarProps) => {
             >
               software engineering
             </button>
-            <button
+            {/* <button
               onClick={() => {
                 window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
               }}
@@ -116,7 +118,7 @@ export const NavBar = (props: NavBarProps) => {
               }}
             >
               contact
-            </button>
+            </button> */}
           </div>
         </div>
       </nav>

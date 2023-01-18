@@ -128,7 +128,6 @@ export const Estuario = (props: EstuarioProps) => {
         //CONTAINER
         style={{
           boxSizing: "border-box",
-          backgroundColor: "white",
           display: "flex",
           flexDirection: "column",
           position: "absolute",

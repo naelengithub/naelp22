@@ -32,14 +32,10 @@ export const Fica = (props: FicaProps) => {
         }}
       >
         <div>
-          <div
-            style={{
-              width: (screenWidthSize / 10) * 6,
-            }}
-          >
+          <div>
             <h1
               style={{
-                backgroundColor: "white",
+                backgroundColor: "#E4CCF4",
                 fontSize: "90px",
                 margin: "0",
                 textAlign: "right",
@@ -64,7 +60,7 @@ export const Fica = (props: FicaProps) => {
         </div>
         <div
           style={{
-            backgroundColor: "white",
+            backgroundColor: "#E4CCF4",
             width: (screenWidthSize / 10) * 2,
             paddingRight: "0.5rem",
             textAlign: "end",
