@@ -1,6 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 
+import { useWindowSize } from "../../hooks/useWindowSize";
 import styles from "./navbar.module.css";
 import { Toggle } from "./toggle";
 
@@ -24,18 +25,101 @@ export const NavBar = (props: NavBarProps) => {
     setIsOpen(!isOpen);
   };
 
-  return (
-    <nav>
-      <div className={styles.container}>
-        <div>
-          <Link href="/">
-            <h1>ana elisa</h1>
-          </Link>
-          <p>software developer, skin coach, architect</p>
+  const size = useWindowSize();
+  const screenWidthSize = size.width;
+
+  if (!screenWidthSize) {
+    return null;
+  } else {
+    if (screenWidthSize < 1024) {
+      return (
+        <nav>
+          <div className={styles.container}>
+            <div>
+              <Link href="/">
+                <h1>ana elisa</h1>
+              </Link>
+              <p>software developer, architect, skin coach</p>
+            </div>
+            <h3 onClick={handleClick}>{isOpen ? "." : "..."}</h3>
+          </div>
+          <div className={styles.toggleContainer}>
+            {isOpen ? <Toggle /> : null}
+          </div>
+        </nav>
+      );
+    }
+  }
+  {
+    return (
+      <nav>
+        <div className={styles.container}>
+          <div>
+            <Link href="/">
+              <h1>ana elisa</h1>
+            </Link>
+            <p>software developer, architect, skin coach</p>
+          </div>
+          <div style={{ display: "flex", gap: "2rem" }}>
+            <button
+              onClick={() => {
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+              }}
+              style={{
+                backgroundColor: "transparent",
+                border: "solid",
+                borderRadius: "10px",
+              }}
+            >
+              architecture
+            </button>
+            <button
+              onClick={() => {
+                window.scrollTo({
+                  top: screenWidthSize / 1.3,
+                  left: 0,
+                  behavior: "smooth",
+                });
+              }}
+              style={{
+                backgroundColor: "transparent",
+                border: "solid",
+                borderRadius: "10px",
+              }}
+            >
+              design
+            </button>
+            <button
+              onClick={() => {
+                window.scrollTo({
+                  top: screenWidthSize * 2.5,
+                  left: 0,
+                  behavior: "smooth",
+                });
+              }}
+              style={{
+                backgroundColor: "transparent",
+                border: "solid",
+                borderRadius: "10px",
+              }}
+            >
+              software engineering
+            </button>
+            <button
+              onClick={() => {
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+              }}
+              style={{
+                backgroundColor: "transparent",
+                border: "solid",
+                borderRadius: "10px",
+              }}
+            >
+              contact
+            </button>
+          </div>
         </div>
-        <h3 onClick={handleClick}>{isOpen ? "." : "..."}</h3>
-      </div>
-      <div className={styles.toggleContainer}>{isOpen ? <Toggle /> : null}</div>
-    </nav>
-  );
+      </nav>
+    );
+  }
 };

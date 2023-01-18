@@ -18,22 +18,24 @@ export const FeatSoftware = (props: FeatSoftwareProps) => {
   return (
     <div
       style={{
+        backgroundColor: "pink",
+        display: "flex",
         position: "relative",
-        height: screenWidthSize / 1.5,
+        height: screenWidthSize / 1.4,
+        alignItems: "flex-end",
+        borderBottom: "solid 3px",
       }}
     >
       <div
         style={{
           display: "flex",
-          height: "50rem",
-          justifyContent: "center",
-          alignItems: "center",
+          height: screenWidthSize / 2.3,
         }}
       >
         <h1
           style={{
             fontSize: screenWidthSize / 5.75,
-            height: screenWidthSize / 5.75,
+            margin: 0,
           }}
         >
           software
@@ -47,7 +49,7 @@ export const FeatSoftware = (props: FeatSoftwareProps) => {
             margin: "0",
             fontSize: screenWidthSize / 40,
             position: "absolute",
-            top: screenWidthSize / 3.6,
+            top: screenWidthSize / 3.3,
             left: "1rem",
           }}
         >

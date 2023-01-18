@@ -19,11 +19,14 @@ export const FeatDesign = (props: FeatDesignProps) => {
     <div>
       <div
         style={{
+          backgroundColor: "green",
           display: "flex",
-          height: "50rem",
+          height: screenWidthSize,
           justifyContent: "center",
           alignItems: "center",
           position: "relative",
+          borderTop: "solid 3px",
+          borderBottom: "solid 3px",
         }}
       >
         <h1
@@ -34,14 +37,13 @@ export const FeatDesign = (props: FeatDesignProps) => {
         >
           design
         </h1>
-
         <h1
           style={{
             margin: "0",
             fontSize: screenWidthSize / 40,
             position: "absolute",
-            top: screenWidthSize / 3.7,
-            right: screenWidthSize / 3.7,
+            top: screenWidthSize / 2.3,
+            right: screenWidthSize / 3.9,
           }}
         >
           [falling into]
