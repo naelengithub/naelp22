@@ -26,14 +26,20 @@ export const Toggle = (props: ToggleProps) => {
     <div>
       <div className={styles.toggle}>
         <div className={styles.linkBox}>
-          <Link className={styles.link} href="/about">
-            about
-          </Link>
+          <p>architecture</p>
         </div>
         <div className={styles.linkBox}>
-          <Link className={styles.link} href="/contact">
-            contact
-          </Link>
+          <p>design</p>
+        </div>
+        <div className={styles.linkBox}>
+          <p>
+            software
+            <br />
+            development
+          </p>
+        </div>
+        <div className={styles.linkBox}>
+          <p>contact</p>
         </div>
       </div>
     </div>

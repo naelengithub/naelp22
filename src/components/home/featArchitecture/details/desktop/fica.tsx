@@ -22,18 +22,25 @@ export const Fica = (props: FicaProps) => {
     return (
       <div
         style={{
-          backgroundColor: "white",
           display: "flex",
           flexDirection: "row-reverse",
           position: "absolute",
           right: screenWidthSize / 10,
           bottom: -(screenWidthSize / 10) * 1.5,
           alignItems: "end",
+          zIndex: 20,
         }}
       >
         <div>
-          <div style={{ width: (screenWidthSize / 10) * 6 }}>
-            <h1 style={{ fontSize: "90px", margin: "0", textAlign: "right" }}>
+          <div>
+            <h1
+              style={{
+                backgroundColor: "#E4CCF4",
+                fontSize: "90px",
+                margin: "0",
+                textAlign: "right",
+              }}
+            >
               FICA 2018
             </h1>
           </div>
@@ -53,9 +60,11 @@ export const Fica = (props: FicaProps) => {
         </div>
         <div
           style={{
+            backgroundColor: "#E4CCF4",
             width: (screenWidthSize / 10) * 2,
             paddingRight: "0.5rem",
             textAlign: "end",
+            paddingTop: "5rem",
           }}
         >
           <p>_2018_CDMX</p>

@@ -128,12 +128,12 @@ export const Estuario = (props: EstuarioProps) => {
         //CONTAINER
         style={{
           boxSizing: "border-box",
-          backgroundColor: "white",
           display: "flex",
           flexDirection: "column",
           position: "absolute",
           top: -(screenWidthSize / 10) * 2,
           left: screenWidthSize / 10,
+          zIndex: 20,
         }}
       >
         <div
