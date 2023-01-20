@@ -4,6 +4,7 @@ import { useWindowSize } from "../src/hooks/useWindowSize";
 import { FeatArch } from "../src/components/home/featArchitecture/Overview/overview";
 import { FeatDesign } from "../src/components/home/featDesign/design";
 import { FeatSoftware } from "../src/components/home/featSoftware/FeatSoftware";
+import { Contact } from "../src/components/home/featContact/contact";
 
 export default function Home() {
   const size = useWindowSize();
@@ -16,6 +17,7 @@ export default function Home() {
       <FeatArch />
       <FeatDesign />
       <FeatSoftware />
+      <Contact />
       <Footer />
     </div>
   );
