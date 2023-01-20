@@ -71,6 +71,8 @@ export const NavBar = (props: NavBarProps) => {
                 backgroundColor: "transparent",
                 border: "solid",
                 borderRadius: "10px",
+                paddingRight: "1rem",
+                paddingLeft: "1rem",
               }}
             >
               architecture
@@ -78,7 +80,7 @@ export const NavBar = (props: NavBarProps) => {
             <button
               onClick={() => {
                 window.scrollTo({
-                  top: screenWidthSize / 1.3,
+                  top: screenWidthSize,
                   left: 0,
                   behavior: "smooth",
                 });
@@ -87,6 +89,8 @@ export const NavBar = (props: NavBarProps) => {
                 backgroundColor: "transparent",
                 border: "solid",
                 borderRadius: "10px",
+                paddingRight: "1rem",
+                paddingLeft: "1rem",
               }}
             >
               design
@@ -94,7 +98,7 @@ export const NavBar = (props: NavBarProps) => {
             <button
               onClick={() => {
                 window.scrollTo({
-                  top: screenWidthSize * 1.9,
+                  top: screenWidthSize * 2.1,
                   left: 0,
                   behavior: "smooth",
                 });
@@ -103,22 +107,30 @@ export const NavBar = (props: NavBarProps) => {
                 backgroundColor: "transparent",
                 border: "solid",
                 borderRadius: "10px",
+                paddingRight: "1rem",
+                paddingLeft: "1rem",
               }}
             >
               software engineering
             </button>
-            {/* <button
+            <button
               onClick={() => {
-                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                window.scrollTo({
+                  top: screenWidthSize * 3,
+                  left: 0,
+                  behavior: "smooth",
+                });
               }}
               style={{
                 backgroundColor: "transparent",
                 border: "solid",
                 borderRadius: "10px",
+                paddingRight: "1rem",
+                paddingLeft: "1rem",
               }}
             >
               contact
-            </button> */}
+            </button>
           </div>
         </div>
       </nav>
