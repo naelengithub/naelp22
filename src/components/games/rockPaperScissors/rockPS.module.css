@@ -1,0 +1,46 @@
+.button {
+  padding: 40xp 20xp;
+  background-color: rgb(240, 123, 240);
+  color: rgb(134, 67, 23);
+  outline: none;
+  border: 0px;
+  border-radius: 8px;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  font-family: monospace;
+}
+
+.buttonChoice {
+  background-color: rgb(243, 215, 54);
+  padding: 1px;
+  color: rgb(134, 67, 23);
+  border: 2px solid rgb(174, 54, 243);
+  border-radius: 8px;
+  width: 100px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  font-family: monospace;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: rgb(161, 189, 248);
+}
+
+.buttonChoice:hover {
+  cursor: pointer;
+  background-color: rgba(240, 123, 240, 0.719);
+}
+
+.q {
+  color: rgb(134, 67, 23);
+  font-size: 36px;
+  font-weight: 700;
+  font-family: monospace;
+  height: 50px;
+}
