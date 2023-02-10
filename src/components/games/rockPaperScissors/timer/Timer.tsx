@@ -1,5 +1,5 @@
 import * as React from "react";
-import styles from "./rockPS.module.css";
+import styles from "../rockPS.module.css";
 
 export interface TimerProps {
   className?: string;

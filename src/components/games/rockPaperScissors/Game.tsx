@@ -20,7 +20,6 @@ export const Game = (props: GameProps) => {
   const { className } = props;
 
   // Hooks
-  // const [timer, setTimer] = React.useState(3);
   const [gameState, setGameState] = React.useState<GameType>({
     computerHand: null,
     userHand: null,
@@ -98,19 +97,6 @@ export const Game = (props: GameProps) => {
     setGameState(newGameStateWithHands);
   };
 
-  // const timeStart = () => {
-  //   if (timer > 0) {
-  //     setTimeout(() => setTimer(timer - 1), 1000);
-  //   } else {
-  //     // console.log("hola");
-  //     setTimer(0);
-  //   }
-  // };
-
-  // React.useEffect(() => {
-  //   timeStart();
-  // });
-
   function handleReload() {
     window.location.reload();
   }
@@ -130,7 +116,6 @@ export const Game = (props: GameProps) => {
       <div style={{ width: "100%" }}>
         <h1>Let&apos;s go!</h1>
         <div>
-          {/* <h1>{timer}</h1> */}
           <div style={{ display: "flex", justifyContent: "space-evenly" }}>
             <div
               style={{
@@ -186,18 +171,16 @@ export const Game = (props: GameProps) => {
           </div>
         </div>
         <div>
-          {/* {timer === 0 ? ( */}
           <div>
             <h1>{gameState.userHand ? getResult() : null}</h1>
             <div>
-              {gameState.result ? (
+              {gameState.result && (
                 <button className={styles.button} onClick={handleReload}>
                   Restart
                 </button>
-              ) : null}
+              )}
             </div>
           </div>
-          {/* ) : null} */}
         </div>
       </div>
     </main>

@@ -1,6 +1,12 @@
 import { atom } from "recoil";
 
-export const gameStartState = atom({
+type GameStart = {
+  status: "start" | "wait" | null;
+};
+
+export const gameStartState = atom<GameStart>({
   key: "gameStart",
-  default: null,
+  default: {
+    status: null,
+  },
 });

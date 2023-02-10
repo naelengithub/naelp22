@@ -10,10 +10,6 @@ export interface RPSProps {
   className?: string;
 }
 
-type GameStatus = {
-  status: "start" | "wait" | null;
-};
-
 /**
  * @name RPS
  * @description RPS component.
@@ -22,16 +18,15 @@ export const RPS = (props: RPSProps) => {
   const { className } = props;
 
   // Hooks
-  const [gameOn, setGameOn] = React.useState<GameStatus>({ status: null });
-  // const [gameOn, setGameOn] = useRecoilState<GameStatus>(gameStartState);
+  const [gameOn, setGameOn] = useRecoilState(gameStartState);
 
   const [isWaiting, setIsWaiting] = React.useState(false);
 
-  //Handlers
-  const handleClickStart = () => {
-    const newGameOn = { ...gameOn };
-    newGameOn.status = "start";
-    setGameOn(newGameOn);
+  const handleClickStartRecoil = () => {
+    const newGameState = { ...gameOn };
+    newGameState.status = "start";
+    setGameOn(newGameState);
+    console.log(gameOn);
   };
 
   return (
@@ -44,11 +39,9 @@ export const RPS = (props: RPSProps) => {
         height: "100vh",
       }}
     >
-      {gameOn.status === "start" ? (
-        <Game />
-      ) : gameOn.status === "wait" ? (
-        <Wait />
-      ) : (
+      {gameOn.status === "start" && <Game />}
+      {gameOn.status === "wait" && <Wait />}
+      {gameOn.status === null && (
         <div>
           <h2>Hey stranger!</h2>
           <h1>Ready to play?</h1>
@@ -57,7 +50,7 @@ export const RPS = (props: RPSProps) => {
               {isWaiting ? null : (
                 <button
                   className={styles.buttonChoice}
-                  onClick={handleClickStart}
+                  onClick={handleClickStartRecoil}
                 >
                   Bring it on!
                 </button>
