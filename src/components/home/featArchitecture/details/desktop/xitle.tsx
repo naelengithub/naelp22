@@ -61,7 +61,7 @@ export const Xitle = (props: XitleProps) => {
             }}
           >
             <Image
-              src="/xitle/Render2.jpg"
+              src="/xitle/Render2.compressed.png"
               alt="3D render of project farming section."
               layout="fill"
             />

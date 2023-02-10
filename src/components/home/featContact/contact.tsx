@@ -1,5 +1,7 @@
 import * as React from "react";
 import { useWindowSize } from "../../../hooks/useWindowSize";
+import Link from "next/link";
+import Image from "next/image";
 
 export interface ContactProps {
   className?: string;
@@ -57,6 +59,24 @@ export const Contact = (props: ContactProps) => {
             Feel free to reach out if you&apos;d like to chat, collaborate, or
             grab coffee.
           </p>
+          <div style={{ display: "flex", gap: "1rem", marginTop: "1rem" }}>
+            <Link href="https://www.linkedin.com/in/ana-elisa-vargas-1bb436145/">
+              <Image
+                src="/logo.linkedin.png"
+                alt="Linked In profile"
+                width="40"
+                height="40"
+              />
+            </Link>
+            <Link href="https://github.com/naelengithub">
+              <Image
+                src="/logo.github.png"
+                alt="Github profile"
+                width="40"
+                height="40"
+              />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

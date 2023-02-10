@@ -56,7 +56,7 @@ export const Matlaltik = (props: MatlaltikProps) => {
             }}
           >
             <Image
-              src="/matlaltik/MatlaltikBirdsEye.jpg"
+              src="/matlaltik/SSPlanta.png"
               alt="Birds eye view of the project."
               layout="fill"
             />

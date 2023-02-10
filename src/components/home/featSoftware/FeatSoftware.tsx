@@ -1,5 +1,10 @@
 import * as React from "react";
 import { useWindowSize } from "../../../hooks/useWindowSize";
+import { Games } from "./Games";
+import { GameHover } from "./GameHover";
+import Link from "next/link";
+import Image from "next/image";
+import { ProjectItem } from "../featArchitecture/details/desktop/ProjectItem";
 
 export interface FeatSoftwareProps {
   className?: string;
@@ -32,6 +37,64 @@ export const FeatSoftware = (props: FeatSoftwareProps) => {
           height: screenWidthSize / 2.3,
         }}
       >
+        <div
+          style={{
+            position: "relative",
+          }}
+        >
+          <Link href="/rock-paper-scissors">
+            <div
+              style={{
+                position: "absolute",
+                top: -(screenWidthSize / 10) * 2,
+                left: (screenWidthSize / 10) * 6,
+                width: screenWidthSize / 10,
+                boxShadow: "-15px -10px",
+              }}
+            >
+              <div
+                style={{
+                  height: screenWidthSize / 20,
+                  width: screenWidthSize / 10,
+                }}
+              >
+                <Games
+                  alt="Play rock paper scissors"
+                  src="/BnW/RPS.png"
+                  layout="fill"
+                >
+                  <GameHover gameName="Rock Paper Scissors" />
+                </Games>
+              </div>
+            </div>
+          </Link>
+          <Link href="/rock-paper-scissors">
+            <div
+              style={{
+                position: "absolute",
+                top: -(screenWidthSize / 10) * 2,
+                left: (screenWidthSize / 10) * 8,
+                width: screenWidthSize / 10,
+                boxShadow: "-15px -10px",
+              }}
+            >
+              <div
+                style={{
+                  height: screenWidthSize / 20,
+                  width: screenWidthSize / 10,
+                }}
+              >
+                <Games
+                  alt="Play tic tac toe"
+                  src="/BnW/TicTacToe.png"
+                  layout="fill"
+                >
+                  <GameHover gameName="Tic Tac Toe" />
+                </Games>
+              </div>
+            </div>
+          </Link>
+        </div>
         <h1
           style={{
             fontSize: screenWidthSize / 5.75,
