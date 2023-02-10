@@ -28,14 +28,6 @@ export const FeatArch = (props: FeatArchProps) => {
   const screenWidthSize = size.width;
   console.log(JSON.stringify(screenWidthSize));
 
-  const handleOnMouseEnter = () => {
-    setIsSelected(true);
-  };
-
-  const handleOnMouseLeave = () => {
-    setIsSelected(false);
-  };
-
   if (!screenWidthSize) {
     return null;
   } else {

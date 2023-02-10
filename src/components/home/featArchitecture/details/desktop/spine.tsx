@@ -47,7 +47,7 @@ export const Spine = (props: SpineProps) => {
             }}
           >
             <Image
-              src="/spline/plantaCopy.compressed.jpg"
+              src="/spline/plantaCopy.compressed.png"
               alt="3D model and perspective of project."
               layout="fill"
             />
