@@ -52,7 +52,7 @@ export const Fica = (props: FicaProps) => {
             }}
           >
             <Image
-              src="/fica/render.jpg"
+              src="/fica/render.compressed.jpg"
               alt="3D render of project."
               layout="fill"
             />
