@@ -10,7 +10,7 @@ export interface GamesImageProps {
 
 /**
  * @name GamesImage
- * @description FAQs feature component.
+ * @description Icon of each game.
  */
 export const GamesImage = (props: GamesImageProps) => {
   const { className, src, alt, layout } = props;

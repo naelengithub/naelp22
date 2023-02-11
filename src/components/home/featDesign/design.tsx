@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useWindowSize } from "../../../hooks/useWindowSize";
+import { Fader } from "./fader";
 
 export interface FeatDesignProps {
   className?: string;
@@ -29,6 +30,52 @@ export const FeatDesign = (props: FeatDesignProps) => {
           borderBottom: "solid 3px",
         }}
       >
+        <div
+          style={{
+            border: "2px, solid",
+            position: "absolute",
+            top: screenWidthSize / 4,
+            left: screenWidthSize / 15,
+            height: screenWidthSize / 4,
+            width: screenWidthSize / 4.2,
+          }}
+        >
+          <Fader
+            src="/designSamples/Comic-search.jpg"
+            alt="project image"
+            layout="fill"
+          />
+        </div>
+        <div
+          style={{
+            position: "absolute",
+            top: "4rem",
+            right: "1rem",
+            height: screenWidthSize / 3,
+            width: screenWidthSize / 3,
+          }}
+        >
+          <Fader
+            src="/designSamples/feminist.jpg"
+            alt="project image"
+            layout="fill"
+          />
+        </div>
+        <div
+          style={{
+            position: "absolute",
+            top: screenWidthSize / 1.6,
+            right: screenWidthSize / 3,
+            height: screenWidthSize / 6,
+            width: screenWidthSize / 4,
+          }}
+        >
+          <Fader
+            src="/designSamples/roomexperiments.jpg"
+            alt="project image"
+            layout="fill"
+          />
+        </div>
         <h1
           style={{
             fontSize: screenWidthSize / 5.75,

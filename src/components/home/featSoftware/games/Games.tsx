@@ -11,18 +11,13 @@ export interface GamesProps {
 
 /**
  * @name Games
- * @description FAQs feature component.
+ * @description Game project link component.
  */
 export const Games = (props: GamesProps) => {
   const { className, children, src, alt, layout } = props;
 
   // Hooks
   const [isSelected, setIsSelected] = React.useState(false);
-
-  // Handlers
-  const handleClick = () => {
-    setIsSelected(!isSelected);
-  };
 
   return (
     <div>
