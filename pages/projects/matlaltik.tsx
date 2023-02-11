@@ -1,6 +1,6 @@
 import * as React from "react";
 import Head from "next/head";
-import { DetailedMatlaltik } from "../../src/components/home/featArchitecture/details/detailedMatlaltik";
+import { DetailedMatlaltik } from "../../src/components/home/featArchitecture/details/mobile/detailedMatlaltik";
 
 export interface IndexProps {}
 
