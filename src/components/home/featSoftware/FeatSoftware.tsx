@@ -1,11 +1,8 @@
 import * as React from "react";
 import { useWindowSize } from "../../../hooks/useWindowSize";
-import { Games } from "./Games";
-import { GameHover } from "./GameHover";
+import { Games } from "./games/Games";
+import { GameHover } from "./games/GameHover";
 import Link from "next/link";
-import Image from "next/image";
-import { ProjectItem } from "../featArchitecture/details/desktop/ProjectItem";
-
 export interface FeatSoftwareProps {
   className?: string;
 }

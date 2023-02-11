@@ -1,9 +1,9 @@
 import * as React from "react";
 import { DetailedItem } from "./detailedItem";
 
-import { useWindowSize } from "../../../../hooks/useWindowSize";
+import { useWindowSize } from "../../../../../hooks/useWindowSize";
 
-import { ProjectImage } from "../projectImage";
+import { ProjectImage } from "../../Overview/projectImage";
 
 export interface DetailedEstuarioProps {
   className?: string;

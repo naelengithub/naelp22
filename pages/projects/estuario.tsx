@@ -1,6 +1,6 @@
 import * as React from "react";
 import Head from "next/head";
-import { DetailedEstuario } from "../../src/components/home/featArchitecture/details/detailedEstuario";
+import { DetailedEstuario } from "../../src/components/home/featArchitecture/details/mobile/detailedEstuario";
 
 export interface IndexProps {}
 

@@ -1,6 +1,6 @@
 import * as React from "react";
 import Head from "next/head";
-import { DetailedXitle } from "../../src/components/home/featArchitecture/details/detailedXitle";
+import { DetailedXitle } from "../../src/components/home/featArchitecture/details/mobile/detailedXitle";
 
 export interface IndexProps {}
 
