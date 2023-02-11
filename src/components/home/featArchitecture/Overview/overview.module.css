@@ -1,5 +1,12 @@
-@media screen and (max-width: 320px) {
-  .heading {
-    font-size: 30px;
+.container {
+  background-color: #e4ccf4;
+}
+
+@media (max-width: 1250px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60rem;
   }
 }

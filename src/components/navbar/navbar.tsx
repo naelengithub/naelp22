@@ -60,7 +60,7 @@ export const NavBar = (props: NavBarProps) => {
             <Link href="/">
               <h1>ana elisa</h1>
             </Link>
-            <p>software developer, architect, skin coach</p>
+            <p>software developer, architect</p>
           </div>
           <div style={{ display: "flex", gap: "2rem" }}>
             <button

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useWindowSize } from "../../../hooks/useWindowSize";
 import { Fader } from "./fader";
+import styles from "./design.module.css";
 
 export interface FeatDesignProps {
   className?: string;
@@ -17,7 +18,7 @@ export const FeatDesign = (props: FeatDesignProps) => {
   const screenWidthSize = size.width;
 
   return (
-    <div>
+    <div className={styles.container}>
       <div
         style={{
           backgroundColor: "#FFCCB4",
@@ -26,8 +27,6 @@ export const FeatDesign = (props: FeatDesignProps) => {
           justifyContent: "center",
           alignItems: "center",
           position: "relative",
-          borderTop: "solid 3px",
-          borderBottom: "solid 3px",
         }}
       >
         <div
