@@ -1,5 +1,6 @@
 .container {
-  background-color: #e4ccf4;
+  background-color: pink;
+  border-bottom: solid 3px;
 }
 
 @media (max-width: 1250px) {

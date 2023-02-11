@@ -30,9 +30,11 @@ export const ProjectItem = (props: ProjectItemProps) => {
       <div
         onMouseEnter={() => {
           setIsSelected(true);
+          console.log("entered!");
         }}
         onMouseLeave={() => {
           setIsSelected(false);
+          console.log("left");
         }}
       >
         <ProjectImage src={src} alt={alt} width={width} height={height} />
