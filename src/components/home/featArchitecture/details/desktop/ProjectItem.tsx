@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ProjectImage } from "../../projectImage";
+import { ProjectImage } from "../../Overview/projectImage";
 
 export interface ProjectItemProps {
   className?: string;

@@ -1,5 +1,5 @@
 .toggle {
-  background-color: #5ec694;
+  background-color: #e4ccf4;
   position: fixed;
   right: 0;
   height: 100%;
@@ -10,7 +10,7 @@
 }
 
 .linkBox:hover {
-  background-color: #b38bfa;
+  background-color: #c9d6ff;
 }
 
 .linkBox p {

@@ -40,9 +40,9 @@ export const NavBar = (props: NavBarProps) => {
                 <Link href="/">
                   <h1>ana elisa</h1>
                 </Link>
-                <p>software developer, architect, skin coach</p>
+                <p>software developer, architect</p>
               </div>
-              <h3 onClick={handleClick}>{isOpen ? "." : "..."}</h3>
+              <h3 onClick={handleClick}>{isOpen ? "x" : "..."}</h3>
             </div>
             <div className={styles.toggleContainer}>
               {isOpen ? <Toggle /> : null}
