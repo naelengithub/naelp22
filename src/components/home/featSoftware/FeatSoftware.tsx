@@ -65,7 +65,7 @@ export const FeatSoftware = (props: FeatSoftwareProps) => {
               </div>
             </div>
           </Link>
-          <Link href="/rock-paper-scissors">
+          <Link href="https://naelengithub.github.io/Gato/">
             <div
               style={{
                 position: "absolute",
