@@ -1,7 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
-import { NavBar } from "../../../navbar/navbar";
-import { Footer } from "../../../footer/footer";
+import { NavBar } from "../../../../navbar/navbar";
+import { Footer } from "../../../../footer/footer";
 
 export interface DetailedItemProps {
   className?: string;
