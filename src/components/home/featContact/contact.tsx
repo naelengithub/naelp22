@@ -2,6 +2,7 @@ import * as React from "react";
 import { useWindowSize } from "../../../hooks/useWindowSize";
 import Link from "next/link";
 import Image from "next/image";
+import styles from "./contact.module.css";
 
 export interface ContactProps {
   className?: string;
@@ -18,7 +19,7 @@ export const Contact = (props: ContactProps) => {
   const screenWidthSize = size.width;
 
   return (
-    <div>
+    <div className={styles.container}>
       <div
         style={{
           backgroundColor: "#C9D6FF",
