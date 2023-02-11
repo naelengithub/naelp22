@@ -1,6 +1,6 @@
 import * as React from "react";
 import Head from "next/head";
-import { DetailedSpine } from "../../src/components/home/featArchitecture/details/detailedSpine";
+import { DetailedSpine } from "../../src/components/home/featArchitecture/details/mobile/detailedSpine";
 
 export interface IndexProps {}
 

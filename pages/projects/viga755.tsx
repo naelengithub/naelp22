@@ -1,6 +1,6 @@
 import * as React from "react";
 import Head from "next/head";
-import { DetailedViga } from "../../src/components/home/featArchitecture/details/detailedViga";
+import { DetailedViga } from "../../src/components/home/featArchitecture/details/mobile/detailedViga";
 
 export interface IndexProps {}
 
