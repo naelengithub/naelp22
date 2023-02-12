@@ -22,6 +22,7 @@ export const Spine = (props: SpineProps) => {
     return (
       <div
         style={{
+          backgroundColor: "#e4ccf4",
           display: "flex",
           position: "absolute",
           top: -(screenWidthSize / 10) * 3.65,
@@ -33,7 +34,7 @@ export const Spine = (props: SpineProps) => {
         <div>
           <h1
             style={{
-              fontSize: "90px",
+              fontSize: screenWidthSize / 10,
               margin: "0",
             }}
           >
@@ -42,8 +43,8 @@ export const Spine = (props: SpineProps) => {
           <div
             style={{
               position: "relative",
-              width: (screenWidthSize / 10) * 4,
-              height: (screenWidthSize / 10) * 4.2,
+              width: (screenWidthSize / 10) * 3.5,
+              height: (screenWidthSize / 10) * 3.7,
             }}
           >
             <Image
@@ -53,18 +54,19 @@ export const Spine = (props: SpineProps) => {
             />
           </div>
         </div>
-
-        <p style={{ textAlign: "right" }}>
-          _2021_Berlin
-          <br />
-          __collaboration with
-          <br />
-          Barbara Sula
-          <br />
-          Fabian Prissok,
-          <br />
-          and Pia Drewes
-        </p>
+        <div style={{ width: (screenWidthSize / 10) * 2 }}>
+          <p style={{ textAlign: "left", paddingLeft: "1rem" }}>
+            _2021_Berlin
+            <br />
+            __collab with
+            <br />
+            Barbara Sula,
+            <br />
+            Fabian Prissok,
+            <br />
+            and Pia Drewes
+          </p>
+        </div>
       </div>
     );
   }

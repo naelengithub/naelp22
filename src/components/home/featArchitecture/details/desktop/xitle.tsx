@@ -44,7 +44,7 @@ export const Xitle = (props: XitleProps) => {
         >
           <h1
             style={{
-              fontSize: "90px",
+              fontSize: screenWidthSize / 10,
               margin: "0",
               textAlign: "end",
             }}
@@ -68,9 +68,18 @@ export const Xitle = (props: XitleProps) => {
           </div>
         </div>
         <div
-          style={{ height: (screenWidthSize / 10) * 0.5, alignItems: "center" }}
+          style={{
+            height: (screenWidthSize / 10) * 0.5,
+            alignItems: "center",
+          }}
         >
-          <p style={{ textAlign: "right", marginBottom: "0" }}>
+          <p
+            style={{
+              backgroundColor: "#e4ccf4",
+              textAlign: "right",
+              marginBottom: "0",
+            }}
+          >
             _2019_CDMX, Mexico
             <br />
             _colaboration with Alejandro Palacio,

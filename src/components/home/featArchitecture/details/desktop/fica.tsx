@@ -36,7 +36,7 @@ export const Fica = (props: FicaProps) => {
             <h1
               style={{
                 backgroundColor: "#E4CCF4",
-                fontSize: "90px",
+                fontSize: screenWidthSize / 10,
                 margin: "0",
                 textAlign: "right",
               }}

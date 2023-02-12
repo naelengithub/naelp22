@@ -49,7 +49,7 @@ export const Contact = (props: ContactProps) => {
               fontSize: screenWidthSize / 13,
             }}
           >
-            anaelisa@mailmasker.com
+            thisisanaelisa@gmail.com
           </h1>
           <p
             style={{

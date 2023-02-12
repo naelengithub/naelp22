@@ -73,7 +73,7 @@ export default function Contact() {
         </form>
         <div>
           <div style={{ borderTop: "solid 1px #B38BFA" }}>
-            <p>anaelisa@mailmasker.com</p>
+            <p>thisisanaelisa@gmail.com</p>
           </div>
           <div style={{ borderTop: "solid 1px #B38BFA" }}>
             <p>TG naelentransito</p>
