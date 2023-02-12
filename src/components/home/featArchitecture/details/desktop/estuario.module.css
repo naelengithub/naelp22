@@ -1,0 +1,10 @@
+.container {
+  background-color: #e4ccf4;
+}
+
+/* second priority */
+@media (min-width: 1250px) {
+  .container h1 {
+    font-size: 90px;
+  }
+}

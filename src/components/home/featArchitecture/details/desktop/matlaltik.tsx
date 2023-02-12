@@ -25,12 +25,12 @@ export const Matlaltik = (props: MatlaltikProps) => {
         style={{
           boxSizing: "border-box",
           display: "flex",
-          flexDirection: "row",
           position: "relative",
         }}
       >
         <div
           style={{
+            backgroundColor: "#e4ccf4",
             display: "flex",
             flexDirection: "column",
             position: "absolute",
@@ -42,7 +42,7 @@ export const Matlaltik = (props: MatlaltikProps) => {
         >
           <h1
             style={{
-              fontSize: "90px",
+              fontSize: screenWidthSize / 10,
               margin: "0",
             }}
           >
@@ -65,6 +65,7 @@ export const Matlaltik = (props: MatlaltikProps) => {
         <div
           style={{
             position: "absolute",
+            top: (screenWidthSize / 10) * 0.3,
             right: -(screenWidthSize / 10) * 6,
           }}
         >
