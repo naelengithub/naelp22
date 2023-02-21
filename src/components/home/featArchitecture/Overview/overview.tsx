@@ -33,7 +33,7 @@ export const FeatArch = (props: FeatArchProps) => {
       <div className={styles.container}>
         <div
           style={{
-            backgroundColor: "#E4CCF4",
+            backgroundColor: "#40798C",
             paddingTop: "3rem",
             height: screenWidthSize / 1.2,
           }}

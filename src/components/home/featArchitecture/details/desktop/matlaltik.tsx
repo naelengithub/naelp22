@@ -30,7 +30,7 @@ export const Matlaltik = (props: MatlaltikProps) => {
       >
         <div
           style={{
-            backgroundColor: "#e4ccf4",
+            backgroundColor: "#40798C",
             display: "flex",
             flexDirection: "column",
             position: "absolute",

@@ -22,7 +22,7 @@ export const Contact = (props: ContactProps) => {
     <div className={styles.container}>
       <div
         style={{
-          backgroundColor: "#C9D6FF",
+          backgroundColor: "#F7C678",
           display: "flex",
           height: screenWidthSize / 1.8,
           position: "relative",

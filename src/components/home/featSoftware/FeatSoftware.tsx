@@ -24,7 +24,7 @@ export const FeatSoftware = (props: FeatSoftwareProps) => {
     <div className={styles.container}>
       <div
         style={{
-          backgroundColor: "pink",
+          backgroundColor: "#C6878F",
           display: "flex",
           position: "relative",
           height: screenWidthSize / 1.2,
