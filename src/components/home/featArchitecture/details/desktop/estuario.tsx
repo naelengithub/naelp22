@@ -26,7 +26,7 @@ export const Estuario = (props: EstuarioProps) => {
         <div
           //CONTAINER
           style={{
-            backgroundColor: "#e4ccf4",
+            backgroundColor: "#40798C",
             boxSizing: "border-box",
             display: "flex",
             flexDirection: "column",

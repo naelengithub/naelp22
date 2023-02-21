@@ -75,7 +75,7 @@ export const Xitle = (props: XitleProps) => {
         >
           <p
             style={{
-              backgroundColor: "#e4ccf4",
+              backgroundColor: "#40798C",
               textAlign: "right",
               marginBottom: "0",
             }}

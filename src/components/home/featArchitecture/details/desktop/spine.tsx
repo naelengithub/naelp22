@@ -22,7 +22,7 @@ export const Spine = (props: SpineProps) => {
     return (
       <div
         style={{
-          backgroundColor: "#e4ccf4",
+          backgroundColor: "#40798C",
           display: "flex",
           position: "absolute",
           top: -(screenWidthSize / 10) * 3.65,

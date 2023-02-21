@@ -21,7 +21,7 @@ export const FeatDesign = (props: FeatDesignProps) => {
     <div className={styles.container}>
       <div
         style={{
-          backgroundColor: "#FFCCB4",
+          backgroundColor: "#6BA368",
           display: "flex",
           height: screenWidthSize,
           justifyContent: "center",
