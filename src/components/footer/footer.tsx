@@ -34,7 +34,7 @@ export const Footer = (props: FooterProps) => {
           justifyContent: "space-between",
         }}
       >
-        <p>copyright © 2022, designed and built with &hearts; in Mexico City</p>
+        <p>copyright © 2022, designed and built with &hearts; in Berlin</p>
         <button
           onClick={() => {
             window.scrollTo({ top: 0, left: 0, behavior: "smooth" });

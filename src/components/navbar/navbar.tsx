@@ -31,28 +31,6 @@ export const NavBar = (props: NavBarProps) => {
   if (!screenWidthSize) {
     return null;
   } else {
-    if (screenWidthSize < 1024) {
-      return (
-        <nav>
-          <div style={{ display: "flex", position: "relative", zIndex: 100 }}>
-            <div className={styles.container}>
-              <div>
-                <Link href="/">
-                  <h1>ana elisa</h1>
-                </Link>
-                <p>software developer, architect</p>
-              </div>
-              <h3 onClick={handleClick}>{isOpen ? "x" : "..."}</h3>
-            </div>
-            <div className={styles.toggleContainer}>
-              {isOpen ? <Toggle /> : null}
-            </div>
-          </div>
-        </nav>
-      );
-    }
-  }
-  {
     return (
       <nav>
         <div className={styles.container}>
@@ -65,58 +43,8 @@ export const NavBar = (props: NavBarProps) => {
           <div style={{ display: "flex", gap: "2rem" }}>
             <button
               onClick={() => {
-                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-              }}
-              style={{
-                backgroundColor: "transparent",
-                border: "solid",
-                borderRadius: "10px",
-                paddingRight: "1rem",
-                paddingLeft: "1rem",
-              }}
-            >
-              architecture
-            </button>
-            <button
-              onClick={() => {
                 window.scrollTo({
-                  top: screenWidthSize,
-                  left: 0,
-                  behavior: "smooth",
-                });
-              }}
-              style={{
-                backgroundColor: "transparent",
-                border: "solid",
-                borderRadius: "10px",
-                paddingRight: "1rem",
-                paddingLeft: "1rem",
-              }}
-            >
-              design
-            </button>
-            <button
-              onClick={() => {
-                window.scrollTo({
-                  top: screenWidthSize * 2.1,
-                  left: 0,
-                  behavior: "smooth",
-                });
-              }}
-              style={{
-                backgroundColor: "transparent",
-                border: "solid",
-                borderRadius: "10px",
-                paddingRight: "1rem",
-                paddingLeft: "1rem",
-              }}
-            >
-              software engineering
-            </button>
-            <button
-              onClick={() => {
-                window.scrollTo({
-                  top: screenWidthSize * 3,
+                  top: screenWidthSize * 30,
                   left: 0,
                   behavior: "smooth",
                 });
