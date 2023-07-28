@@ -97,7 +97,7 @@ export const FeatSoftware = (props: FeatSoftwareProps) => {
           </div>
           <h1
             style={{
-              fontSize: screenWidthSize / 5.75,
+              fontSize: screenWidthSize / 6,
               margin: 0,
             }}
           >
