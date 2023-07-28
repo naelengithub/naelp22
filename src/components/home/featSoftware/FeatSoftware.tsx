@@ -101,9 +101,9 @@ export const FeatSoftware = (props: FeatSoftwareProps) => {
               margin: 0,
             }}
           >
-            software
+            product
             <br />
-            engineering
+            development
           </h1>
         </div>
         <div>
