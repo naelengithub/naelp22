@@ -22,11 +22,7 @@ export const Matlaltik = (props: MatlaltikProps) => {
     return (
       <div
         //CONTAINER
-        style={{
-          boxSizing: "border-box",
-          display: "flex",
-          position: "relative",
-        }}
+        className="flex flex-col bg-red-300"
       >
         <div
           style={{
@@ -34,20 +30,12 @@ export const Matlaltik = (props: MatlaltikProps) => {
             display: "flex",
             flexDirection: "column",
             position: "absolute",
-            top: -(screenWidthSize / 10) * 5,
-            left: screenWidthSize / 10,
+            bottom: 5,
+            left: screenWidthSize / 12,
             width: (screenWidthSize / 10) * 6,
             zIndex: 20,
           }}
         >
-          <h1
-            style={{
-              fontSize: screenWidthSize / 10,
-              margin: "0",
-            }}
-          >
-            matlaltik
-          </h1>
           <div
             style={{
               position: "relative",
@@ -62,13 +50,7 @@ export const Matlaltik = (props: MatlaltikProps) => {
             />
           </div>
         </div>
-        <div
-          style={{
-            position: "absolute",
-            top: (screenWidthSize / 10) * 0.3,
-            right: -(screenWidthSize / 10) * 6,
-          }}
-        >
+        <div>
           <p style={{ margin: 0, textAlign: "end" }}>
             _2018_CDMX, Mexico
             <br />

@@ -16,7 +16,7 @@ export interface FeatArchProps {
 
 /**
  * @name FeatArch
- * @description FAQs feature component.
+ * @description Arq feature component.
  */
 export const FeatArch = (props: FeatArchProps) => {
   const { className } = props;
@@ -33,7 +33,7 @@ export const FeatArch = (props: FeatArchProps) => {
       <div className={styles.container}>
         <div
           style={{
-            backgroundColor: "#40798C",
+            backgroundColor: "#ded8ce",
             paddingTop: "3rem",
             height: screenWidthSize / 1.2,
           }}
@@ -50,15 +50,14 @@ export const FeatArch = (props: FeatArchProps) => {
                   top: (screenWidthSize / 10) * 2,
                   left: (screenWidthSize / 10) * 2,
                   width: screenWidthSize / 10,
-                  boxShadow: "-15px -10px",
                 }}
               >
                 <div>
                   <ProjectItem
                     alt="Estuario project."
-                    src="/BnW/E.jpg"
-                    width={screenWidthSize / 10}
-                    height={screenWidthSize / 20}
+                    src="/images/001/the-sleepover.jpeg"
+                    width={screenWidthSize / 14}
+                    height={screenWidthSize / 22}
                   >
                     <div style={{}}>
                       <Estuario />
@@ -74,13 +73,12 @@ export const FeatArch = (props: FeatArchProps) => {
                   width: screenWidthSize / 10,
                   height: (screenWidthSize / 10) * 0.5,
                   margin: "0",
-                  boxShadow: "10px -15px",
                 }}
               >
                 <ProjectItem
                   alt="Xitle project."
-                  src="/BnW/X.jpg"
-                  width={screenWidthSize / 10}
+                  src="/images/001/forrest-gump-running.avif"
+                  width={screenWidthSize / 12}
                   height={screenWidthSize / 20}
                 >
                   <Xitle />
@@ -88,7 +86,6 @@ export const FeatArch = (props: FeatArchProps) => {
               </div>
               <div
                 style={{
-                  boxShadow: "-15px -13px",
                   position: "absolute",
                   top: (screenWidthSize / 10) * 3.5,
                   left: (screenWidthSize / 10) * 3,
@@ -97,8 +94,8 @@ export const FeatArch = (props: FeatArchProps) => {
               >
                 <ProjectItem
                   alt="Spine project."
-                  src="/BnW/S.jpg"
-                  width={screenWidthSize / 10}
+                  src="/images/001/suns.jpeg"
+                  width={screenWidthSize / 12}
                   height={screenWidthSize / 20}
                 >
                   <Spine />
@@ -106,7 +103,6 @@ export const FeatArch = (props: FeatArchProps) => {
               </div>
               <div
                 style={{
-                  boxShadow: "-13px -10px",
                   position: "absolute",
                   top: (screenWidthSize / 10) * 4.5,
                   left: screenWidthSize / 10,
@@ -115,8 +111,8 @@ export const FeatArch = (props: FeatArchProps) => {
               >
                 <ProjectItem
                   alt="Matlaltik project."
-                  src="/BnW/O.jpg"
-                  width={screenWidthSize / 10}
+                  src="/images/001/pokemon.webp"
+                  width={screenWidthSize / 12}
                   height={screenWidthSize / 20}
                 >
                   <Matlaltik />
@@ -124,7 +120,6 @@ export const FeatArch = (props: FeatArchProps) => {
               </div>
               <div
                 style={{
-                  boxShadow: "15px -13px",
                   position: "absolute",
                   top: (screenWidthSize / 10) * 3,
                   left: (screenWidthSize / 10) * 8,
@@ -133,7 +128,7 @@ export const FeatArch = (props: FeatArchProps) => {
               >
                 <ProjectItem
                   alt="Fica project."
-                  src="/BnW/F.jpg"
+                  src="/images/001/pam.jpeg"
                   width={screenWidthSize / 10}
                   height={screenWidthSize / 20}
                 >
@@ -146,7 +141,6 @@ export const FeatArch = (props: FeatArchProps) => {
             <div
               style={{
                 position: "absolute",
-                height: (screenWidthSize / 10) * 5.5,
                 top: (screenWidthSize / 10) * 5.5,
                 right: 0,
               }}

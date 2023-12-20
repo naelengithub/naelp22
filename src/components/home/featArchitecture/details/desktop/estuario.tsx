@@ -32,7 +32,7 @@ export const Estuario = (props: EstuarioProps) => {
             flexDirection: "column",
             position: "absolute",
             top: -(screenWidthSize / 10) * 2,
-            left: screenWidthSize / 10,
+            left: screenWidthSize / 13,
             zIndex: 20,
           }}
         >

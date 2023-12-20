@@ -38,7 +38,7 @@ export const NavBar = (props: NavBarProps) => {
             <Link href="/">
               <h1>ana elisa</h1>
             </Link>
-            <p>product developer, architect</p>
+            <p>product engineer, architect</p>
           </div>
           <div style={{ display: "flex", gap: "2rem" }}>
             <button
