@@ -20,7 +20,7 @@ export default function Home() {
         <p>
           This site is being renovated.
           <br />
-          Check out the experience starting Feb, 2024
+          Check out the experience in 2024!
         </p>
       </div>
       <div className="absolute w-full h-full">
