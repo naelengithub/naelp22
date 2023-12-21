@@ -15,15 +15,15 @@ export default function Home() {
         <title>Ana Elisa Vargas</title>
       </Head>
       {/* <NavBar /> */}
-      <div className="pt-8 text-center gap-4 mx-4">
+      <div className="pt-8 text-center gap-4 mx-4 z-[100]">
         <h2>Stay Tuned...</h2>
         <p>
           This site is being renovated.
           <br />
-          Check out the experience in Feb, 2024
+          Check out the experience starting Feb, 2024
         </p>
       </div>
-      <div className="absolute">
+      <div className="absolute w-full h-full">
         {/* Render the DynamicP5Sketch component */}
         <DynamicP5Sketch />
       </div>

@@ -1,29 +1,24 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import Sketch from "react-p5";
 
 function P5Sketch() {
-  const numBalls = 13;
+  const numBalls = 27;
   const spring = 0.05;
   const gravity = 0.03;
   const friction = -0.9;
   const balls = [];
   const p5Instance = useRef(null); // Use a ref for the p5 instance
 
-  const [canvasSize, setCanvasSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
-
   const setup = (p5, canvasParentRef) => {
     p5Instance.current = p5; // Save the p5 instance reference to the ref
-    p5.createCanvas(canvasSize.width, canvasSize.height).parent(
+    p5.createCanvas(window.innerWidth, window.innerHeight).parent(
       canvasParentRef
     );
 
     for (let i = 0; i < numBalls; i++) {
       balls[i] = new Ball(
-        p5.random(canvasSize.width),
-        p5.random(canvasSize.height),
+        p5.random(window.innerWidth),
+        p5.random(window.innerHeight),
         p5.random(30, 70),
         i,
         balls
@@ -43,18 +38,11 @@ function P5Sketch() {
   };
 
   const windowResized = () => {
-    setCanvasSize({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    });
+    updateCanvasSize(p5Instance.current);
+  };
 
-    // Access the p5 instance using the ref
-    p5Instance.current.resizeCanvas(canvasSize.width, canvasSize.height);
-
-    balls.forEach((ball) => {
-      ball.x = p5Instance.current.random(canvasSize.width);
-      ball.y = p5Instance.current.random(canvasSize.height);
-    });
+  const updateCanvasSize = (p5) => {
+    p5.resizeCanvas(window.innerWidth, window.innerHeight);
   };
 
   useEffect(() => {
@@ -62,7 +50,7 @@ function P5Sketch() {
     return () => {
       window.removeEventListener("resize", windowResized);
     };
-  }, [canvasSize]);
+  }, []);
 
   class Ball {
     constructor(xin, yin, din, idin, oin) {
@@ -101,8 +89,8 @@ function P5Sketch() {
       this.x += this.vx;
       this.y += this.vy;
 
-      const canvasWidth = canvasSize.width;
-      const canvasHeight = canvasSize.height;
+      const canvasWidth = window.innerWidth;
+      const canvasHeight = window.innerHeight;
 
       if (this.x + this.diameter / 2 > canvasWidth) {
         this.x = canvasWidth - this.diameter / 2;
