@@ -15,7 +15,7 @@ export default function Home() {
         <title>Ana Elisa Vargas</title>
       </Head>
       {/* <NavBar /> */}
-      <div className="pt-8 text-center gap-4 z-[100]">
+      <div className="pt-8 text-center text-charcoal gap-4 z-[100]">
         <h2>Stay tuned...</h2>
         <h3>
           This site is under renovation <br />
