@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Sketch from "react-p5";
 
 function P5Sketch() {
@@ -7,44 +7,53 @@ function P5Sketch() {
   const gravity = 0.03;
   const friction = -0.9;
   const balls = [];
+  const p5Instance = useRef(null); // Use a ref for the p5 instance
+
+  const [canvasSize, setCanvasSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
 
   const setup = (p5, canvasParentRef) => {
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
-
-    p5.createCanvas(windowWidth, windowHeight).parent(canvasParentRef);
+    p5Instance.current = p5; // Save the p5 instance reference to the ref
+    p5.createCanvas(canvasSize.width, canvasSize.height).parent(
+      canvasParentRef
+    );
 
     for (let i = 0; i < numBalls; i++) {
       balls[i] = new Ball(
-        p5.random(windowWidth),
-        p5.random(windowHeight),
+        p5.random(canvasSize.width),
+        p5.random(canvasSize.height),
         p5.random(30, 70),
         i,
         balls
       );
     }
     p5.noStroke();
-    p5.fill(0);
+    p5.fill(255, 182, 193);
   };
 
   const draw = (p5) => {
     p5.background(255, 247, 237);
     balls.forEach((ball) => {
       ball.collide();
-      ball.move(p5); // Pass the p5 object
+      ball.move(p5);
       ball.display(p5);
     });
   };
 
-  const windowResized = (p5) => {
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
+  const windowResized = () => {
+    setCanvasSize({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
 
-    p5.resizeCanvas(windowWidth, windowHeight);
+    // Access the p5 instance using the ref
+    p5Instance.current.resizeCanvas(canvasSize.width, canvasSize.height);
 
     balls.forEach((ball) => {
-      ball.x = p5.random(windowWidth);
-      ball.y = p5.random(windowHeight);
+      ball.x = p5Instance.current.random(canvasSize.width);
+      ball.y = p5Instance.current.random(canvasSize.height);
     });
   };
 
@@ -53,7 +62,7 @@ function P5Sketch() {
     return () => {
       window.removeEventListener("resize", windowResized);
     };
-  }, []);
+  }, [canvasSize]);
 
   class Ball {
     constructor(xin, yin, din, idin, oin) {
@@ -92,8 +101,8 @@ function P5Sketch() {
       this.x += this.vx;
       this.y += this.vy;
 
-      const canvasWidth = p5.width;
-      const canvasHeight = p5.height;
+      const canvasWidth = canvasSize.width;
+      const canvasHeight = canvasSize.height;
 
       if (this.x + this.diameter / 2 > canvasWidth) {
         this.x = canvasWidth - this.diameter / 2;
@@ -110,10 +119,6 @@ function P5Sketch() {
         this.y = this.diameter / 2;
         this.vy *= friction;
       }
-    }
-
-    display(p5) {
-      p5.ellipse(this.x, this.y, this.diameter, this.diameter);
     }
 
     display(p5) {
