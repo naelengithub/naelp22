@@ -10,12 +10,13 @@ export default function Home() {
         <title>Ana Elisa Vargas</title>
       </Head>
       {/* <NavBar /> */}
-      <div className="pt-8 text-center gap-4">
-        <h2>Stay tuned...</h2>
-        <h3>
-          This site is under renovation <br />
-          Feb 2024
-        </h3>
+      <div className="pt-8 text-center gap-4 mx-4">
+        <h2>Stay Tuned...</h2>
+        <p>
+          This site is being renovated.
+          <br />
+          Check out the experience in Feb, 2024
+        </p>
       </div>
       <div className="sketch">{/* <P5Sketch /> */}</div>
       {/* <Footer /> */}
