@@ -1,11 +1,16 @@
 import { Footer } from "../src/components/footer/footer";
 import { NavBar } from "../src/components/navbar/navbar";
 import Head from "next/head";
-import P5Sketch from "../src/components/p5-sketch";
+import dynamic from "next/dynamic";
+
+// Import P5Sketch dynamically
+const DynamicP5Sketch = dynamic(() => import("../src/components/p5-sketch"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-orange-50 flex flex-col">
+    <div className="min-h-screen flex relative flex-col">
       <Head>
         <title>Ana Elisa Vargas</title>
       </Head>
@@ -18,7 +23,10 @@ export default function Home() {
           Check out the experience in Feb, 2024
         </p>
       </div>
-      <div className="sketch">{/* <P5Sketch /> */}</div>
+      <div className="absolute">
+        {/* Render the DynamicP5Sketch component */}
+        <DynamicP5Sketch />
+      </div>
       {/* <Footer /> */}
     </div>
   );
