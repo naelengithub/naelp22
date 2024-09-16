@@ -13,7 +13,6 @@ WORKDIR /app
 COPY --from=development /app/node_modules ./node_modules
 COPY --from=development /app/package*.json ./
 
-COPY components /app/components
 COPY pages /app/pages
 COPY public /app/public
 COPY src /app/src
