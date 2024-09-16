@@ -10,3 +10,8 @@ export const gameStartState = atom<GameStart>({
     status: null,
   },
 });
+
+export const timeState = atom({
+  key: "timeState",
+  default: 25200, // Default value for 7 am in seconds
+});
