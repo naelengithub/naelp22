@@ -16,11 +16,11 @@ export default function Home() {
       </Head>
       {/* <NavBar /> */}
       <div className="pt-36 text-center gap-4 mx-4 z-[100]">
-        <h2>Stay Tuned...</h2>
+        <h2>Almost there...</h2>
         <p>
-          This site is being renovated.
+          This site is in the final stage of renovation.
           <br />
-          Check out the experience in 2024!
+          Check out the experience in October!
         </p>
       </div>
       <div className="absolute w-full h-full">
