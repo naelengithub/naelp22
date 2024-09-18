@@ -15,9 +15,11 @@ export default function Home() {
         {webProjects.map((project, index) => (
           <WebProject
             key={index}
-            title={project.title}
+            brand={project.brand}
             year={project.year}
             images={project.images}
+            url={project.url}
+            concept={project.concept}
           />
         ))}
         <div className="absolute bottom-0 pl-6 pb-6">INFO</div>

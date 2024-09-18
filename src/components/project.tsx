@@ -3,40 +3,72 @@ import Image from "next/image";
 
 export interface WebProjectProps {
   className?: string;
-  title: string;
+  brand: string;
   year: number;
-  images: string[];
+  url: string;
+  concept: string;
+  images: {
+    category: string;
+    sources: string[];
+  }[];
 }
 
 /**
  * @name WebProject
- * @description Each webproject added in as prop.
+ * @description Each web project added in as a prop.
  */
 
 export const WebProject = (props: WebProjectProps) => {
-  const { className, title, year, images } = props;
+  const { className, brand, year, images, url, concept } = props;
+
+  // Function to render the images for each category
+  const renderImages = (sources: string[]) => {
+    return sources.map((src, index) => {
+      const isMbImage = src.includes("mb");
+      const isFbCover = src.includes("cover");
+      const imageWidth = isFbCover ? 800 : isMbImage ? 200 : 500;
+
+      return (
+        <div
+          key={index}
+          className="carousel-item min-w-fit h-80 overflow-scroll"
+        >
+          <Image
+            src={src}
+            alt={`${brand} - Image ${index + 1}`}
+            width={imageWidth}
+            height={300}
+            className=""
+          />
+        </div>
+      );
+    });
+  };
+
   return (
-    <div className="p-6">
-      <div className="flex overflow-x-scroll gap-4">
-        {images.map((src, index) => (
-          <div
-            key={index}
-            className="carousel-item min-w-fit h-80 overflow-scroll"
-          >
-            <Image
-              src={src}
-              alt={`${title} - Image ${index + 1}`}
-              width={500}
-              height={300}
-              className=""
-            />
+    <div className={`flex flex-col p-6 ${className}`}>
+      <h3>{concept}</h3>
+      <p>
+        {brand}, {year}
+      </p>
+      <div className="flex flex-row overflow-x-auto gap-[50px]">
+        {images.map((imageGroup, groupIndex) => (
+          <div key={groupIndex} className="mb-4 flex-shrink-0">
+            <div className="flex overflow-x-scroll gap-2">
+              {renderImages(imageGroup.sources)}
+            </div>
+            <p className="text-right">
+              {imageGroup.category.charAt(0).toUpperCase() +
+                imageGroup.category.slice(1)}
+            </p>
           </div>
         ))}
       </div>
-      <div className="flex w-full justify-between">
-        <h3>{title}</h3>
+
+      {/* <div className="flex w-full justify-between">
+        <h3>{url}</h3>
         <h3>{year}</h3>
-      </div>
+      </div> */}
     </div>
   );
 };
