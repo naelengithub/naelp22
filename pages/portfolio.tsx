@@ -5,9 +5,6 @@ import { webProjects } from "../src/components/web/data";
 import { WebProject } from "../src/components/project";
 
 export default function Home() {
-  const clp = webProjects[0];
-  const pulsoPacheco = webProjects[1];
-
   return (
     <div className="">
       <Head>
@@ -15,16 +12,14 @@ export default function Home() {
       </Head>
       <div className="relative min-h-screen">
         <NavBarPortfolio />
-        <WebProject
-          title={clp.title}
-          year={clp.year}
-          images={clp.images} // Passing the array of images
-        />
-        <WebProject
-          title={pulsoPacheco.title}
-          year={pulsoPacheco.year}
-          images={pulsoPacheco.images} // Passing the array of images
-        />
+        {webProjects.map((project, index) => (
+          <WebProject
+            key={index}
+            title={project.title}
+            year={project.year}
+            images={project.images}
+          />
+        ))}
         <div className="absolute bottom-0 pl-6 pb-6">INFO</div>
       </div>
     </div>

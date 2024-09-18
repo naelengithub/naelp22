@@ -5,7 +5,7 @@ export interface WebProjectProps {
   className?: string;
   title: string;
   year: number;
-  images: string[]; // Updated to accept an array of image URLs
+  images: string[];
 }
 
 /**
