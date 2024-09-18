@@ -1,5 +1,18 @@
 export const webProjects = [
   {
+    title: "Dr. Pablo Vicencio",
+    year: 2024,
+    description:
+      "Brand identity, web design and development. Head of product design and development.",
+    tools: "Adobe Photoshop, Figma, Wordpress, Elementor",
+    role: "Designer, Principal Engineer & Product Lead",
+    images: [
+      "/dr-pablo-lopez/Desktop.png",
+      "/dr-pablo-lopez/Mobile.png",
+      "/dr-pablo-lopez/Nav-mobile.png",
+    ],
+  },
+  {
     title: "El Colegio La Paz",
     year: 2024,
     description:
@@ -23,9 +36,9 @@ export const webProjects = [
       "Figma, typescript, next.js, react, tailwindCSS, herzner, caprover, pocketbase",
     role: "Principal Engineer & Product Lead",
     images: [
-      "https://example.com/images/ecommerce1.png",
-      "https://example.com/images/ecommerce2.png",
-      "https://example.com/images/ecommerce3.png",
+      "/pulso-pacheco/dktp-home.png",
+      "/pulso-pacheco/dktp-about.png",
+      "/pulso-pacheco/mb-home.png",
     ],
   },
 ];
