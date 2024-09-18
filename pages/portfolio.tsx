@@ -3,6 +3,7 @@ import React from "react";
 import { NavBarPortfolio } from "../src/components/navbar/navbarPortfolio";
 import { webProjects } from "../src/components/web/data";
 import { WebProject } from "../src/components/project";
+// import DynamicShadowText from "../src/components/DynamicShadowText";
 
 export default function Home() {
   return (
@@ -12,8 +13,7 @@ export default function Home() {
       </Head>
       <div className="relative min-h-screen">
         <NavBarPortfolio />
-        <h1 className="text-center text-floral-white m-40 text-8xl">
-          {" "}
+        <h1 className="text-center text-floral-white md:my-40 mx-20 text-8xl">
           <span
             style={{
               textShadow: `
@@ -23,9 +23,10 @@ export default function Home() {
               40px 40px 80px rgba(255, 20, 147, 0.4)`,
             }}
           >
-            ana elisa
+            a few works
           </span>
         </h1>
+        {/* <DynamicShadowText text="some works" /> */}
         {webProjects.map((project, index) => (
           <WebProject
             key={index}
