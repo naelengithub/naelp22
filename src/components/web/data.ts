@@ -1,7 +1,7 @@
 export const webProjects = [
   {
     brand: "Dr. Pablo Vicencio",
-    url: "drpablolopez.com",
+    url: "",
     year: 2024,
     concept: "Brand Identity",
     description:
@@ -10,7 +10,7 @@ export const webProjects = [
     role: "Designer, Principal Engineer & Product Lead",
     images: [
       {
-        category: "landing Page",
+        category: "Landing Page",
         sources: [
           "/dr-pablo-lopez/home-dk.png",
           "/dr-pablo-lopez/home-mb.png",
@@ -18,25 +18,31 @@ export const webProjects = [
         ],
       },
       {
-        category: "facebook cover",
+        category: "Facebook Cover",
         sources: ["/dr-pablo-lopez/Fb-cover.jpg"],
       },
       {
-        category: "business card",
-        sources: ["/dr-pablo-lopez/business-card.jpg"],
+        category: "Business Cards",
+        sources: [
+          "/dr-pablo-lopez/b-card-red.jpg",
+          "/dr-pablo-lopez/b-card-red-back.jpg",
+          "/dr-pablo-lopez/b-card.jpg",
+          "/dr-pablo-lopez/b-card-back.jpg",
+        ],
       },
     ],
   },
   {
     brand: "El Colegio La Paz",
+    url: "https://elcolegiolapaz.edu.mx",
     year: 2024,
-    concept: "Rebranding",
+    concept: "Website Revamp",
     description:
       "Design and development of their website. Revamp, design and development for El Colegio La Paz's website - Kindergarten, Elementary School, Middle School, High School. Includes a school calendar with events and an appointment manager. Head of product design and development.",
     tools: "Figma, Wordpress, Elementor",
     role: "Principal Engineer & Product Lead",
     images: [
-      { category: "home", sources: ["/clp/Portada.png"] },
+      { category: "home", sources: ["/clp/Homepage-dk.jpg"] },
       {
         category: "about",
         sources: [
@@ -52,6 +58,7 @@ export const webProjects = [
   },
   {
     brand: "Pulso Pacheco",
+    url: "https://pulsopacheco.com",
     year: 2024,
     concept: "Web Design",
     description: "Design and development of Diego Pacheco's portfolio website.",

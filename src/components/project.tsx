@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export interface WebProjectProps {
   className?: string;
@@ -26,7 +27,8 @@ export const WebProject = (props: WebProjectProps) => {
     return sources.map((src, index) => {
       const isMbImage = src.includes("mb");
       const isFbCover = src.includes("cover");
-      const imageWidth = isFbCover ? 800 : isMbImage ? 200 : 500;
+      const isCard = src.includes("card");
+      const imageWidth = isFbCover ? 800 : isMbImage ? 200 : isCard ? 182 : 500;
 
       return (
         <div
@@ -48,9 +50,11 @@ export const WebProject = (props: WebProjectProps) => {
   return (
     <div className={`flex flex-col p-6 ${className}`}>
       <h3>{concept}</h3>
-      <p>
-        {brand}, {year}
-      </p>
+      <Link href={url} target="_blank">
+        <p>
+          {brand}, {year}
+        </p>
+      </Link>
       <div className="flex flex-row overflow-x-auto gap-[50px]">
         {images.map((imageGroup, groupIndex) => (
           <div key={groupIndex} className="mb-4 flex-shrink-0">
