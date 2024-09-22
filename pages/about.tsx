@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useWindowSize } from "../src/hooks/useWindowSize";
+import DynamicShadowText from "../src/components/DynamicShadowText";
 
 export default function Contact() {
   const size = useWindowSize();
@@ -8,10 +9,11 @@ export default function Contact() {
   return (
     <div
       style={{
-        backgroundImage: "url('/images/test.jpg')",
+        backgroundImage: "url('/images/bg2.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
         minHeight: "100vh",
       }}
     >
@@ -19,7 +21,7 @@ export default function Contact() {
         designed and built by urs truly, with &hearts; in Berlin © 2024
       </p>
       <div>
-        <div className="block w-1/4 pt-80 p-4 min-w-[360px md:m-auto">
+        <div className="block pt-80 w-1/4 p-4 min-w-[360px] md:m-auto">
           <div className="float-left w-48 mr-4">
             <Image
               alt="Ana Elisa Vargas"
@@ -28,7 +30,7 @@ export default function Contact() {
               height={300}
             />
           </div>
-          <div className="mt-20 ml-28">
+          <div className="mt-20 ml-28 mb-14">
             <p>
               She is a seasoned project lead with a presence in Berlin, Mexico
               City, and San Francisco. Although originally trained as an
@@ -50,9 +52,9 @@ export default function Contact() {
           onClick={() => {
             window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
           }}
-          className="p-4 w-full text-right"
+          className="p-4 w-full text-right text-2xl"
         >
-          scroll to top &uarr;
+          <DynamicShadowText text="scroll to top &uarr;" />
         </button>
       </div>
     </div>

@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className=" bg-floral-white">
+    <div className="bg-floral-white">
       <Head>
         <title>Portfolio</title>
       </Head>
@@ -39,12 +39,19 @@ export default function Home() {
               concept={project.concept}
             />
           ))}
-          <div className="fixed bottom-0 md:bottom-1/3 right-8 pl-6 pb-6">
+          <div className="fixed bottom-24 md:bottom-1/3 right-8 pl-6 pb-6 text-6xl">
             <Link href="/about">
               <DynamicShadowText text="info" />
             </Link>
           </div>
-          <Footer />
+          <button
+            onClick={() => {
+              window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            }}
+            className="p-4 w-full text-right text-2xl"
+          >
+            <DynamicShadowText text="scroll to top &uarr;" />
+          </button>{" "}
         </div>
       </div>
     </div>

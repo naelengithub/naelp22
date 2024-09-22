@@ -27,19 +27,17 @@ export default function DynamicShadowText({ text }) {
   const shadowY = (mousePosition.y / window.innerHeight - 0.5) * 20;
 
   return (
-    <div className="flex justify-center items-center">
-      <h1
-        className="text-floral-white text-6xl"
-        style={{
-          textShadow: `${shadowX}px ${shadowY}px 30px rgba(255, 105, 180, 1),
+    <span
+      className="text-floral-white m-6"
+      style={{
+        textShadow: `${shadowX}px ${shadowY}px 30px rgba(255, 105, 180, 1),
           ${shadowX}px ${shadowY}px 30px rgba(255, 20, 147, 1),
           ${shadowX}px ${shadowY}px 80px rgba(255, 20, 147, 0.8),
           ${shadowX}px ${shadowY}px 80px rgba(255, 20, 147, 0.6),
           ${shadowX}px ${shadowY}px 80px rgba(255, 20, 147, 0.4)`,
-        }}
-      >
-        {text}
-      </h1>
-    </div>
+      }}
+    >
+      {text}
+    </span>
   );
 }
