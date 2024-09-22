@@ -19,7 +19,7 @@ export const Footer = (props: FooterProps) => {
   return (
     <div
       style={{
-        backgroundColor: "#F7C678",
+        backgroundColor: "#FFF7ED",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -34,7 +34,7 @@ export const Footer = (props: FooterProps) => {
           justifyContent: "space-between",
         }}
       >
-        <p>copyright © 2022, designed and built with &hearts; in Berlin</p>
+        <p>designed and built by urs truly, with &hearts; in Berlin © 2024</p>
         <button
           onClick={() => {
             window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -47,5 +47,3 @@ export const Footer = (props: FooterProps) => {
     </div>
   );
 };
-
-// @refresh reset

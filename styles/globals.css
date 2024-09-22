@@ -6,12 +6,20 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@font-face {
+  font-family: "Apoc";
+  src: url("/fonts/Apoc-Revelations-Trial-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Rufina, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Apoc", Rufina, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
 }
 
 a {
@@ -28,12 +36,12 @@ p {
 }
 
 button {
-  font-family: Rufina;
+  font-family: "Apoc", Rufina;
   font-size: 1rem;
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 24px;
 }
 
 h2 {

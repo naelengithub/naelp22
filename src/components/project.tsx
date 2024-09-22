@@ -1,0 +1,78 @@
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+export interface WebProjectProps {
+  className?: string;
+  brand: string;
+  year: number;
+  url: string;
+  concept: string;
+  images: {
+    category: string;
+    sources: string[];
+  }[];
+}
+
+/**
+ * @name WebProject
+ * @description Each web project added in as a prop.
+ */
+
+export const WebProject = (props: WebProjectProps) => {
+  const { className, brand, year, images, url, concept } = props;
+
+  // Function to render the images for each category
+  const renderImages = (sources: string[]) => {
+    return sources.map((src, index) => {
+      const isMbImage = src.includes("mb");
+      const isFbCover = src.includes("cover");
+      const isCard = src.includes("card");
+      const imageWidth = isFbCover ? 800 : isMbImage ? 200 : isCard ? 182 : 500;
+
+      return (
+        <div
+          key={index}
+          className="carousel-item min-w-fit h-80 overflow-scroll"
+        >
+          <Image
+            src={src}
+            alt={`${brand} - Image ${index + 1}`}
+            width={imageWidth}
+            height={300}
+            className=""
+          />
+        </div>
+      );
+    });
+  };
+
+  return (
+    <div className={`flex flex-col p-6 ${className}`}>
+      <h3>{concept}</h3>
+      <Link href={url} target="_blank">
+        <p>
+          {brand}, {year}
+        </p>
+      </Link>
+      <div className="flex flex-row overflow-x-auto gap-[50px]">
+        {images.map((imageGroup, groupIndex) => (
+          <div key={groupIndex} className="mb-4 flex-shrink-0">
+            <div className="flex overflow-x-scroll gap-2">
+              {renderImages(imageGroup.sources)}
+            </div>
+            <p className="text-right">
+              {imageGroup.category.charAt(0).toUpperCase() +
+                imageGroup.category.slice(1)}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {/* <div className="flex w-full justify-between">
+        <h3>{url}</h3>
+        <h3>{year}</h3>
+      </div> */}
+    </div>
+  );
+};

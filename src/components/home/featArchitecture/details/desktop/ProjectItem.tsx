@@ -12,7 +12,7 @@ export interface ProjectItemProps {
 
 /**
  * @name ProjectItem
- * @description FAQs feature component.
+ * @description Logic for when hovering on project item, its image is rendered.
  */
 export const ProjectItem = (props: ProjectItemProps) => {
   const { className, children, alt, src, width, height } = props;
@@ -20,26 +20,33 @@ export const ProjectItem = (props: ProjectItemProps) => {
   // Hooks
   const [isSelected, setIsSelected] = React.useState(false);
 
-  // Handlers
-  const handleClick = () => {
-    setIsSelected(!isSelected);
-  };
-
   return (
-    <div>
-      <div
-        onMouseEnter={() => {
-          setIsSelected(true);
-          console.log("entered!");
-        }}
-        onMouseLeave={() => {
-          setIsSelected(false);
-          console.log("left");
-        }}
-      >
-        <ProjectImage src={src} alt={alt} width={width} height={height} />
-      </div>
-      <div>{isSelected ? children : null}</div>
+    <div
+      onMouseEnter={() => {
+        setIsSelected(true);
+        console.log("entered!");
+      }}
+      onMouseLeave={() => {
+        setIsSelected(false);
+        console.log("left");
+      }}
+      style={{ position: "relative" }}
+    >
+      <ProjectImage src={src} alt={alt} width={width} height={height} />
+      {isSelected && (
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            zIndex: 1,
+          }}
+        >
+          {children}
+        </div>
+      )}
     </div>
   );
 };
