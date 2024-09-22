@@ -2,11 +2,12 @@ import React, { useRef, useEffect } from "react";
 import Sketch from "react-p5";
 
 function P5Sketch() {
-  const numBalls = 27;
+  const numBalls = 4;
   const spring = 0.05;
   const gravity = 0.03;
   const friction = -0.9;
   const balls = [];
+  const images = []; // To store images for each ball
   const p5Instance = useRef(null); // Use a ref for the p5 instance
 
   const setup = (p5, canvasParentRef) => {
@@ -15,17 +16,23 @@ function P5Sketch() {
       canvasParentRef
     );
 
+    // Load images
+    for (let i = 0; i < numBalls; i++) {
+      images[i] = p5.loadImage(`/images/imp${i + 1}.png`); // Adjust image paths
+    }
+
+    // Create balls with bigger diameters
     for (let i = 0; i < numBalls; i++) {
       balls[i] = new Ball(
         p5.random(window.innerWidth),
         p5.random(window.innerHeight),
-        p5.random(30, 70),
+        p5.random(200, 300), // Larger ball diameters
         i,
-        balls
+        balls,
+        images[i] // Pass corresponding image
       );
     }
     p5.noStroke();
-    p5.fill(255, 182, 193);
   };
 
   const draw = (p5) => {
@@ -53,7 +60,7 @@ function P5Sketch() {
   }, []);
 
   class Ball {
-    constructor(xin, yin, din, idin, oin) {
+    constructor(xin, yin, din, idin, oin, img) {
       this.x = xin;
       this.y = yin;
       this.vx = 0;
@@ -61,6 +68,7 @@ function P5Sketch() {
       this.diameter = din;
       this.id = idin;
       this.others = oin;
+      this.img = img; // Store the image for this ball
     }
 
     collide() {
@@ -110,7 +118,18 @@ function P5Sketch() {
     }
 
     display(p5) {
+      // Draw a solid ellipse background before drawing the image
+      p5.fill(255);
       p5.ellipse(this.x, this.y, this.diameter, this.diameter);
+
+      // Display the image on top of the ellipse, clipped by the round background
+      p5.image(
+        this.img,
+        this.x - this.diameter / 2,
+        this.y - this.diameter / 2,
+        this.diameter,
+        this.diameter
+      );
     }
   }
 
