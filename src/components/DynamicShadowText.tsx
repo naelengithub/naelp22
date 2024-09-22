@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 
 export default function DynamicShadowText({ text }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true); // Now it's confirmed that this is client-side
+
     const handleMouseMove = (event) => {
       setMousePosition({
         x: event.clientX,
@@ -18,13 +21,15 @@ export default function DynamicShadowText({ text }) {
     };
   }, []);
 
+  if (!isClient) return null; // Prevent rendering on the server side
+
   const shadowX = (mousePosition.x / window.innerWidth - 0.5) * 20; // Adjust for shadow offset
   const shadowY = (mousePosition.y / window.innerHeight - 0.5) * 20;
 
   return (
-    <div className="bg-floral-white min-h-screen flex justify-center items-center">
+    <div className="flex justify-center items-center">
       <h1
-        className="text-floral-white text-8xl"
+        className="text-floral-white text-6xl"
         style={{
           textShadow: `${shadowX}px ${shadowY}px 30px rgba(255, 105, 180, 1),
           ${shadowX}px ${shadowY}px 30px rgba(255, 20, 147, 1),

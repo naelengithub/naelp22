@@ -41,7 +41,7 @@ export default function Home() {
       <div className="pt-8 text-center gap-4 mx-4 z-[100]">
         <h2>Welcome</h2>
         <div className="flex flex-col">
-          <Link href="/takeawalkwithme">Start</Link>
+          {/* <Link href="/takeawalkwithme">Start</Link> */}
           <Link href="/portfolio">Portfolio</Link>
         </div>
       </div>

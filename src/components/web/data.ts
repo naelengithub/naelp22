@@ -36,7 +36,7 @@ export const webProjects = [
     brand: "El Colegio La Paz",
     url: "https://elcolegiolapaz.edu.mx",
     year: 2024,
-    concept: "Website Revamp",
+    concept: "Website Revamp & Development",
     description:
       "Design and development of their website. Revamp, design and development for El Colegio La Paz's website - Kindergarten, Elementary School, Middle School, High School. Includes a school calendar with events and an appointment manager. Head of product design and development.",
     tools: "Figma, Wordpress, Elementor",
@@ -60,7 +60,7 @@ export const webProjects = [
     brand: "Pulso Pacheco",
     url: "https://pulsopacheco.com",
     year: 2024,
-    concept: "Web Design",
+    concept: "Web Design & Development",
     description: "Design and development of Diego Pacheco's portfolio website.",
     tools:
       "Figma, typescript, next.js, react, tailwindCSS, herzner, caprover, pocketbase",
