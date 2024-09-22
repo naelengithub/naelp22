@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { timeState } from "../src/components/games/rockPaperScissors/atoms";
+import DynamicShadowText from "../src/components/DynamicShadowText";
 
 // Import P5Sketch dynamically
 const DynamicP5Sketch = dynamic(
@@ -36,13 +37,17 @@ export default function Home() {
   return (
     <div className="min-h-screen flex relative flex-col items-center justify-center">
       <Head>
-        <title>Ana Elisa Vargas</title>
+        <title>ana elisa</title>
       </Head>
-      <div className="pt-8 text-center gap-4 mx-4 z-[100]">
+      <div className="text-center gap-4 mx-4 z-[100]">
         <h2>ana elisa</h2>
         <div className="flex flex-col">
           {/* <Link href="/takeawalkwithme">Start</Link> */}
+          {/* <h2>
+            <DynamicShadowText text="ana elisa" />
+          </h2> */}
           <Link href="/portfolio">Portfolio</Link>
+          <Link href="/about">About</Link>
         </div>
       </div>
       <div className="absolute w-full h-full">

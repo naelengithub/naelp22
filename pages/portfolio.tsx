@@ -48,10 +48,10 @@ export default function Home() {
             onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
             }}
-            className="p-4 w-full text-right text-2xl"
+            className="p-6 w-full text-right text-xl"
           >
-            <DynamicShadowText text="scroll to top &uarr;" />
-          </button>{" "}
+            <p>scroll to top &uarr;</p>
+          </button>
         </div>
       </div>
     </div>

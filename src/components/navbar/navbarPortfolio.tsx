@@ -14,9 +14,11 @@ export const NavBarPortfolio = (props: NavBarPortfolioProps) => {
 
   return (
     <nav className="p-6 text-right">
-      <div>anaelisa</div>
-      <div>
-        <Link className="pr-2" href="/portfolio">
+      <span>
+        <Link href="/">anaelisa</Link>
+      </span>
+      <p>
+        <Link className="pr-2" href="/portfolio" target="_blank">
           thisisanaelisa@gmail.com
         </Link>{" "}
         /{" "}
@@ -30,8 +32,8 @@ export const NavBarPortfolio = (props: NavBarPortfolioProps) => {
         <Link className="pl-2" href="">
           the old relic
         </Link> */}
-      </div>
-      <div>© 2024</div>
+      </p>
+      <span>© 2024</span>
     </nav>
   );
 };
