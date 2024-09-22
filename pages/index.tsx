@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex relative flex-col items-center justify-center">
       <Head>
-        <title>ana elisa</title>
+        <title>Ana Elisa</title>
       </Head>
       <div className="text-center gap-4 mx-4 z-[100]">
         <h2>ana elisa</h2>

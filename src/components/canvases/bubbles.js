@@ -21,14 +21,14 @@ function P5Sketch() {
       images[i] = p5.loadImage(`/images/imp${i + 1}.png`); // Adjust image paths
     }
 
-    // Create balls with bigger diameters
+    // Create balls with unique diameters
     for (let i = 0; i < numBalls; i++) {
       const isMobile = window.innerWidth < 768;
       const ballSize = isMobile ? p5.random(75, 150) : p5.random(200, 350); // Unique size for each ball
       balls[i] = new Ball(
         p5.random(window.innerWidth),
         p5.random(window.innerHeight),
-        p5.random(200, 300), // Larger ball diameters
+        ballSize, // Use unique ball diameters
         i,
         balls,
         images[i] // Pass corresponding image
