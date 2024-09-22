@@ -21,17 +21,17 @@ export const NavBarPortfolio = (props: NavBarPortfolioProps) => {
         </Link>{" "}
         /{" "}
         <Link
-          className="pr-2 pl-2"
+          className="pl-2"
           href="https://www.linkedin.com/in/anaelisavargas/"
         >
           linked.in
-        </Link>{" "}
-        /{" "}
+        </Link>
+        {/* /{" "}
         <Link className="pl-2" href="">
           the old relic
-        </Link>
+        </Link> */}
       </div>
-      <div className="pt-2">© 2024</div>
+      <div>© 2024</div>
     </nav>
   );
 };
