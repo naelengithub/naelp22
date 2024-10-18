@@ -18,15 +18,15 @@ export const webProjects = [
         ],
       },
       {
-        category: "About Page",
+        category: "About Page Desktop",
         sources: ["/dr-pablo-lopez/about.png"],
       },
       {
-        category: "Example Case Page",
+        category: "Example Case Page Desktop",
         sources: ["/dr-pablo-lopez/caso_ejemplo.png"],
       },
       {
-        category: "Procedures Page",
+        category: "Procedures Page Desktop",
         sources: ["/dr-pablo-lopez/procedimientos.png"],
       },
       {
