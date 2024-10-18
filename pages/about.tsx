@@ -39,25 +39,26 @@ export default function Contact() {
                 <DynamicShadowText text="ana elisa" />
               </span>
               <span>
-                is a seasoned project lead with a presence in Berlin, Mexico
-                City, and San Francisco. Although originally trained as an
-                architect, she has transitioned into managing a diverse range of
-                projects.
+                is a seasoned project developer and designer with a presence in
+                Berlin, Mexico City, and San Francisco. Although originally
+                trained as an architect, she has transitioned into operating a
+                diverse range of projects.
               </span>
             </p>
-            <p className="mt-2">
+            <p className="mt-4">
               In addition to her freelance work in graphic design and full-stack
-              development, she excels at overseeing end-to-end client projects.
-              From initial sketches to delivering fully functional, hosted
-              websites, she offers a comprehensive service.
+              development (typescript and low/no-code), she excels at overseeing
+              end-to-end client projects. From initial sketches to delivering
+              fully functional, hosted websites, she offers a comprehensive full
+              service.
             </p>
-            <p className="mt-2">
-              Her expertise is especially valuable for entrepreneurs seeking to
-              digitalize their products, as well as small startups needing
-              scalable solutions as they grow. With experience in designing data
-              flows, automating processes, and integrating systems through API
-              calls and webhooks, she provides tailored, robust solutions that
-              help businesses thrive in the digital landscape.
+            <p className="mt-4">
+              With experience in designing data flows, automating processes, and
+              integrating systems through API calls and webhooks, she provides
+              tailored, robust solutions that help businesses thrive in the
+              digital landscape. Her expertise is especially valuable for
+              startups needing scalable solutions as they grow, as well as
+              entrepreneurs seeking to digitalize their products.
             </p>
           </div>
         </div>
