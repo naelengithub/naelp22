@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="bg-floral-white">
       <Head>
-        <title>Portfolio</title>
+        <title>Ana Elisa - Portfolio</title>
       </Head>
       <div className="relative">
         <div className="min-h-screen">
@@ -37,6 +37,7 @@ export default function Home() {
               images={project.images}
               url={project.url}
               concept={project.concept}
+              team={project.team}
             />
           ))}
           <div className="fixed bottom-24 md:bottom-1/3 right-8 pl-6 pb-6 text-6xl">

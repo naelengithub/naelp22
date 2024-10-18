@@ -1,7 +1,7 @@
 export const webProjects = [
   {
     brand: "Dr. Pablo Vicencio",
-    url: "",
+    url: "https://www.drpablovicencio.com",
     year: 2024,
     concept: "Brand Identity",
     description:
@@ -18,6 +18,18 @@ export const webProjects = [
         ],
       },
       {
+        category: "About Page",
+        sources: ["/dr-pablo-lopez/about.png"],
+      },
+      {
+        category: "Example Case Page",
+        sources: ["/dr-pablo-lopez/caso_ejemplo.png"],
+      },
+      {
+        category: "Procedures Page",
+        sources: ["/dr-pablo-lopez/procedimientos.png"],
+      },
+      {
         category: "Facebook Cover",
         sources: ["/dr-pablo-lopez/Fb-cover.jpg"],
       },
@@ -30,17 +42,25 @@ export const webProjects = [
           "/dr-pablo-lopez/b-card-back.jpg",
         ],
       },
+      {
+        category: "Folder",
+        sources: [
+          "/dr-pablo-lopez/folder_front.jpg",
+          "/dr-pablo-lopez/folder_back.jpg",
+        ],
+      },
     ],
   },
   {
     brand: "El Colegio La Paz",
-    url: "https://elcolegiolapaz.edu.mx",
-    year: 2024,
     concept: "Website Revamp & Development",
     description:
       "Design and development of their website. Revamp, design and development for El Colegio La Paz's website - Kindergarten, Elementary School, Middle School, High School. Includes a school calendar with events and an appointment manager. Head of product design and development.",
-    tools: "Figma, Wordpress, Elementor",
     role: "Principal Engineer & Product Lead",
+    team: "Colaboration with Rodrigo López Vicencio",
+    tools: "Figma, Wordpress, Elementor",
+    url: "https://elcolegiolapaz.edu.mx",
+    year: 2024,
     images: [
       { category: "home", sources: ["/clp/Homepage-dk.jpg"] },
       {
@@ -62,6 +82,7 @@ export const webProjects = [
     year: 2024,
     concept: "Web Design & Development",
     description: "Design and development of Diego Pacheco's portfolio website.",
+    team: "Colaboration with Rodrigo López Vicencio",
     tools:
       "Figma, typescript, next.js, react, tailwindCSS, herzner, caprover, pocketbase",
     role: "Principal Engineer & Product Lead",

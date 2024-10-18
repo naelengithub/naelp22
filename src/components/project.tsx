@@ -6,6 +6,7 @@ export interface WebProjectProps {
   className?: string;
   brand: string;
   year: number;
+  team?: string;
   url: string;
   concept: string;
   images: {
@@ -20,7 +21,7 @@ export interface WebProjectProps {
  */
 
 export const WebProject = (props: WebProjectProps) => {
-  const { className, brand, year, images, url, concept } = props;
+  const { className, brand, year, images, url, concept, team } = props;
 
   // Function to render the images for each category
   const renderImages = (sources: string[]) => {
@@ -28,7 +29,16 @@ export const WebProject = (props: WebProjectProps) => {
       const isMbImage = src.includes("mb");
       const isFbCover = src.includes("cover");
       const isCard = src.includes("card");
-      const imageWidth = isFbCover ? 800 : isMbImage ? 200 : isCard ? 182 : 500;
+      const isFolder = src.includes("folder");
+      const imageWidth = isFbCover
+        ? 800
+        : isMbImage
+        ? 200
+        : isCard
+        ? 182
+        : isFolder
+        ? 245
+        : 500;
 
       return (
         <div
@@ -49,10 +59,11 @@ export const WebProject = (props: WebProjectProps) => {
 
   return (
     <div className={`flex flex-col p-6 ${className}`}>
-      <h3>{concept}</h3>
       <Link href={url} target="_blank">
+        <h3>{concept}</h3>
         <p>
-          {brand}, {year}
+          {brand}, {year} <br />
+          {team}
         </p>
       </Link>
       <div className="flex flex-row overflow-x-auto gap-[50px]">
