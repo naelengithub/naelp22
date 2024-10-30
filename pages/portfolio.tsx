@@ -30,6 +30,7 @@ export default function Home() {
               <WebProject
                 key={index}
                 brand={project.brand}
+                description={project.description}
                 year={project.year}
                 images={project.images}
                 url={project.url}

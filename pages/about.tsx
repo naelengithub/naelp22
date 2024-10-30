@@ -46,19 +46,19 @@ export default function Contact() {
               </span>
             </p>
             <p className="mt-4">
-              In addition to her freelance work in graphic design and full-stack
-              development (typescript and low/no-code), she excels at overseeing
-              end-to-end client projects. From initial sketches to delivering
-              fully functional, hosted websites, she offers a comprehensive full
-              service.
+              In addition to her freelance work in graphic design and Front-End
+              development (Typescript, React and low/no-code), she excels at
+              overseeing end-to-end client projects. From initial sketches to
+              delivering fully functional, hosted websites, she offers a
+              comprehensive full service.
             </p>
             <p className="mt-4">
-              With experience in designing data flows, automating processes, and
-              integrating systems through API calls and webhooks, she provides
-              tailored, robust solutions that help businesses thrive in the
-              digital landscape. Her expertise is especially valuable for
-              startups needing scalable solutions as they grow, as well as
-              entrepreneurs seeking to digitalize their products.
+              With experience in designing data flows, automation, and system
+              integration through API calls and webhooks, she provides tailored,
+              robust solutions that help businesses thrive in the digital
+              landscape. Her expertise is especially valuable for startups
+              needing scalable solutions as they grow, as well as entrepreneurs
+              seeking to digitalize their products.
             </p>
           </div>
         </div>

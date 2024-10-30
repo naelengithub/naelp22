@@ -6,11 +6,14 @@ const ProtectedPage = ({ children }: { children: React.ReactNode }) => {
   const [accessCode, setAccessCode] = useState("");
   const [isAuthorized, setIsAuthorized] = useState(false);
   const router = useRouter();
+  type CorrectCode = "fauxfurcoat" | "alohomora";
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const correctCode = "fauxfurcoat";
-    if (accessCode === correctCode) {
+
+    const correctCodes: CorrectCode[] = ["fauxfurcoat", "alohomora"];
+
+    if (correctCodes.includes(accessCode as CorrectCode)) {
       setIsAuthorized(true);
     } else {
       alert(
@@ -22,7 +25,6 @@ const ProtectedPage = ({ children }: { children: React.ReactNode }) => {
   if (isAuthorized) {
     return <>{children}</>;
   }
-
   return (
     <div className="relative">
       <div className="bg-floral-white flex h-screen w-screen items-center justify-center">

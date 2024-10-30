@@ -6,6 +6,7 @@ export const webProjects = [
     concept: "Brand Identity",
     description:
       "Brand identity, web design and development. Head of product design and development.",
+    team: "Development in colaboration with Rodrigo López Vicencio",
     tools: "Adobe Photoshop, Figma, Wordpress, Elementor",
     role: "Designer, Principal Engineer & Product Lead",
     images: [
@@ -52,10 +53,31 @@ export const webProjects = [
     ],
   },
   {
+    brand: "DRIM",
+    concept: "Product Design & Development",
+    description:
+      "Design and development for DRIM's Product Page and Homepage. Implemented with Shopify.",
+    role: "Engineer & Design Lead",
+    team: "",
+    tools: "Figma, Liquid, Shopify, Notion",
+    url: "https://shop.drim.mx/",
+    year: 2024,
+    images: [
+      {
+        category: "home",
+        sources: ["/drim/DRIM-Home.png", "/drim/home-drim-mobile.png"],
+      },
+      {
+        category: "Product Page",
+        sources: ["/drim/DRIM-PPD.jpg"],
+      },
+    ],
+  },
+  {
     brand: "El Colegio La Paz",
     concept: "Website Revamp & Development",
     description:
-      "Design and development of their website. Revamp, design and development for El Colegio La Paz's website - Kindergarten, Elementary School, Middle School, High School. Includes a school calendar with events and an appointment manager. Head of product design and development.",
+      "Design and development of their website. Revamp, design and development for El Colegio La Paz's website - Kindergarten, Elementary School, Middle School, and High School. Includes a school calendar with events and an appointment manager.",
     role: "Principal Engineer & Product Lead",
     team: "Colaboration with Rodrigo López Vicencio",
     tools: "Figma, Wordpress, Elementor",

@@ -5,6 +5,7 @@ import Link from "next/link";
 export interface WebProjectProps {
   className?: string;
   brand: string;
+  description: string;
   year: number;
   team?: string;
   url: string;
@@ -21,12 +22,13 @@ export interface WebProjectProps {
  */
 
 export const WebProject = (props: WebProjectProps) => {
-  const { className, brand, year, images, url, concept, team } = props;
+  const { className, brand, description, year, images, url, concept, team } =
+    props;
 
   // Function to render the images for each category
   const renderImages = (sources: string[]) => {
     return sources.map((src, index) => {
-      const isMbImage = src.includes("mb");
+      const isMbImage = src.includes("mb") || src.includes("mobile");
       const isFbCover = src.includes("cover");
       const isCard = src.includes("card");
       const isFolder = src.includes("folder");
@@ -61,9 +63,14 @@ export const WebProject = (props: WebProjectProps) => {
     <div className={`flex flex-col p-6 ${className}`}>
       <Link href={url} target="_blank">
         <h3>{concept}</h3>
-        <p>
+        <p className="max-w-5xl">
           {brand}, {year} <br />
-          {team}
+          {description}
+          {team && (
+            <>
+              <br /> {team}
+            </>
+          )}
         </p>
       </Link>
       <div className="flex flex-row overflow-x-auto gap-[50px]">
