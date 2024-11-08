@@ -7,8 +7,10 @@ import Link from "next/link";
 import ProtectedPage from "../src/components/ProtectedPage";
 
 export default function Home() {
+  const correctCodes = ["alohomora", "fauxfurcoat"];
+
   return (
-    <ProtectedPage>
+    <ProtectedPage correctCodes={correctCodes}>
       <div className="bg-floral-white">
         <div className="relative">
           <div className="min-h-screen">

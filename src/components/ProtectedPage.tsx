@@ -2,18 +2,20 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-const ProtectedPage = ({ children }: { children: React.ReactNode }) => {
+interface ProtectedPageProps {
+  correctCodes: string[]; // Array of correct codes passed from the parent
+  children?: React.ReactNode;
+}
+
+const ProtectedPage = ({ children, correctCodes }: ProtectedPageProps) => {
   const [accessCode, setAccessCode] = useState("");
   const [isAuthorized, setIsAuthorized] = useState(false);
   const router = useRouter();
-  type CorrectCode = "fauxfurcoat" | "alohomora";
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const correctCodes: CorrectCode[] = ["fauxfurcoat", "alohomora"];
-
-    if (correctCodes.includes(accessCode as CorrectCode)) {
+    if (correctCodes.includes(accessCode)) {
       setIsAuthorized(true);
     } else {
       alert(
@@ -28,8 +30,8 @@ const ProtectedPage = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="relative">
       <div className="bg-floral-white flex h-screen w-screen items-center justify-center">
-        <span className="absolute right-0 top-0 text-sm p-2">
-          designed & gated by urs truly, with &hearts; in Berlin © 2024
+        <span className="absolute right-0 top-0 text-xs p-2">
+          made by urs truly, with &hearts; in Berlin © 2024
         </span>
 
         <form

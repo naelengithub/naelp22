@@ -46,6 +46,7 @@ export default function Home() {
           {/* <h2>
             <DynamicShadowText text="ana elisa" />
           </h2> */}
+          <Link href="/wishlist">Adquisitions</Link>
           <Link href="/portfolio">Portfolio</Link>
           <Link href="/about">About</Link>
         </div>
