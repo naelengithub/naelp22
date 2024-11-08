@@ -58,7 +58,7 @@ export const Wishlist = (props: WishlistProps) => {
               >
                 <div>
                   <Gift
-                    alt="Book"
+                    alt={Gifts[0].title}
                     src="/Gifts/book.gif"
                     width={screenWidthSize / 14}
                     height={screenWidthSize / 22}
@@ -129,7 +129,7 @@ export const Wishlist = (props: WishlistProps) => {
                 }}
               >
                 <Gift
-                  alt="Matlaltik project."
+                  alt={Gifts[4].title}
                   src="/images/001/pokemon.webp"
                   width={screenWidthSize / 12}
                   height={screenWidthSize / 20}
