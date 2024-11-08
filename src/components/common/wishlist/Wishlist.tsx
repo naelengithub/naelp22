@@ -37,17 +37,13 @@ export const Wishlist = (props: WishlistProps) => {
           <title>merry xmas</title>
         </Head>
         <div
+          className="pt-12"
           style={{
-            paddingTop: "3rem",
             height: screenWidthSize / 1.2,
           }}
         >
-          <div style={{ backgroundColor: "tomato" }}>
-            <div
-              style={{
-                position: "relative",
-              }}
-            >
+          <div className="relative">
+            <div>
               <div
                 style={{
                   position: "absolute",

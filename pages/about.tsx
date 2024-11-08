@@ -18,7 +18,7 @@ export default function Contact() {
         minHeight: "100vh",
       }}
     >
-      <p className="p-4 text-right">
+      <p className="p-4 text-right text-xs">
         designed and built by urs truly, with &hearts; in Berlin © 2024
       </p>
       <div>
