@@ -1,5 +1,4 @@
 import { useWindowSize } from "../src/hooks/useWindowSize";
-import { ProjectItem } from "../src/components/home/featArchitecture/details/desktop/ProjectItem";
 import Image from "next/image";
 import Head from "next/head";
 import BroadwayChambers from "../src/components/city-vibes/broadway-chambers";
