@@ -1,24 +1,26 @@
 import * as React from "react";
 
-import { useWindowSize } from "../../../../hooks/useWindowSize";
+import { useWindowSize } from "../../../hooks/useWindowSize";
+import { Gifts } from "./data";
 
-import { Matlaltik } from "../../../common/wishlist/MiddleSpacedRight";
-import { ProjectItem } from "../details/desktop/ProjectItem";
-import { Estuario } from "../../../common/wishlist/TopToRight";
-import { Spine } from "../../../common/wishlist/MiddleToRight";
-import { Xitle } from "../../../common/wishlist/BottomToLeft";
-import { Fica } from "../../../common/wishlist/MiddleToLeft";
-import styles from "./overview.module.css";
+import { MiddleSpacedRight } from "./MiddleSpacedRight";
+import { Gift } from "./Gift";
+import { TopToRight } from "./TopToRight";
+import { MiddleToRight } from "./MiddleToRight";
+import { BottomToLeft } from "./BottomToLeft";
+import { MiddleToLeft } from "./MiddleToLeft";
+import styles from "./wishlist.module.css";
+import Head from "next/head";
 
-export interface FeatArchProps {
+export interface WishlistProps {
   className?: string;
 }
 
 /**
- * @name FeatArch
+ * @name Wishlist
  * @description Arq feature component.
  */
-export const FeatArch = (props: FeatArchProps) => {
+export const Wishlist = (props: WishlistProps) => {
   const { className } = props;
 
   // Handlers
@@ -31,9 +33,11 @@ export const FeatArch = (props: FeatArchProps) => {
   } else {
     return (
       <div className={styles.container}>
+        <Head>
+          <title>merry xmas</title>
+        </Head>
         <div
           style={{
-            backgroundColor: "#ded8ce",
             paddingTop: "3rem",
             height: screenWidthSize / 1.2,
           }}
@@ -53,16 +57,21 @@ export const FeatArch = (props: FeatArchProps) => {
                 }}
               >
                 <div>
-                  <ProjectItem
-                    alt="Estuario project."
-                    src="/images/001/the-sleepover.jpeg"
+                  <Gift
+                    alt="Book"
+                    src="/Gifts/book.gif"
                     width={screenWidthSize / 14}
                     height={screenWidthSize / 22}
                   >
                     <div style={{}}>
-                      <Estuario />
+                      <TopToRight
+                        author={Gifts[0].author}
+                        goodFor={Gifts[0].goodFor}
+                        image={Gifts[0].image}
+                        title={Gifts[0].title}
+                      />
                     </div>
-                  </ProjectItem>
+                  </Gift>
                 </div>
               </div>
               <div
@@ -75,14 +84,19 @@ export const FeatArch = (props: FeatArchProps) => {
                   margin: "0",
                 }}
               >
-                <ProjectItem
-                  alt="Xitle project."
-                  src="/images/001/forrest-gump-running.avif"
+                <Gift
+                  alt={Gifts[2].title}
+                  src="/Gifts/vinyl3.gif"
                   width={screenWidthSize / 12}
                   height={screenWidthSize / 20}
                 >
-                  <Xitle />
-                </ProjectItem>
+                  <BottomToLeft
+                    author={Gifts[2].author}
+                    goodFor={Gifts[2].goodFor}
+                    image={Gifts[2].image}
+                    title={Gifts[2].title}
+                  />
+                </Gift>
               </div>
               <div
                 style={{
@@ -92,14 +106,19 @@ export const FeatArch = (props: FeatArchProps) => {
                   width: screenWidthSize / 10,
                 }}
               >
-                <ProjectItem
-                  alt="Spine project."
-                  src="/images/001/suns.jpeg"
+                <Gift
+                  alt={Gifts[3].title}
+                  src="/Gifts/negacion.jpg"
                   width={screenWidthSize / 12}
                   height={screenWidthSize / 20}
                 >
-                  <Spine />
-                </ProjectItem>
+                  <MiddleToRight
+                    author={Gifts[3].author}
+                    goodFor={Gifts[3].goodFor}
+                    image={Gifts[3].image}
+                    title={Gifts[3].title}
+                  />
+                </Gift>
               </div>
               <div
                 style={{
@@ -109,14 +128,19 @@ export const FeatArch = (props: FeatArchProps) => {
                   width: screenWidthSize / 10,
                 }}
               >
-                <ProjectItem
+                <Gift
                   alt="Matlaltik project."
                   src="/images/001/pokemon.webp"
                   width={screenWidthSize / 12}
                   height={screenWidthSize / 20}
                 >
-                  <Matlaltik />
-                </ProjectItem>
+                  <MiddleSpacedRight
+                    author={Gifts[4].author}
+                    goodFor={Gifts[4].goodFor}
+                    image={Gifts[4].image}
+                    title={Gifts[4].title}
+                  />
+                </Gift>
               </div>
               <div
                 style={{
@@ -126,14 +150,19 @@ export const FeatArch = (props: FeatArchProps) => {
                   width: screenWidthSize / 10,
                 }}
               >
-                <ProjectItem
-                  alt="Fica project."
-                  src="/images/001/pam.jpeg"
+                <Gift
+                  alt="Boots"
+                  src="/Gifts/nancy.webp"
                   width={screenWidthSize / 10}
                   height={screenWidthSize / 20}
                 >
-                  <Fica />
-                </ProjectItem>
+                  <MiddleToLeft
+                    goodFor={Gifts[1].goodFor}
+                    title={Gifts[1].title}
+                    image={Gifts[1].image}
+                    className="bg-floral-white"
+                  />
+                </Gift>
               </div>
             </div>
           </div>
@@ -141,8 +170,8 @@ export const FeatArch = (props: FeatArchProps) => {
             <div
               style={{
                 position: "absolute",
-                top: (screenWidthSize / 10) * 5.5,
-                right: 0,
+                top: (screenWidthSize / 10) * 5,
+                right: 25,
               }}
             >
               <h1
@@ -154,7 +183,7 @@ export const FeatArch = (props: FeatArchProps) => {
                   zIndex: 1,
                 }}
               >
-                [coming from]
+                [but tbh just]
               </h1>
               <h1
                 style={{
@@ -162,7 +191,7 @@ export const FeatArch = (props: FeatArchProps) => {
                   fontSize: screenWidthSize / 5.75,
                 }}
               >
-                architecture
+                a good laugh
               </h1>
             </div>
           </div>
