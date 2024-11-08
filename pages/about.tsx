@@ -27,7 +27,7 @@ export default function Contact() {
             <Link href="/">
               <Image
                 alt="Ana Elisa Vargas"
-                src="/images/ss.frame.png"
+                src="/images/ss.png"
                 width="300"
                 height={300}
               />
@@ -69,14 +69,9 @@ export default function Contact() {
               products and/or services.
             </p>
             <p className="mt-4">
-              Above all, she thrives in environments where collaboration and
-              creativity are key. Known for her proactive approach, she brings
-              an innate ability to learn quickly and adapt to new challenges.
-              Ana Elisa is deeply motivated by{" "}
-              <strong>projects that inspire and drive</strong>
-              their owners. For her, the most fulfilling work happens when a
-              project not only meets business goals but also resonates on a
-              personal level with those involved.
+              Ana Elisa is driven by projects that inspire and motivate their
+              teams, believing the most fulfilling work aligns with both
+              business goals and a deeper sense of purpose or social impact.
             </p>
           </div>
         </div>
