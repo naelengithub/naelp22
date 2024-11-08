@@ -21,13 +21,39 @@ function P5Sketch() {
       images[i] = p5.loadImage(`/images/imp${i + 1}.png`); // Adjust image paths
     }
 
-    // Create balls with unique diameters
+    // Create balls with unique diameters and spread out across the canvas
+    const minSpacing = 200; // Minimum distance between balls to avoid overlap
+
+    // Create balls with unique diameters and spread out positions
     for (let i = 0; i < numBalls; i++) {
       const isMobile = window.innerWidth < 768;
       const ballSize = isMobile ? p5.random(75, 150) : p5.random(200, 350); // Unique size for each ball
+
+      let x, y;
+      let overlapping = true;
+      while (overlapping) {
+        // Random position but avoid overlap by checking distances
+        x = p5.random(window.innerWidth);
+        y = p5.random(window.innerHeight);
+        overlapping = false;
+
+        // Check if the new position overlaps with any existing balls
+        for (let j = 0; j < i; j++) {
+          const distX = x - balls[j].x;
+          const distY = y - balls[j].y;
+          const distance = Math.sqrt(distX * distX + distY * distY);
+          const minDist = balls[j].diameter / 2 + ballSize / 2;
+
+          if (distance < minDist) {
+            overlapping = true; // If there's overlap, pick new coordinates
+            break;
+          }
+        }
+      }
+
       balls[i] = new Ball(
-        p5.random(window.innerWidth),
-        p5.random(window.innerHeight),
+        x,
+        y,
         ballSize, // Use unique ball diameters
         i,
         balls,
