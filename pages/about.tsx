@@ -19,7 +19,7 @@ export default function Contact() {
       }}
     >
       <p className="p-4 text-right text-xs">
-        designed and built by urs truly, with &hearts; in Berlin © 2024
+        made by urs truly, with &hearts; in Berlin © 2024
       </p>
       <div>
         <div className="block pt-80 w-1/4 p-4 min-w-[360px] md:m-auto">
@@ -40,25 +40,43 @@ export default function Contact() {
               </span>
               <span>
                 is a seasoned project developer and designer with a presence in
-                Berlin, Mexico City, and San Francisco. Although originally
-                trained as an architect, she has transitioned into operating a
-                diverse range of projects.
+                Berlin, Mexico City, and San Francisco. Although initially
+                trained as an architect, she has successfully transitioned into
+                leading a diverse range of projects, including the production of
+                a short film, alongside her extensive work in web design and
+                development.
               </span>
             </p>
             <p className="mt-4">
-              In addition to her freelance work in graphic design and Front-End
-              development (Typescript, React and low/no-code), she excels at
-              overseeing end-to-end client projects. From initial sketches to
-              delivering fully functional, hosted websites, she offers a
-              comprehensive full service.
+              In addition to her freelance expertise in design and Front-End
+              development{" "}
+              <strong>(Typescript, React, low/no-code platforms)</strong>, she
+              excels in operating end-to-end client projects. From the
+              conceptualization phase to delivering fully functional, live
+              websites, she offers a comprehensive, hands-on approach that
+              ensures every project is executed to the highest standard. This
+              website serves as a prime example of her ability to design,
+              develop, and launch integrated digital experiences that are both
+              aesthetically compelling and highly functional.
             </p>
             <p className="mt-4">
-              With experience in designing data flows, automation, and system
-              integration through API calls and webhooks, she provides tailored,
-              robust solutions that help businesses thrive in the digital
-              landscape. Her expertise is especially valuable for startups
-              needing scalable solutions as they grow, as well as entrepreneurs
-              seeking to digitalize their products.
+              With experience in designing complex data flows, automation, and
+              system integration using API calls and webhooks, she provides
+              tailored, scalable solutions that enable businesses to excel in
+              the digital space. Her expertise is especially valuable for
+              <strong>startups seeking scalable solutions</strong> to support
+              their growth and for entrepreneurs seeking to digitalize their
+              products and/or services.
+            </p>
+            <p className="mt-4">
+              Above all, she thrives in environments where collaboration and
+              creativity are key. Known for her proactive approach, she brings
+              an innate ability to learn quickly and adapt to new challenges.
+              Ana Elisa is deeply motivated by{" "}
+              <strong>projects that inspire and drive</strong>
+              their owners. For her, the most fulfilling work happens when a
+              project not only meets business goals but also resonates on a
+              personal level with those involved.
             </p>
           </div>
         </div>
