@@ -6,7 +6,7 @@ import ProtectedPage from "../src/components/ProtectedPage";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
-  const correctCodes = ["happeebirthdaeharry"];
+  const correctCodes = ["alohomora"];
 
   useEffect(() => {
     // Check the screen width to determine if it's mobile

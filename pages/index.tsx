@@ -47,7 +47,7 @@ export default function Home() {
             <DynamicShadowText text="ana elisa" />
           </h2> */}
           <Link href="/wishlist">Adquisitions</Link>
-          <Link href="/portfolio">Portfolio</Link>
+          <Link href="/portfolio">Archive</Link>
           <Link href="/about">About</Link>
         </div>
       </div>
