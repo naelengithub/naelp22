@@ -53,6 +53,7 @@ export const WebProject = (props: WebProjectProps) => {
             width={imageWidth}
             height={300}
             className=""
+            loading="lazy"
           />
         </div>
       );
