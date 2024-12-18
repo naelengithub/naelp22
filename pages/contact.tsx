@@ -73,7 +73,7 @@ export default function Contact() {
         </form>
         <div>
           <div style={{ borderTop: "solid 1px #B38BFA" }}>
-            <p>thisisanaelisa@gmail.com</p>
+            <p>contact@anaelisavargas.com</p>
           </div>
           <div style={{ borderTop: "solid 1px #B38BFA" }}>
             <p>TG naelentransito</p>
@@ -88,6 +88,7 @@ export default function Contact() {
             <Link
               href="https://www.linkedin.com/in/ana-elisa-vargas-1bb436145/"
               style={{ marginTop: "1rem" }}
+              target="_blank"
             >
               LinkedIn
             </Link>

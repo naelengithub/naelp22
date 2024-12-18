@@ -49,7 +49,7 @@ export const Contact = (props: ContactProps) => {
               fontSize: screenWidthSize / 13,
             }}
           >
-            thisisanaelisa@gmail.com
+            contact@anaelisavargas.com
           </h1>
           <p
             style={{
@@ -61,7 +61,10 @@ export const Contact = (props: ContactProps) => {
             grab coffee.
           </p>
           <div style={{ display: "flex", gap: "1rem", marginTop: "1rem" }}>
-            <Link href="https://www.linkedin.com/in/ana-elisa-vargas-1bb436145/">
+            <Link
+              href="https://www.linkedin.com/in/ana-elisa-vargas-1bb436145/"
+              target="_blank"
+            >
               <Image
                 src="/logo.linkedin.png"
                 alt="Linked In profile"
