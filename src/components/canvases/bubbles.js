@@ -3,7 +3,7 @@ import Sketch from "react-p5";
 
 function P5Sketch() {
   const numBalls = 4;
-  const spring = 0.05;
+  const spring = 0.4;
   const gravity = 0.03;
   const friction = -0.9;
   const balls = [];
