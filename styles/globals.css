@@ -41,13 +41,26 @@ button {
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 h2 {
-  font-size: 52px;
+  font-size: 24px;
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 36px;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 24px; /* Medium size */
+  }
+}
+
+/* Media query for large screens */
+@media (min-width: 1024px) {
+  h3 {
+    font-size: 24px; /* Original larger size */
+  }
 }
