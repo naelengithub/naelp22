@@ -4,6 +4,7 @@ import DynamicShadowText from "../src/components/DynamicShadowText";
 import Link from "next/link";
 import { jobExperience } from "../src/components/web/experience";
 import { education } from "../src/components/web/education";
+import { NavBarPortfolio } from "../src/components/navbar/navbarPortfolio";
 
 export default function Contact() {
   const size = useWindowSize();
@@ -20,9 +21,7 @@ export default function Contact() {
         minHeight: "100vh",
       }}
     >
-      <p className="p-4 text-right text-xs">
-        made by urs truly, with &hearts; in Berlin © 2024
-      </p>
+      <NavBarPortfolio />
       <div>
         <div className="block pt-80 w-1/3 p-4 min-w-[360px] md:m-auto">
           <div className="float-left w-48 mr-4">
@@ -115,6 +114,9 @@ export default function Contact() {
         >
           <DynamicShadowText text="scroll to top &uarr;" />
         </button>
+        <p className="pb-4 pl-4 text-xs">
+          made by urs truly, with &hearts;. Berlin © 2024
+        </p>
       </div>
     </div>
   );

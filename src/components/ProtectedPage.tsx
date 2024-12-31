@@ -30,8 +30,8 @@ const ProtectedPage = ({ children, correctCodes }: ProtectedPageProps) => {
   return (
     <div className="relative">
       <div className="bg-floral-white flex h-screen w-screen items-center justify-center">
-        <span className="absolute right-0 top-0 text-xs p-2">
-          made by urs truly, with &hearts; in Berlin © 2024
+        <span className="absolute bottom-0 left-0 text-xs p-2">
+          made by urs truly, with &hearts;. Berlin © 2024
         </span>
 
         <form

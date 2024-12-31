@@ -15,7 +15,7 @@ export const NavBarPortfolio = (props: NavBarPortfolioProps) => {
   return (
     <nav className="p-6 text-right">
       <span>
-        <Link href="/">anaelisa</Link>
+        <Link href="/">index</Link>
       </span>
       <p>
         <Link

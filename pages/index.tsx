@@ -40,15 +40,18 @@ export default function Home() {
         <title>Ana Elisa</title>
       </Head>
       <div className="text-center gap-4 mx-4 z-[100]">
-        <h2>ana elisa</h2>
+        <h1>ana elisa</h1>
         <div className="flex flex-col">
           {/* <Link href="/takeawalkwithme">Start</Link> */}
           {/* <h2>
             <DynamicShadowText text="ana elisa" />
           </h2> */}
-          <Link href="/wishlist">Adquisitions</Link>
-          <Link href="/portfolio">Archive</Link>
-          <Link href="/about">About</Link>
+          <Link href="/about">about</Link>
+          <Link href="/portfolio">works</Link>
+          <Link href="https://eina.info" target="_blank">
+            eina
+          </Link>
+          <Link href="/wishlist">adquisitions</Link>
         </div>
       </div>
       <div className="absolute w-full h-full">
