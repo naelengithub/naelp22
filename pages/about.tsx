@@ -4,6 +4,7 @@ import DynamicShadowText from "../src/components/DynamicShadowText";
 import Link from "next/link";
 import { jobExperience } from "../src/components/web/experience";
 import { education } from "../src/components/web/education";
+import ContactForm from "../src/components/ContactForm";
 import { NavBarPortfolio } from "../src/components/navbar/navbarPortfolio";
 
 export default function Contact() {
@@ -92,7 +93,7 @@ export default function Contact() {
             </div>
           ))}
         </section>
-        <section className="flex flex-col p-4 min-w-[360px] mx-auto mt-20 mb-40 w-2/3 md:w-5/6">
+        <section className="flex flex-col p-4 min-w-[360px] mx-auto mt-20 mb-28 w-2/3 md:w-5/6">
           <span className="text-4xl md:ml-52">
             <DynamicShadowText text="Education" />
           </span>
@@ -106,6 +107,7 @@ export default function Contact() {
             </div>
           ))}
         </section>
+        <ContactForm />
         <button
           onClick={() => {
             window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
