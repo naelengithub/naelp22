@@ -34,6 +34,8 @@ export default async function handler(
         user: smtpUser,
         pass: smtpPass,
       },
+      // Adding custom "HELO" command
+      hello: "anaelisavargas.com",
     });
 
     const mailOptions = {
