@@ -115,7 +115,7 @@ export default function Contact() {
           <DynamicShadowText text="scroll to top &uarr;" />
         </button>
         <p className="pb-4 pl-4 text-xs">
-          made by urs truly, with &hearts;. Berlin © 2024
+          made by urs truly, with &hearts;. Berlin © 2025
         </p>
       </div>
     </div>

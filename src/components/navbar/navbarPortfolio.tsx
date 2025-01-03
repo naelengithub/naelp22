@@ -38,7 +38,7 @@ export const NavBarPortfolio = (props: NavBarPortfolioProps) => {
           the old relic
         </Link> */}
       </p>
-      <span>© 2024</span>
+      <span>© 2025</span>
     </nav>
   );
 };
