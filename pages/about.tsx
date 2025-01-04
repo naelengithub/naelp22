@@ -101,6 +101,7 @@ export default function Contact() {
             <div key={index} className="flex justify-center gap-6 mt-12">
               <div className="flex-col w-36 md:w-48">
                 <h3>{school.title}</h3>
+                <p>{school.sede}</p>
                 <p>{school.year}</p>
               </div>
               <p className="w-1/2 md:w-1/3">{school.description}</p>
