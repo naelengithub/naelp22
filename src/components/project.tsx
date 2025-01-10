@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 export interface WebProjectProps {
   className?: string;
@@ -29,6 +30,7 @@ export const WebProject = (props: WebProjectProps) => {
   const renderImages = (sources: string[]) => {
     return sources.map((src, index) => {
       const isMbImage = src.includes("mb") || src.includes("mobile");
+      const isDesktopImage = src.includes("dktp") || src.includes("desktop");
       const isFbCover = src.includes("cover");
       const isCard = src.includes("card");
       const isFolder = src.includes("folder");
@@ -36,6 +38,8 @@ export const WebProject = (props: WebProjectProps) => {
         ? 800
         : isMbImage
         ? 200
+        : isDesktopImage
+        ? 500
         : isCard
         ? 182
         : isFolder
@@ -62,18 +66,23 @@ export const WebProject = (props: WebProjectProps) => {
 
   return (
     <div className={`flex flex-col p-6 ${className}`}>
-      <Link href={url} target="_blank">
-        <h3>{concept}</h3>
-        <p className="max-w-5xl">
-          {brand}, {year} <br />
-          {description}
-          {team && (
-            <>
-              <br /> {team}
-            </>
-          )}
-        </p>
-      </Link>
+      <h3>{concept}</h3>
+      <p className="max-w-5xl">
+        <Link href={url} target="_blank">
+          {brand}, {year}
+        </Link>
+        <br />
+        {description}
+        {team && (
+          <>
+            <br /> {team}
+          </>
+        )}
+      </p>
+      <div className="flex text-xs mt-2">
+        <span>scroll</span>
+        <ArrowRightIcon className="h-4 w-6 text-gray-600" />{" "}
+      </div>
       <div className="flex flex-row overflow-x-auto gap-[50px]">
         {images.map((imageGroup, groupIndex) => (
           <div key={groupIndex} className="mb-4 flex-shrink-0">
@@ -87,11 +96,6 @@ export const WebProject = (props: WebProjectProps) => {
           </div>
         ))}
       </div>
-
-      {/* <div className="flex w-full justify-between">
-        <h3>{url}</h3>
-        <h3>{year}</h3>
-      </div> */}
     </div>
   );
 };

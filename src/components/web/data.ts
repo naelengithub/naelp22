@@ -1,12 +1,42 @@
 export const webProjects = [
   {
+    brand: "La Marimorena",
+    online: true,
+    url: "https://lamarimorena.com",
+    year: 2025,
+    concept: "Digital Product Redesign",
+    description:
+      "Redesigned and developed the online store for La Marimorena, refining the branding, streamlining user flows, and adding strategic marketing elements. The revamp included clear calls to action, mobile optimization, and a modern aesthetic to enhance usability and drive conversions.",
+    team: "",
+    tools: "Figma, Shopify",
+    role: "Designer & Developer",
+    images: [
+      {
+        category: "Home",
+        sources: [
+          "/la-marimorena/dktp-home.png",
+          "/la-marimorena/mb-home.png",
+          "/la-marimorena/mb-nav.png",
+        ],
+      },
+      {
+        category: "Booking Page",
+        sources: [
+          "/la-marimorena/dktp-piercings.png",
+          "/la-marimorena/mb-piercings.png",
+        ],
+      },
+    ],
+  },
+  {
     brand: "Dr. Pablo Vicencio",
+    online: true,
     url: "https://www.drpablovicencio.com",
     year: 2024,
-    concept: "Brand Identity",
+    concept: "Brand Identity and Digital Product Design",
     description:
-      "Brand identity, web design and development. Head of product design and development.",
-    team: "Development in colaboration with Rodrigo López Vicencio",
+      "Transformed Dr. Pablo Vicencio’s vision into a cohesive brand identity and platform. Defined the brand’s goals, developed a complete marketing strategy, and crafted the UX and website design.",
+    team: "Development in colaboration with Rodrigo López",
     tools: "Adobe Photoshop, Figma, Wordpress, Elementor",
     role: "Designer, Principal Engineer & Product Lead",
     images: [
@@ -53,10 +83,33 @@ export const webProjects = [
     ],
   },
   {
-    brand: "DRIM",
-    concept: "Product Design & Development",
+    brand: "Cardela",
+    online: true,
+    url: "https://cardela.mx",
+    year: 2025,
+    concept: "Digital Product Audit & Enhancements",
     description:
-      "Design and development for DRIM's Product Page and Homepage. Implemented with Shopify.",
+      "Redesigned the online store for La Marimorena, refining the branding, streamlining user flows, and adding strategic marketing elements. The revamp included clear calls to action, mobile optimization, and a modern aesthetic to enhance usability and drive conversions.",
+    team: "",
+    tools: "Figma, Shopify",
+    role: "Designer & Developer",
+    images: [
+      {
+        category: "Home",
+        sources: ["/cardela/dktp-home.png", "/cardela/mb-home.png"],
+      },
+      {
+        category: "Booking Page",
+        sources: ["/cardela/dktp-product.png", "/cardela/mb-product.png"],
+      },
+    ],
+  },
+  {
+    brand: "DRIM",
+    online: true,
+    concept: "Digital Product Enhancements",
+    description:
+      "Conducted an improvement audit for DRIM, a mattress e-commerce site, focusing on refining the homepage with updated featured sections and implementing UX enhancements. Notable updates included adding bedding size visuals to the mattress size selector on product pages, ensuring a smoother and more intuitive shopping experience. Implemented with Shopify.",
     role: "Engineer & Design Lead",
     team: "",
     tools: "Figma, Liquid, Shopify, Notion",
@@ -75,11 +128,12 @@ export const webProjects = [
   },
   {
     brand: "El Colegio La Paz",
-    concept: "Website Revamp & Development",
+    online: true,
+    concept: "Digital Product Redesign",
     description:
-      "Design and development of their website. Revamp, design and development for El Colegio La Paz's website - Kindergarten, Elementary School, Middle School, and High School. Includes a school calendar with events and an appointment manager.",
+      "Redesigned and developed the website for El Colegio La Paz, serving Kindergarten through High School. The project involved revamping the site’s structure and visuals to present information effectively for diverse user groups: parent leads seeking school information, current parents looking for news, students accessing the calendar, and employees using the external admin app.",
     role: "Principal Engineer & Product Lead",
-    team: "Colaboration with Rodrigo López Vicencio",
+    team: "Colaboration with Rodrigo López.",
     tools: "Figma, Wordpress, Elementor",
     url: "https://elcolegiolapaz.edu.mx",
     year: 2024,
@@ -100,11 +154,12 @@ export const webProjects = [
   },
   {
     brand: "Pulso Pacheco",
+    online: false,
     url: "https://pulsopacheco.com",
     year: 2024,
     concept: "Web Design & Development",
     description: "Design and development of Diego Pacheco's portfolio website.",
-    team: "Colaboration with Rodrigo López Vicencio",
+    team: "Colaboration with Rodrigo López.",
     tools:
       "Figma, typescript, next.js, react, tailwindCSS, herzner, caprover, pocketbase",
     role: "Principal Engineer & Product Lead",

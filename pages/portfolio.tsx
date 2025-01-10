@@ -24,18 +24,21 @@ export default function Home() {
               some works
             </span>
           </h1>
-          {webProjects.map((project, index) => (
-            <WebProject
-              key={index}
-              brand={project.brand}
-              description={project.description}
-              year={project.year}
-              images={project.images}
-              url={project.url}
-              concept={project.concept}
-              team={project.team}
-            />
-          ))}
+          {webProjects
+            .filter((project) => project.online)
+            .map((project, index) => (
+              <WebProject
+                key={index}
+                brand={project.brand}
+                description={project.description}
+                year={project.year}
+                images={project.images}
+                url={project.url}
+                concept={project.concept}
+                team={project.team}
+              />
+            ))}
+
           <div className="fixed bottom-24 md:bottom-1/3 right-8 pl-6 pb-6 text-6xl">
             <Link href="/about">
               <DynamicShadowText text="info" />
