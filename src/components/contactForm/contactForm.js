@@ -18,7 +18,7 @@ export const ContactUs = () => {
         },
         (error) => {
           setMessage(
-            "Oops, something failed :( My email is at the top of the page."
+            "Oops, something failed :( But you can find my email at the top of this page."
           );
           console.log(`${error}`);
         }
@@ -62,7 +62,11 @@ export const ContactUs = () => {
         <label>Message</label>
         <textarea name="message" style={inputStyle} />
       </div>
-      <input type="submit" value="Send" style={{ textAlign: "right" }} />
+      <input
+        type="submit"
+        value="Send"
+        style={{ textAlign: "right", cursor: "pointer" }}
+      />
       {message && <p style={{ textAlign: "right" }}>{message}</p>}
     </form>
   );
