@@ -19,7 +19,7 @@ export const jobExperience = [
     title: "Product Specialist",
     location: "Remote (San Francisco)",
     company: "Haldi",
-    year: "Mar 2021 - Mar 2022",
+    year: "Mar 2021 - Dec 2023",
     description:
       "Analyzed product features and functionalities to ensure alignment with user needs and reliability in a B2C context. Assisted in product launches and marketing initiatives while gathering and synthesizing customer feedback to inform product improvements.",
   },
