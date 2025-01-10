@@ -42,10 +42,9 @@ export default function Contact() {
               </span>
               <span>
                 I&apos;m Ana Elisa, a hands-on digital project designer and
-                developer with a proven track record of 4+years, specializing in
-                managing and operating end-to-end client projects—from initial
-                concept to the launch of fully functional, live websites and
-                ecommerce stores.
+                developer, specializing in managing and operating end-to-end
+                client projects—from initial concept to the launch of fully
+                functional, live websites and ecommerce stores.
               </span>
               <span>
                 &nbsp;My approach ensures digital experiences that are are both
@@ -108,7 +107,7 @@ export default function Contact() {
             </div>
           ))}
         </section>
-        {/* <ContactForm /> */}
+        <ContactForm />
         <button
           onClick={() => {
             window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
