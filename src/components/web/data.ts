@@ -14,16 +14,16 @@ export const webProjects = [
       {
         category: "Home",
         sources: [
-          "/la-marimorena/dktp-home.png",
           "/la-marimorena/mb-home.png",
           "/la-marimorena/mb-nav.png",
+          "/la-marimorena/dktp-home.png",
         ],
       },
       {
         category: "Booking Page",
         sources: [
-          "/la-marimorena/dktp-piercings.png",
           "/la-marimorena/mb-piercings.png",
+          "/la-marimorena/dktp-piercings.png",
         ],
       },
     ],
@@ -43,9 +43,9 @@ export const webProjects = [
       {
         category: "Landing Page",
         sources: [
-          "/dr-pablo-lopez/home-dk.png",
           "/dr-pablo-lopez/home-mb.png",
           "/dr-pablo-lopez/nav-mb.png",
+          "/dr-pablo-lopez/home-dk.png",
         ],
       },
       {
@@ -96,11 +96,11 @@ export const webProjects = [
     images: [
       {
         category: "Home",
-        sources: ["/cardela/dktp-home.png", "/cardela/mb-home.png"],
+        sources: ["/cardela/mb-home.png", "/cardela/dktp-home.png"],
       },
       {
         category: "Booking Page",
-        sources: ["/cardela/dktp-product.png", "/cardela/mb-product.png"],
+        sources: ["/cardela/mb-product.png", "/cardela/dktp-product.png"],
       },
     ],
   },
@@ -118,7 +118,7 @@ export const webProjects = [
     images: [
       {
         category: "home",
-        sources: ["/drim/DRIM-Home.png", "/drim/home-drim-mobile.png"],
+        sources: ["/drim/home-drim-mobile.png", "/drim/DRIM-Home.png"],
       },
       {
         category: "Product Page",
