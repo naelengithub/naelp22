@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
@@ -7,6 +7,7 @@ export interface WebProjectProps {
   className?: string;
   brand: string;
   description: string;
+  live: boolean;
   year: number;
   team?: string;
   url: string;
@@ -23,23 +24,73 @@ export interface WebProjectProps {
  */
 
 export const WebProject = (props: WebProjectProps) => {
-  const { className, brand, description, year, images, url, concept, team } =
-    props;
+  const {
+    className,
+    brand,
+    description,
+    year,
+    images,
+    url,
+    concept,
+    team,
+    live,
+  } = props;
+
+  const [screenWidth, setScreenWidth] = useState<number>(0);
+  const [isDesktop, setIsDesktop] = useState<boolean>(false);
+
+  // Update screen width and check if on desktop
+  useEffect(() => {
+    const handleResize = () => {
+      const currentWidth = window.innerWidth;
+      setScreenWidth(currentWidth);
+      setIsDesktop(currentWidth >= 768); // Example breakpoint for 'md+' screens
+    };
+
+    // Set initial values
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // Function to render the images for each category
   const renderImages = (sources: string[]) => {
     return sources.map((src, index) => {
-      const isMbImage = src.includes("mb") || src.includes("mobile");
-      const isDesktopImage = src.includes("dktp") || src.includes("desktop");
+      const isMbImage =
+        src.includes("mb") || src.includes("mobile") || src.includes("Mobile");
+      const isDesktopImage =
+        src.includes("dktp") ||
+        src.includes("desktop") ||
+        src.includes("Desktop");
       const isFbCover = src.includes("cover");
       const isCard = src.includes("card");
       const isFolder = src.includes("folder");
-      const imageWidth = isFbCover
+
+      // Set image width based on screen size
+      const imageWidth = isDesktop
+        ? // Desktop-specific widths
+          isFbCover
+          ? 800
+          : isMbImage
+          ? 200
+          : isDesktopImage
+          ? 500
+          : isCard
+          ? 182
+          : isFolder
+          ? 245
+          : 500
+        : // Mobile-specific widths
+        isFbCover
         ? 800
         : isMbImage
-        ? 200
+        ? Math.round(screenWidth / 3)
         : isDesktopImage
-        ? 500
+        ? Math.round(screenWidth * 0.8)
         : isCard
         ? 182
         : isFolder
@@ -68,9 +119,15 @@ export const WebProject = (props: WebProjectProps) => {
     <div className={`flex flex-col p-6 ${className}`}>
       <h3>{concept}</h3>
       <p className="max-w-5xl">
-        <Link href={url} target="_blank">
-          {brand}, {year}
-        </Link>
+        {live ? (
+          <Link href={url} target="_blank" className="underline">
+            {brand}, {year}
+          </Link>
+        ) : (
+          <>
+            {brand}, {year} (in development)
+          </>
+        )}
         <br />
         {description}
         {team && (
@@ -89,7 +146,7 @@ export const WebProject = (props: WebProjectProps) => {
             <div className="flex overflow-x-scroll gap-2">
               {renderImages(imageGroup.sources)}
             </div>
-            <p className="text-right">
+            <p>
               {imageGroup.category.charAt(0).toUpperCase() +
                 imageGroup.category.slice(1)}
             </p>

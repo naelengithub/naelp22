@@ -36,6 +36,7 @@ export default function Home() {
                 url={project.url}
                 concept={project.concept}
                 team={project.team}
+                live={project.live}
               />
             ))}
 
