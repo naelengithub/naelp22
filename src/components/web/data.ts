@@ -28,7 +28,7 @@ export const webProjects = [
         ],
       },
       {
-        category: "Baby Piercing Page",
+        category: "Baby Piercing Landing Page",
         sources: [
           "/la-marimorena/LMM-Bebés-Desktop.png",
           "/la-marimorena/LMM-Bebés-Mobile.png",
