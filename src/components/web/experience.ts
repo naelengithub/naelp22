@@ -1,6 +1,6 @@
 export const jobExperience = [
   {
-    title: "Web Designer and Developer",
+    title: "Design Engineer",
     location: "Remote",
     company: "Freelance",
     year: "Mar 2024 - Present",

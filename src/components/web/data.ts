@@ -4,7 +4,7 @@ export const webProjects = [
     online: true,
     live: false,
     url: "https://lamarimorena.com",
-    year: 2025,
+    year: 2024,
     concept: "Digital Product Redesign",
     description:
       "Redesigned and developed the online store for La Marimorena, refining the branding, streamlining user flows, and adding strategic marketing elements. The revamp included clear calls to action, mobile optimization, and a modern aesthetic to enhance usability and drive conversions.",
@@ -96,7 +96,7 @@ export const webProjects = [
     online: true,
     live: true,
     url: "https://cardela.mx",
-    year: 2025,
+    year: 2024,
     concept: "Digital Product Audit & Enhancements",
     description:
       "Conducted an efficiency audit and optimized the online store for Cardela, improving functionality and streamlining the overall user experience. Key enhancements included implementing a robust Doofinder search bar, introducing image-hover effects, adding a favicon for better branding, and integrating a reviews plugin to boost customer trust. Additionally, I introduced a personalization feature enabling users to choose product colors and preview their custom text as it would appear when printed. These updates created a cleaner, more engaging interface to enhance usability and drive customer satisfaction.",

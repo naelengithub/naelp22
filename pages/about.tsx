@@ -41,10 +41,10 @@ export default function Contact() {
                 <DynamicShadowText text="Hi." />
               </span>
               <span>
-                I&apos;m Ana Elisa, a hands-on digital project designer and
-                developer, specializing in managing and operating end-to-end
-                client projects—from initial concept to the launch of fully
-                functional, live websites and ecommerce stores.
+                I&apos;m Ana Elisa, a hands-on design engineer, specializing in
+                managing and operating end-to-end client projects—from initial
+                concept to the launch of fully functional, live websites and
+                ecommerce stores.
               </span>
               <span>
                 &nbsp;My approach ensures digital experiences that are are both
@@ -52,15 +52,19 @@ export default function Contact() {
               </span>
             </p>
             <p className="mt-4">
-              I’m a self-starter with a knack for adapting and problem-solving,
-              honed through my experiences as a third-culture kid. I design and
-              develop digital products that not only scale businesses but also
-              help transmit their message and evoke the right emotions. My role
-              spans across operations, from setting up new projects and
-              responding to briefs and RFPs to co-creating pitches, treatments,
-              and proposals. I handle the entire project lifecycle, from design
-              and development to scoping, quoting, and planning, ensuring
-              everything runs smoothly, is profitable, and meets deadlines.
+              I’m a self-starter with a passion for creative coding and
+              interactive design. I love crafting digital experiences that go
+              beyond function — they engage, evoke emotion, and tell a story. My
+              work spans the entire product lifecycle, from design and
+              development to scoping, quoting, and planning, ensuring projects
+              run smoothly, meet deadlines, and drive impact. I thrive in
+              problem-solving and adapting to challenges, skills honed through
+              my experience as a third-culture kid. You can see my creative
+              exploration in action with my side project, &apos;
+              <Link href="https://other-side.net" className="underline">
+                Otherside
+              </Link>
+              &apos;, launching in early March 2025.
             </p>
             <p className="mt-4">
               I mostly work with entrepreneurs digitizing their products and
