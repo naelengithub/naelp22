@@ -1,71 +1,73 @@
-import { useState } from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export const ContactUs = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [status, setStatus] = useState("");
+  const form = useRef();
+  const [message, setMessage] = useState("");
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_tedu7gs", "template_58a9pub", form.current, {
+        publicKey: "yqAFgU7BQZo7pgMBQ",
+      })
+      .then(
+        () => {
+          setMessage("Thanks! Your message has been sent.");
+        },
+        (error) => {
+          setMessage(
+            "Oops, something failed :( But you can find my email at the top of this page."
+          );
+          console.log(`${error}`);
+        }
+      );
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("Sending...");
+  const formStyle = {
+    display: "flex",
+    flexDirection: "column",
+    gap: "10px",
+  };
 
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+  const groupStyle = {
+    display: "flex",
+    justifyContent: "flex-end",
+    gap: "10px",
+  };
 
-    if (response.ok) {
-      setStatus("Email sent successfully!");
-      setFormData({ name: "", email: "", message: "" });
-    } else {
-      setStatus("Failed to send email. Try again.");
-    }
+  const inputStyle = {
+    borderWidth: "2px",
+    borderStyle: "dotted",
+    borderColor: "rgb(255, 182, 193)",
+    borderRadius: "0.25rem",
+    backgroundColor: "floralwhite",
+    paddingLeft: "0.25rem",
+    paddingRight: "0.25rem",
+    textAlign: "right",
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      style={{ display: "flex", flexDirection: "column", gap: "10px" }}
-    >
-      <div style={{ display: "flex", justifyContent: "flex-end", gap: "10px" }}>
+    <form ref={form} onSubmit={sendEmail} style={formStyle}>
+      <div style={groupStyle}>
         <label>Name</label>
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
+        <input type="text" name="from_name" style={inputStyle} />
       </div>
-      <div style={{ display: "flex", justifyContent: "flex-end", gap: "10px" }}>
+      <div style={groupStyle}>
         <label>Email</label>
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
+        <input type="email" name="from_email" style={inputStyle} />
       </div>
-      <div style={{ display: "flex", justifyContent: "flex-end", gap: "10px" }}>
+      <div style={groupStyle}>
         <label>Message</label>
-        <textarea
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        />
+        <textarea name="message" style={inputStyle} />
       </div>
-      <input type="submit" value="Send" style={{ cursor: "pointer" }} />
-      <p>{status}</p>
+      <input
+        type="submit"
+        value="Send"
+        style={{ textAlign: "right", cursor: "pointer" }}
+      />
+      {message && <p style={{ textAlign: "right" }}>{message}</p>}
     </form>
   );
 };

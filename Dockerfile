@@ -36,20 +36,6 @@ ENV NODE_ENV production
 
 ENV NEXT_TELEMETRY_DISABLED 1
 
-# Accept environment variables from build arguments
-ARG EMAIL_HOST
-ARG EMAIL_PORT
-ARG EMAIL_USER
-ARG EMAIL_PASS
-ARG EMAIL_TO
-
-# Set environment variables inside the container
-ENV EMAIL_HOST=$EMAIL_HOST
-ENV EMAIL_PORT=$EMAIL_PORT
-ENV EMAIL_USER=$EMAIL_USER
-ENV EMAIL_PASS=$EMAIL_PASS
-ENV EMAIL_TO=$EMAIL_TO
-
 # You only need to copy next.config.js if you are NOT using the default configuration
 COPY --from=builder /app/next-env.d.ts ./next-env.d.ts
 COPY --from=builder /app/public ./public
@@ -71,7 +57,12 @@ RUN ["chmod", "+x", "docker-entrypoint.sh"]
 
 ENTRYPOINT ["./docker-entrypoint.sh"]
 
+
 EXPOSE 3000
+
 ENV PORT 3000
 
+
 CMD ["node_modules/.bin/next", "start"]
+
+	

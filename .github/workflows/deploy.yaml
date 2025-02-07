@@ -37,16 +37,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and Push Release to DockerHub
         shell: bash
-        run: |
-          docker build \
-            --build-arg EMAIL_HOST=${{ secrets.EMAIL_HOST }} \
-            --build-arg EMAIL_PORT=${{ secrets.EMAIL_PORT }} \
-            --build-arg EMAIL_USER=${{ secrets.EMAIL_USER }} \
-            --build-arg EMAIL_PASS=${{ secrets.EMAIL_PASS }} \
-           --build-arg EMAIL_TO=${{ secrets.EMAIL_TO }} \
-           -t ${{ secrets.DOCKER_USERNAME }}/$IMAGE_NAME:latest .
-
-           docker push ${{ secrets.DOCKER_USERNAME }}/$IMAGE_NAME:latest
+        run: .github/scripts/build_and_push.sh
       - name: Deploy to CapRover
         uses: caprover/deploy-from-github@v1.1.2
         with:
