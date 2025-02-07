@@ -5,6 +5,11 @@ env:
   IMAGE_NAME: ${{ github.repository }}
   DOCKERFILE: Dockerfile
   CAPROVER_APP: naelp22
+  EMAIL_HOST: ${{ secrets.EMAIL_HOST }}
+  EMAIL_PORT: ${{ secrets.EMAIL_PORT }}
+  EMAIL_USER: ${{ secrets.EMAIL_USER }}
+  EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+  EMAIL_TO: ${{ secrets.EMAIL_TO }}
 
 on:
   push:
