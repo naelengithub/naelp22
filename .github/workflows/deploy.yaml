@@ -5,11 +5,6 @@ env:
   IMAGE_NAME: ${{ github.repository }}
   DOCKERFILE: Dockerfile
   CAPROVER_APP: naelp22
-  EMAIL_HOST: ${{ secrets.EMAIL_HOST }}
-  EMAIL_PORT: ${{ secrets.EMAIL_PORT }}
-  EMAIL_USER: ${{ secrets.EMAIL_USER }}
-  EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
-  EMAIL_TO: ${{ secrets.EMAIL_TO }}
 
 on:
   push:
@@ -43,6 +38,12 @@ jobs:
       - name: Build and Push Release to DockerHub
         shell: bash
         run: .github/scripts/build_and_push.sh
+        env:
+          EMAIL_HOST: ${{ secrets.EMAIL_HOST }}
+          EMAIL_PORT: ${{ secrets.EMAIL_PORT }}
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
       - name: Deploy to CapRover
         uses: caprover/deploy-from-github@v1.1.2
         with:
