@@ -2,7 +2,7 @@ export const webProjects = [
   {
     brand: "La Marimorena",
     online: true,
-    live: false,
+    live: true,
     url: "https://lamarimorena.com",
     year: 2024,
     concept: "Digital Product Redesign",
