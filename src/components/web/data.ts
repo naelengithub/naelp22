@@ -4,7 +4,7 @@ export const webProjects = [
     online: true,
     live: true,
     url: "https://lamarimorena.com",
-    year: 2024,
+    year: 2025,
     concept: "Digital Product Redesign",
     description:
       "Redesigned and developed the online store for La Marimorena, refining the branding, streamlining user flows, and adding strategic marketing elements. The revamp included clear calls to action, mobile optimization, and a modern aesthetic to enhance usability and drive conversions.",
