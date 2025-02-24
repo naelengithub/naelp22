@@ -20,10 +20,10 @@ export const NavBarPortfolio = (props: NavBarPortfolioProps) => {
       <p>
         <Link
           className="pr-2"
-          href="mailto:contact@anaelisavargas.com"
+          href="mailto:hello@anaelisavargas.com"
           target="_blank"
         >
-          contact@anaelisavargas.com
+          hello@anaelisavargas.com
         </Link>{" "}
         /{" "}
         <Link
