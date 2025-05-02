@@ -5,7 +5,7 @@ export const webProjects = [
     live: true,
     url: "https://other-side.net",
     year: 2025,
-    concept: "Founder & Design Engineering",
+    concept: "Founder & Design Engineer",
     description:
       "An ongoing platform I conceptualized, designed, and built — exploring abstraction, expression, and inclusion through interactive digital formats. I engineered the full experience from scratch and curated its first exhibition, The Others, a dynamic archive mapping individual creative presence within a fluid, generative grid.",
     team: "",
@@ -32,7 +32,7 @@ export const webProjects = [
     live: true,
     url: "https://mercedeslopezarratia.com",
     year: 2025,
-    concept: "Design Engineering",
+    concept: "Design Engineer",
     description:
       "I designed and developed the personal website for Mercedes López to support the launch of her debut book and build a cohesive brand across her work as a writer, speaker, and consultant. The project included visual identity design and a custom admin interface built with Sanity.io, giving her full control over content updates. The result is a flexible platform that reflects her voice and grows with her evolving practice.",
     team: "",
