@@ -1,5 +1,32 @@
 export const webProjects = [
   {
+    brand: "Otherside",
+    online: true,
+    live: true,
+    url: "https://other-side.net",
+    year: 2025,
+    concept: "Founder & Design Engineering",
+    description:
+      "An ongoing platform I conceptualized, designed, and built — exploring abstraction, expression, and inclusion through interactive digital formats. I engineered the full experience from scratch and curated its first exhibition, The Others, a dynamic archive mapping individual creative presence within a fluid, generative grid.",
+    team: "",
+    tools: "Typescript, React, p5.js",
+    role: "Designer & Engineer",
+    images: [
+      {
+        category: "Home",
+        sources: ["/otherside/Home-dktp.png"],
+      },
+      {
+        category: "Iciar Feature",
+        sources: ["/otherside/Iciar-dktp.png"],
+      },
+      {
+        category: "Max Feature",
+        sources: ["/otherside/Max-dktp.png"],
+      },
+    ],
+  },
+  {
     brand: "Mer López Arratia",
     online: true,
     live: true,
