@@ -1,5 +1,24 @@
 export const webProjects = [
   {
+    brand: "Mer López Arratia",
+    online: true,
+    live: true,
+    url: "https://mercedeslopezarratia.com",
+    year: 2025,
+    concept: "Design Engineering",
+    description:
+      "I designed and developed the personal website for Mercedes López to support the launch of her debut book and build a cohesive brand across her work as a writer, speaker, and consultant. The project included visual identity design and a custom admin interface built with Sanity.io, giving her full control over content updates. The result is a flexible platform that reflects her voice and grows with her evolving practice.",
+    team: "",
+    tools: "Typescript, React, Sanity.io",
+    role: "Designer & Engineer",
+    images: [
+      {
+        category: "Home",
+        sources: ["/mla/mla-dktp-home.png", "/mla/mla-mb-home.png"],
+      },
+    ],
+  },
+  {
     brand: "La Marimorena",
     online: true,
     live: true,
@@ -9,7 +28,7 @@ export const webProjects = [
     description:
       "Redesigned and developed the online store for La Marimorena, refining the branding, streamlining user flows, and adding strategic marketing elements. The revamp included clear calls to action, mobile optimization, and a modern aesthetic to enhance usability and drive conversions.",
     team: "",
-    tools: "Figma, Shopify",
+    tools: "Figma, Liquid, Shopify",
     role: "Designer & Developer",
     images: [
       {
@@ -46,7 +65,7 @@ export const webProjects = [
     description:
       "Transformed Dr. Pablo Vicencio’s vision into a cohesive brand identity and platform. Defined the brand’s goals, developed a complete marketing strategy, and crafted the UX and website design.",
     team: "Development in colaboration with Rodrigo López.",
-    tools: "Adobe Photoshop, Figma, Wordpress, Elementor",
+    tools: "Adobe Photoshop, Figma, WordPress, Elementor",
     role: "Designer, Principal Engineer & Product Lead",
     images: [
       {
@@ -101,7 +120,7 @@ export const webProjects = [
     description:
       "Conducted an efficiency audit and optimized the online store for Cardela, improving functionality and streamlining the overall user experience. Key enhancements included implementing a robust Doofinder search bar, introducing image-hover effects, adding a favicon for better branding, and integrating a reviews plugin to boost customer trust. Additionally, I introduced a personalization feature enabling users to choose product colors and preview their custom text as it would appear when printed. These updates created a cleaner, more engaging interface to enhance usability and drive customer satisfaction.",
     team: "",
-    tools: "Figma, Shopify",
+    tools: "Figma, Liquid, Shopify",
     role: "Designer & Developer",
     images: [
       {
@@ -139,7 +158,7 @@ export const webProjects = [
   },
   {
     brand: "El Colegio La Paz",
-    online: true,
+    online: false,
     live: true,
     concept: "Digital Product Redesign",
     description:

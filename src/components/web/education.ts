@@ -4,7 +4,7 @@ export const education = [
     sede: "Diploma, Facultad de Artes y Diseño, UNAM",
     year: "Aug 2024 - Jan 2025",
     description:
-      "Relevant coursework: Storytelling, Digital Mindset and User Experience Design, Digital Strategies and Social Media Content Creation.",
+      "Relevant coursework: Storytelling, Service Design & Customer Journeys, Digital Ecosystems & Strategic Positioning, UX Design, Content Strategy & Community Building",
   },
   {
     title: "Front-End Engineering",

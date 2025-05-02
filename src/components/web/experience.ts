@@ -8,7 +8,7 @@ export const jobExperience = [
       "I specialize in designing and developing user-centered web pages and applications, focusing on delivering intuitive and engaging user experiences through strategic design and UX/UI best practices. I collaborate closely with cross-functional teams to perform user research, gather actionable insights, and refine design solutions based on user feedback and testing.",
   },
   {
-    title: "Associate Product Designer & Junior Engineer",
+    title: "Associate Product Designer & Engineer",
     location: "Remote (San Francisco)",
     company: "Haldi",
     year: "Mar 2022 - Mar 2024",

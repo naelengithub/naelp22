@@ -10,6 +10,7 @@ export interface WebProjectProps {
   live: boolean;
   year: number;
   team?: string;
+  tools: string;
   url: string;
   concept: string;
   images: {
@@ -33,6 +34,7 @@ export const WebProject = (props: WebProjectProps) => {
     url,
     concept,
     team,
+    tools,
     live,
   } = props;
 
@@ -136,6 +138,7 @@ export const WebProject = (props: WebProjectProps) => {
           </>
         )}
       </p>
+      <p className="mt-2 text-sm font-bold">Made with: {tools}</p>
       <div className="flex text-xs mt-2">
         <span>scroll</span>
         <ArrowRightIcon className="h-4 w-6 text-gray-600" />{" "}

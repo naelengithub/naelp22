@@ -11,7 +11,7 @@ export default function Home() {
       <div className="relative">
         <div className="min-h-screen">
           <NavBarPortfolio />
-          <h1 className="text-center text-floral-white my-20 md:my-40 mx-20 text-8xl">
+          <h1 className="text-center text-floral-white my-10 md:my-40 mx-10 text-5xl sm:text-8xl break-words">
             <span
               style={{
                 textShadow: `
@@ -21,7 +21,7 @@ export default function Home() {
               40px 40px 80px rgba(255, 20, 147, 0.4)`,
               }}
             >
-              some works
+              selected works
             </span>
           </h1>
           {webProjects
@@ -37,6 +37,7 @@ export default function Home() {
                 concept={project.concept}
                 team={project.team}
                 live={project.live}
+                tools={project.tools}
               />
             ))}
 

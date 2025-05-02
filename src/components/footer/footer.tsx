@@ -19,7 +19,7 @@ export const Footer = (props: FooterProps) => {
   return (
     <div
       style={{
-        backgroundColor: "#FFF7ED",
+        backgroundColor: "#eee",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
