@@ -102,7 +102,7 @@ export const WebProject = (props: WebProjectProps) => {
       return (
         <div
           key={index}
-          className="carousel-item min-w-fit h-40 sm:h-80 overflow-scroll"
+          className="carousel-item min-w-fit h-60 sm:h-80 overflow-scroll"
         >
           <Image
             src={src}
