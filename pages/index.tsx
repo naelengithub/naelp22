@@ -35,7 +35,7 @@ export default function Home() {
   }, [timer, setTime]);
 
   return (
-    <div className="min-h-screen flex relative flex-col items-center justify-center">
+    <div className="min-h-screen flex relative flex-col items-center justify-center overflow-hidden">
       <Head>
         <title>Ana Elisa</title>
       </Head>
@@ -56,8 +56,7 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="absolute w-full h-full">
-        {/* Render the DynamicP5Sketch component */}
+      <div className="fixed top-0 left-0 w-screen h-screen z-0">
         <DynamicP5Sketch />
       </div>
     </div>

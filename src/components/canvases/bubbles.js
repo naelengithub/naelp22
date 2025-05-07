@@ -7,58 +7,43 @@ function P5Sketch() {
   const gravity = 0.03;
   const friction = -0.9;
   const balls = [];
-  const images = []; // To store images for each ball
-  const p5Instance = useRef(null); // Use a ref for the p5 instance
+  const images = [];
+  const p5Instance = useRef(null);
 
   const setup = (p5, canvasParentRef) => {
-    p5Instance.current = p5; // Save the p5 instance reference to the ref
-    p5.createCanvas(window.innerWidth, window.innerHeight).parent(
-      canvasParentRef
-    );
+    p5Instance.current = p5;
+    p5.createCanvas(
+      window.innerWidth,
+      document.documentElement.clientHeight
+    ).parent(canvasParentRef);
 
-    // Load images
     for (let i = 0; i < numBalls; i++) {
-      images[i] = p5.loadImage(`/images/imp${i + 1}.png`); // Adjust image paths
+      images[i] = p5.loadImage(`/images/imp${i + 1}.png`);
     }
 
-    // Create balls with unique diameters and spread out across the canvas
-    const minSpacing = 200; // Minimum distance between balls to avoid overlap
-
-    // Create balls with unique diameters and spread out positions
+    const minSpacing = 200;
     for (let i = 0; i < numBalls; i++) {
       const isMobile = window.innerWidth < 768;
-      const ballSize = isMobile ? p5.random(75, 150) : p5.random(200, 350); // Unique size for each ball
-
+      const ballSize = isMobile ? p5.random(75, 150) : p5.random(200, 350);
       let x, y;
       let overlapping = true;
       while (overlapping) {
-        // Random position but avoid overlap by checking distances
         x = p5.random(window.innerWidth);
-        y = p5.random(window.innerHeight);
+        y = p5.random(document.documentElement.clientHeight);
         overlapping = false;
-
-        // Check if the new position overlaps with any existing balls
         for (let j = 0; j < i; j++) {
           const distX = x - balls[j].x;
           const distY = y - balls[j].y;
           const distance = Math.sqrt(distX * distX + distY * distY);
           const minDist = balls[j].diameter / 2 + ballSize / 2;
-
           if (distance < minDist) {
-            overlapping = true; // If there's overlap, pick new coordinates
+            overlapping = true;
             break;
           }
         }
       }
 
-      balls[i] = new Ball(
-        x,
-        y,
-        ballSize, // Use unique ball diameters
-        i,
-        balls,
-        images[i] // Pass corresponding image
-      );
+      balls[i] = new Ball(x, y, ballSize, i, balls, images[i]);
     }
     p5.noStroke();
   };
@@ -77,7 +62,9 @@ function P5Sketch() {
   };
 
   const updateCanvasSize = (p5) => {
-    p5.resizeCanvas(window.innerWidth, window.innerHeight);
+    const width = window.innerWidth;
+    const height = document.documentElement.clientHeight;
+    p5.resizeCanvas(width, height);
   };
 
   useEffect(() => {
@@ -96,7 +83,7 @@ function P5Sketch() {
       this.diameter = din;
       this.id = idin;
       this.others = oin;
-      this.img = img; // Store the image for this ball
+      this.img = img;
     }
 
     collide() {
@@ -126,7 +113,7 @@ function P5Sketch() {
       this.y += this.vy;
 
       const canvasWidth = window.innerWidth;
-      const canvasHeight = window.innerHeight;
+      const canvasHeight = document.documentElement.clientHeight;
 
       if (this.x + this.diameter / 2 > canvasWidth) {
         this.x = canvasWidth - this.diameter / 2;
@@ -146,11 +133,8 @@ function P5Sketch() {
     }
 
     display(p5) {
-      // Draw a solid ellipse background before drawing the image
       p5.fill(255);
       p5.ellipse(this.x, this.y, this.diameter, this.diameter);
-
-      // Display the image on top of the ellipse, clipped by the round background
       p5.image(
         this.img,
         this.x - this.diameter / 2,
