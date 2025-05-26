@@ -1,5 +1,36 @@
 export const webProjects = [
   {
+    brand: "Sudor",
+    online: true,
+    live: true,
+    url: "https://www.instagram.com/sudor.brln/",
+    year: 2025,
+    concept: "Design Engineer",
+    description:
+      "A visual identity and animated poster for Sudor — an underground party where sweat meets elegance. Built using custom shaders and generative effects, the piece invites people to the dancefloor through fluid, tactile visuals that shimmer and shift. Designed to be both intriguing and welcoming.",
+    team: "",
+    tools: "Shaders, js",
+    role: "Designer & Engineer",
+    images: [
+      {
+        category: "Three-Part Digital Poster",
+        sources: [
+          "/sudor/a-full.mp4",
+          "/sudor/b-full.mp4",
+          "/sudor/c-full.mp4",
+        ],
+      },
+      {
+        category: "Daytime Edition",
+        sources: [
+          "/sudor/daya-full.png",
+          "/sudor/dayb-full.png",
+          "/sudor/dayc-full.png",
+        ],
+      },
+    ],
+  },
+  {
     brand: "Alejandro Martínez",
     online: true,
     live: true,

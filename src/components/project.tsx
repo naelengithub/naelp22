@@ -71,6 +71,7 @@ export const WebProject = (props: WebProjectProps) => {
       const isFbCover = src.includes("cover");
       const isCard = src.includes("card");
       const isFolder = src.includes("folder");
+      const isFull = src.includes("full");
 
       // Set image width based on screen size
       const imageWidth = isDesktop
@@ -85,6 +86,8 @@ export const WebProject = (props: WebProjectProps) => {
           ? 182
           : isFolder
           ? 245
+          : isFull
+          ? 250
           : 500
         : // Mobile-specific widths
         isFbCover
@@ -97,6 +100,8 @@ export const WebProject = (props: WebProjectProps) => {
         ? 182
         : isFolder
         ? 245
+        : isFull
+        ? Math.round(screenWidth / 1.7)
         : 500;
 
       return (
@@ -104,14 +109,27 @@ export const WebProject = (props: WebProjectProps) => {
           key={index}
           className="carousel-item min-w-fit h-60 sm:h-80 overflow-scroll"
         >
-          <Image
-            src={src}
-            alt={`${brand} - Image ${index + 1}`}
-            width={imageWidth}
-            height={300}
-            className=""
-            loading="lazy"
-          />
+          {src.toLowerCase().endsWith(".mp4") ? (
+            <video
+              src={src}
+              width={imageWidth}
+              height={300}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="object-cover"
+            />
+          ) : (
+            <Image
+              src={src}
+              alt={`${brand} - Image ${index + 1}`}
+              width={imageWidth}
+              height={300}
+              className={`${isFull ? "min-h-full" : ""}`}
+              loading="lazy"
+            />
+          )}
         </div>
       );
     });
