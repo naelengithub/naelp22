@@ -1,5 +1,28 @@
 export const webProjects = [
   {
+    brand: "Alejandro Martínez",
+    online: true,
+    live: true,
+    url: "https://amvstudios.work",
+    year: 2025,
+    concept: "Design Engineer",
+    description:
+      "A digital portfolio designed to reflect Alejandro's bold, expressive style — immersive, unapologetic, and rich in color and scale. Built from scratch, it presents his work as a living archive, with an interactive shuffle feature that keeps the experience in motion.",
+    team: "",
+    tools: "Typescript, React",
+    role: "Designer & Engineer",
+    images: [
+      {
+        category: "Home",
+        sources: ["/amv/home_dktp.png", "/amv/home_mb.png"],
+      },
+      {
+        category: "About",
+        sources: ["/amv/about_dktp.png", "/amv/about_mb.png"],
+      },
+    ],
+  },
+  {
     brand: "Otherside",
     online: true,
     live: true,
