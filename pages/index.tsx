@@ -37,7 +37,25 @@ export default function Home() {
   return (
     <div className="min-h-screen flex relative flex-col items-center justify-center overflow-hidden">
       <Head>
-        <title>Ana Elisa</title>
+        <title>
+          Ana Elisa Vargas | Designing Digital Spaces for Small Brands That
+          Dream Big
+        </title>
+        <meta
+          name="description"
+          content="Digital studio founded by Ana Elisa Vargas. Building intentional brands, efficient websites, and clear digital strategies for small businesses — one purposeful project at a time."
+        />
+        <meta
+          property="og:title"
+          content="Ana Elisa Vargas | Intentional Design & Digital Autonomy"
+        />
+        <meta
+          property="og:description"
+          content="Explore the work of Ana Elisa Vargas: branding, web design and development, and digital strategy for small businesses. A studio focused on clarity, autonomy, and creative growth."
+        />
+        <meta property="og:url" content="https://anaelisavargas.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/images/im1.jpg" />
       </Head>
       <div className="text-center gap-4 mx-4 z-[100]">
         <h1>ana elisa</h1>
