@@ -1,5 +1,6 @@
 import * as React from "react";
 import Link from "next/link";
+import Clocks from "../common/Clocks";
 
 export interface NavBarPortfolioProps {
   className?: string;
@@ -13,32 +14,21 @@ export const NavBarPortfolio = (props: NavBarPortfolioProps) => {
   const { className } = props;
 
   return (
-    <nav className="p-6 text-right">
-      <span>
-        <Link href="/">index</Link>
-      </span>
-      <p>
-        <Link
-          className="pr-2"
-          href="mailto:hello@anaelisavargas.com"
-          target="_blank"
-        >
-          hello@anaelisavargas.com
-        </Link>{" "}
-        /{" "}
-        <Link
-          className="pl-2"
-          href="https://www.linkedin.com/in/anaelisavargas/"
-          target="_blank"
-        >
-          linked.in
-        </Link>
-        {/* /{" "}
+    <nav className="fixed flex justify-end p-6 w-full font-extrabold">
+      <div className="text-right text-white mix-blend-difference">
+        <span>
+          <Link href="/">Index</Link>
+        </span>
+        <p>
+          <Link href="mailto:hello@anaelisavargas.com" target="_blank">
+            Contact
+          </Link>
+          {/* /
         <Link className="pl-2" href="">
           the old relic
         </Link> */}
-      </p>
-      <span>© 2025</span>
+        </p>
+      </div>
     </nav>
   );
 };

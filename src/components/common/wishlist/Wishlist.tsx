@@ -11,6 +11,7 @@ import { BottomToLeft } from "./BottomToLeft";
 import { MiddleToLeft } from "./MiddleToLeft";
 import styles from "./wishlist.module.css";
 import Head from "next/head";
+import { NavBarPortfolio } from "../../navbar/navbarPortfolio";
 
 export interface WishlistProps {
   className?: string;
@@ -36,6 +37,7 @@ export const Wishlist = (props: WishlistProps) => {
         <Head>
           <title>merry xmas</title>
         </Head>
+        <NavBarPortfolio />
         <div
           className="pt-12"
           style={{
@@ -184,7 +186,7 @@ export const Wishlist = (props: WishlistProps) => {
               <h1
                 style={{
                   margin: "0",
-                  fontSize: screenWidthSize / 5.75,
+                  fontSize: screenWidthSize / 6,
                 }}
               >
                 a good laugh

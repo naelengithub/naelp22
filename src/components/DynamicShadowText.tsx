@@ -5,7 +5,7 @@ export default function DynamicShadowText({ text }) {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true); // Now it's confirmed that this is client-side
+    setIsClient(true);
 
     const handleMouseMove = (event) => {
       setMousePosition({
@@ -15,26 +15,26 @@ export default function DynamicShadowText({ text }) {
     };
 
     window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  if (!isClient) return null; // Prevent rendering on the server side
+  if (!isClient) return null;
 
-  const shadowX = (mousePosition.x / window.innerWidth - 0.5) * 20; // Adjust for shadow offset
+  const shadowX = (mousePosition.x / window.innerWidth - 0.5) * 20;
   const shadowY = (mousePosition.y / window.innerHeight - 0.5) * 20;
 
   return (
     <span
       className="text-floral-white m-6"
       style={{
-        textShadow: `${shadowX}px ${shadowY}px 30px rgba(255, 105, 180, 1),
-          ${shadowX}px ${shadowY}px 30px rgba(255, 20, 147, 1),
-          ${shadowX}px ${shadowY}px 80px rgba(255, 20, 147, 0.8),
-          ${shadowX}px ${shadowY}px 80px rgba(255, 20, 147, 0.6),
-          ${shadowX}px ${shadowY}px 80px rgba(255, 20, 147, 0.4)`,
+        textShadow: `
+          ${shadowX}px ${shadowY}px 20px rgba(100, 120, 140, 0.7),
+          ${shadowX}px ${shadowY}px 40px rgba(130, 150, 170, 0.5),
+          ${shadowX}px ${shadowY}px 60px rgba(160, 180, 200, 0.3),
+            ${shadowX}px ${shadowY}px 20px rgba(100, 120, 140, 0.7),
+          ${shadowX}px ${shadowY}px 40px rgba(130, 150, 170, 0.5),
+          ${shadowX}px ${shadowY}px 60px rgba(160, 180, 200, 0.3)
+        `,
       }}
     >
       {text}

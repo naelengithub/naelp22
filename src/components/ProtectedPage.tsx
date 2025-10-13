@@ -43,13 +43,13 @@ const ProtectedPage = ({ children, correctCodes }: ProtectedPageProps) => {
             value={accessCode}
             onChange={(e) => setAccessCode(e.target.value)}
             placeholder="Enter access code"
-            className="bg-floral-white text-center border-2 border-dotted border-blossom"
+            className="bg-floral-white text-center border-2 border-dotted border-slate-grey"
           />
           <button type="submit">Submit</button>
           <div className="mt-4 text-sm">
             <span>No luck?&nbsp;</span>
             <Link href="/">
-              <span className="text-bonito-brown">Back to home</span>.
+              <span className="text-slate-grey">Back to home</span>.
             </Link>
           </div>
         </form>

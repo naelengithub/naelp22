@@ -1,6 +1,5 @@
 import * as React from "react";
 import Link from "next/link";
-import { NavBar } from "../../../../navbar/navbar";
 import { Footer } from "../../../../footer/footer";
 
 export interface DetailedItemProps {
@@ -20,7 +19,6 @@ export const DetailedItem = (props: DetailedItemProps) => {
 
   return (
     <div>
-      <NavBar />
       <div style={{ marginTop: "60px" }}>
         <div style={{ padding: "1rem", paddingTop: 0 }}>
           <h1>{title}</h1>

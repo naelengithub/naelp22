@@ -107,19 +107,23 @@ export const WebProject = (props: WebProjectProps) => {
       return (
         <div
           key={index}
-          className="carousel-item min-w-fit h-60 sm:h-80 overflow-scroll"
+          className={`carousel-item min-w-fit h-60 sm:h-80 overflow-scroll ${
+            src.toLowerCase().endsWith(".mp4") && "sm:h-[500px]"
+          }`}
         >
           {src.toLowerCase().endsWith(".mp4") ? (
-            <video
-              src={src}
-              width={imageWidth}
-              height={300}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="object-cover"
-            />
+            <Link href={url}>
+              <video
+                src={src}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="h-full w-auto object-contain"
+              >
+                Sorry, your browser doesn’t support embedded videos.
+              </video>
+            </Link>
           ) : (
             <Image
               src={src}

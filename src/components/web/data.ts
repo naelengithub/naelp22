@@ -3,30 +3,26 @@ export const webProjects = [
     brand: "Sudor",
     online: true,
     live: true,
-    url: "https://www.instagram.com/sudor.brln/",
+    url: "https://www.instagram.com/sudor.bln/",
     year: 2025,
     concept: "Design Engineer",
     description:
-      "A visual identity and animated poster for Sudor — an underground party where sweat meets elegance. Built using custom shaders and generative effects, the piece invites people to the dancefloor through fluid, tactile visuals that shimmer and shift. Designed to be both intriguing and welcoming.",
+      "A visual identity and animated poster for Sudor - an underground party where sweat meets elegance. Built using custom shaders and generative effects, the piece invites people to the dancefloor through fluid, tactile visuals that shimmer and shift. Designed to be both intriguing and welcoming.",
     team: "",
-    tools: "Shaders, js",
+    tools: "Shaders",
     role: "Designer & Engineer",
     images: [
       {
-        category: "Three-Part Digital Poster",
-        sources: [
-          "/sudor/a-full.mp4",
-          "/sudor/b-full.mp4",
-          "/sudor/c-full.mp4",
-        ],
+        category: "October 2025",
+        sources: ["/sudor/sudor3.mp4"],
       },
       {
-        category: "Daytime Edition",
-        sources: [
-          "/sudor/daya-full.png",
-          "/sudor/dayb-full.png",
-          "/sudor/dayc-full.png",
-        ],
+        category: "July 2025",
+        sources: ["/sudor/sudor2.mp4"],
+      },
+      {
+        category: "April 2025",
+        sources: ["/sudor/b-full.mp4"],
       },
     ],
   },
@@ -54,14 +50,14 @@ export const webProjects = [
     ],
   },
   {
-    brand: "Otherside",
+    brand: "Otherside: The Others, Issue I",
     online: true,
     live: true,
     url: "https://other-side.net",
     year: 2025,
     concept: "Founder & Design Engineer",
     description:
-      "An ongoing platform I conceptualized, designed, and built — exploring abstraction, expression, and inclusion through interactive digital formats. I engineered the full experience from scratch and curated its first exhibition, The Others, a dynamic archive mapping individual creative presence within a fluid, generative grid.",
+      "An ongoing iniciative I conceptualized, designed, and built - a platform exploring abstraction, creative expression, and inclusion through interactive digital formats. I engineered the full experience from scratch and curated its first exhibition, The Others, a dynamic archive mapping individual creative presence within a fluid, generative grid.",
     team: "",
     tools: "Typescript, React, p5.js",
     role: "Designer & Engineer",
@@ -138,7 +134,7 @@ export const webProjects = [
   },
   {
     brand: "Dr. Pablo Vicencio",
-    online: true,
+    online: false,
     live: true,
     url: "https://www.drpablovicencio.com",
     year: 2024,
@@ -216,7 +212,7 @@ export const webProjects = [
   },
   {
     brand: "DRIM",
-    online: true,
+    online: false,
     live: true,
     concept: "Digital Product Enhancements",
     description:

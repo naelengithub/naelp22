@@ -5,6 +5,8 @@ import React, { useState, useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { timeState } from "../src/components/games/rockPaperScissors/atoms";
 import DynamicShadowText from "../src/components/DynamicShadowText";
+import { NavBarPortfolio } from "../src/components/navbar/navbarPortfolio";
+import Clocks from "../src/components/common/Clocks";
 
 // Import P5Sketch dynamically
 const DynamicP5Sketch = dynamic(
@@ -57,6 +59,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/images/im1.jpg" />
       </Head>
+      <NavBarPortfolio />
       <div className="text-center gap-4 mx-4 z-[100]">
         <h1>ana elisa</h1>
         <div className="flex flex-col gap-2">
