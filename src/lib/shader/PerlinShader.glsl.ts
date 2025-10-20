@@ -78,7 +78,7 @@ void main() {
 
   // 2. local cursor influence
   float dist = distance(coord, noiseOffset * 0.5 + 0.5);
-  float influence = smoothstep(0.4, 0.0, dist);
+  float influence = smoothstep(0.15, 0.0, dist);
 
   vec2 warp = vec2(
     sin(coord.y * 10.0 + uTime * 0.8),

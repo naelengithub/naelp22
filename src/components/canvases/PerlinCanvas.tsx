@@ -107,10 +107,10 @@ export default function PerlinCanvas() {
 
     // --- render loop ---
     const render = () => {
-      t += 0.01;
+      t += 0.003; // was 0.01 → slower time evolution
 
       // update morph over time
-      morph += morphSpeed;
+      morph += 0.0005; // was 0.002 → much slower morph transition
       if (morph >= 1.0) {
         morph = 0.0;
         seedA = seedB;
@@ -142,6 +142,9 @@ export default function PerlinCanvas() {
   }, []);
 
   return (
-    <canvas ref={canvasRef} className="fixed inset-0 w-screen h-screen block" />
+    <canvas
+      ref={canvasRef}
+      className="fixed inset-0 w-screen h-screen block -z-10"
+    />
   );
 }
