@@ -1,7 +1,13 @@
-import React, { useRef, useEffect } from "react";
-import Sketch from "react-p5";
+"use client";
+import React, { useRef, useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 
-function P5Sketch() {
+// Dynamically import react-p5 to avoid SSR issues
+const Sketch = dynamic(() => import("react-p5").then((mod) => mod.default), {
+  ssr: false,
+});
+
+export default function P5Sketch() {
   const numBalls = 4;
   const spring = 0.4;
   const gravity = 0.03;
@@ -9,14 +15,48 @@ function P5Sketch() {
   const balls = [];
   const images = [];
   const p5Instance = useRef(null);
+  const [mounted, setMounted] = useState(false);
+
+  // ✅ Only run on client
+  useEffect(() => {
+    if (typeof window !== "undefined") setMounted(true);
+  }, []);
+
+  // ✅ Safe resize handler (must be declared even if not mounted yet)
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    let resizeTimeout;
+
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        if (!p5Instance.current) return;
+        const p5 = p5Instance.current;
+        const width = window.innerWidth;
+        const height = document.documentElement.clientHeight;
+        p5.resizeCanvas(width, height);
+      }, 200);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      clearTimeout(resizeTimeout);
+    };
+  }, []);
+
+  // ⛔ Early return must come after all hooks
+  if (!mounted) return null;
 
   const setup = (p5, canvasParentRef) => {
     p5Instance.current = p5;
-    p5.createCanvas(
-      window.innerWidth,
-      document.documentElement.clientHeight
-    ).parent(canvasParentRef);
 
+    const width = window.innerWidth;
+    const height = document.documentElement.clientHeight;
+    p5.createCanvas(width, height).parent(canvasParentRef);
+
+    // preload images
     for (let i = 0; i < numBalls; i++) {
       images[i] = p5.loadImage(`/images/imp${i + 1}.png`);
     }
@@ -25,12 +65,13 @@ function P5Sketch() {
     for (let i = 0; i < numBalls; i++) {
       const isMobile = window.innerWidth < 768;
       const ballSize = isMobile ? p5.random(75, 150) : p5.random(200, 350);
-      let x, y;
-      let overlapping = true;
-      while (overlapping) {
-        x = p5.random(window.innerWidth);
-        y = p5.random(document.documentElement.clientHeight);
+
+      let x, y, overlapping;
+      do {
+        x = p5.random(width);
+        y = p5.random(height);
         overlapping = false;
+
         for (let j = 0; j < i; j++) {
           const distX = x - balls[j].x;
           const distY = y - balls[j].y;
@@ -41,10 +82,11 @@ function P5Sketch() {
             break;
           }
         }
-      }
+      } while (overlapping);
 
       balls[i] = new Ball(x, y, ballSize, i, balls, images[i]);
     }
+
     p5.noStroke();
   };
 
@@ -56,23 +98,6 @@ function P5Sketch() {
       ball.display(p5);
     });
   };
-
-  const windowResized = () => {
-    updateCanvasSize(p5Instance.current);
-  };
-
-  const updateCanvasSize = (p5) => {
-    const width = window.innerWidth;
-    const height = document.documentElement.clientHeight;
-    p5.resizeCanvas(width, height);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", windowResized);
-    return () => {
-      window.removeEventListener("resize", windowResized);
-    };
-  }, []);
 
   class Ball {
     constructor(xin, yin, din, idin, oin, img) {
@@ -133,6 +158,7 @@ function P5Sketch() {
     }
 
     display(p5) {
+      p5.noStroke();
       p5.fill(255);
       p5.ellipse(this.x, this.y, this.diameter, this.diameter);
       p5.image(
@@ -147,5 +173,3 @@ function P5Sketch() {
 
   return <Sketch setup={setup} draw={draw} />;
 }
-
-export default P5Sketch;

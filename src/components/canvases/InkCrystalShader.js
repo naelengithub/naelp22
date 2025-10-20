@@ -2,24 +2,29 @@
 import dynamic from "next/dynamic";
 import React, { useEffect, useState } from "react";
 
+// Dynamically import react-p5 (client only)
 const Sketch = dynamic(() => import("react-p5").then((mod) => mod.default), {
   ssr: false,
 });
 
-export default function InkLiquidGlassShader({ className = "" }) {
+export default function InkCrystalShader({ className = "" }) {
   const [canvasSize, setCanvasSize] = useState({ w: 0, h: 0 });
 
-  // 🧠 make it responsive to window size
+  // 🧠 Update size responsively
   useEffect(() => {
+    if (typeof window === "undefined") return;
     const updateSize = () => {
       const w = window.innerWidth;
-      const h = Math.min(window.innerHeight * 0.35, 400); // cap height so it doesn’t take over
+      const h = Math.min(window.innerHeight * 0.35, 400);
       setCanvasSize({ w, h });
     };
     updateSize();
     window.addEventListener("resize", updateSize);
     return () => window.removeEventListener("resize", updateSize);
   }, []);
+
+  // ✳️ Prevent SSR execution entirely
+  if (typeof window === "undefined" || !canvasSize.w) return null;
 
   const vert = `
     attribute vec3 aPosition;
@@ -81,23 +86,37 @@ export default function InkLiquidGlassShader({ className = "" }) {
   `;
 
   const setup = (p5, canvasParentRef) => {
+    // ✅ Abort if no browser environment
+    if (typeof window === "undefined" || !canvasParentRef) {
+      p5.noLoop();
+      return;
+    }
+
     const w = canvasSize.w || window.innerWidth;
     const h = canvasSize.h || 300;
-
     p5.createCanvas(w, h, p5.WEBGL).parent(canvasParentRef);
+
+    // Limit frame rate
+    p5.frameRate(30);
     p5.clear();
 
-    const inkShader = p5.createShader(vert, frag);
+    let inkShader;
+    try {
+      inkShader = p5.createShader(vert, frag);
+    } catch (err) {
+      console.warn("Shader skipped (no GL context)", err);
+      p5.noLoop();
+      return;
+    }
+
     const screen = p5.createGraphics(w, h);
     const mousePos = p5.createVector(0, 0);
 
     screen.background(252, 252, 250);
     screen.fill(0);
     screen.textFont("Satoshi, sans-serif");
-
-    // 🩶 Responsive text size relative to width
     const text = "selected work";
-    let textSize = Math.min(w * 0.1, 180); // scales with viewport width, caps at 180px
+    const textSize = Math.min(w * 0.1, 180);
     screen.textSize(textSize);
     screen.textAlign(p5.CENTER, p5.CENTER);
     screen.text(text, w / 2, h / 2);
@@ -105,6 +124,11 @@ export default function InkLiquidGlassShader({ className = "" }) {
     p5.shader(inkShader);
 
     p5.draw = () => {
+      if (!p5.canvas) {
+        p5.noLoop();
+        return;
+      }
+
       p5.background(252, 252, 250);
       mousePos.x = (p5.mouseX / p5.width) * 2 - 1;
       mousePos.y = (p5.mouseY / p5.height) * 2 - 1;
@@ -117,9 +141,6 @@ export default function InkLiquidGlassShader({ className = "" }) {
       p5.rect(-p5.width / 2, -p5.height / 2, p5.width, p5.height);
     };
   };
-
-  // 🩶 if we don’t yet have a size, render nothing
-  if (!canvasSize.w) return null;
 
   return (
     <div className={`w-fit flex justify-center ${className}`}>
