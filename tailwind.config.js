@@ -9,13 +9,14 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
-    colors: {
-      blossom: "#FFB6C1",
-      "floral-white": "#eee",
-      charcoal: "#333333",
-      "slate-grey": "#64738F",
-      "bonito-brown": "#B98F85",
+    extend: {
+      colors: {
+        blossom: "#FFB6C1",
+        "floral-white": "#fcfcfa",
+        charcoal: "#333333",
+        "slate-grey": "#64738F",
+        "bonito-brown": "#B98F85",
+      },
     },
   },
   plugins: [],
