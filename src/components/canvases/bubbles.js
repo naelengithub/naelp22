@@ -49,7 +49,7 @@ function P5Sketch() {
   };
 
   const draw = (p5) => {
-    p5.background(238, 238, 238);
+    p5.background(252, 252, 250);
     balls.forEach((ball) => {
       ball.collide();
       ball.move(p5);
