@@ -1,6 +1,5 @@
 import * as React from "react";
 import Link from "next/link";
-import Clocks from "../common/Clocks";
 
 export interface NavBarPortfolioProps {
   className?: string;
@@ -14,8 +13,8 @@ export const NavBarPortfolio = (props: NavBarPortfolioProps) => {
   const { className } = props;
 
   return (
-    <nav className="fixed flex justify-end p-6 w-full font-extrabold">
-      <div className="text-right text-white mix-blend-difference">
+    <nav className="fixed flex justify-end p-6 w-full font-extrabold z-50">
+      <div className="text-right text-slate-grey mix-blend-difference">
         <span>
           <Link href="/">Index</Link>
         </span>

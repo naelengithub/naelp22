@@ -1,8 +1,8 @@
 import * as React from "react";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import Link from "next/link";
-import InkCrystalShader from "../canvases/InkCrystalShader2";
-import InkCrystalShader3 from "../canvases/InkCrystalShader3";
+import InkCrystalShader from "../canvases/InkCrystalShader2Dark";
+import InkCrystalShader3 from "../canvases/InkCrystalShader3Dark";
 
 export interface FooterProps {
   className?: string;
@@ -21,7 +21,7 @@ export const Footer = (props: FooterProps) => {
   console.log(JSON.stringify(screenWidthSize));
 
   return (
-    <div className="flex flex-col justify-center items-end w-full p-6 mt-24 md:mt-32">
+    <div className="bg-charcoal flex flex-col justify-center text-floral-white items-end w-full p-6 border-t mt-24 md:mt-32">
       <div className="flex flex-col md:flex-row justify-between w-full">
         <div className="md:mb-20">
           <Link href="mailto:hello@anaelisavargas.com" target="_blank">
@@ -50,14 +50,12 @@ export const Footer = (props: FooterProps) => {
         </div>
       </div>
       <div className="flex justify-between font-thin w-full">
-        <p className="text-slate-grey md:hidden">
+        <p className="md:hidden">
           Made w &hearts; in
           <br />
           Barcelona © 2025
         </p>
-        <p className="text-slate-grey hidden md:block">
-          Made w &hearts; in Barcelona © 2025
-        </p>
+        <p className="hidden md:block">Made w &hearts; in Barcelona © 2025</p>
         <button
           onClick={() => {
             window.scrollTo({ top: 0, left: 0, behavior: "smooth" });

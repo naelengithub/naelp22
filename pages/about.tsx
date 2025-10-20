@@ -5,6 +5,7 @@ import { education } from "../src/components/web/education";
 import { NavBarPortfolio } from "../src/components/navbar/navbarPortfolio";
 import Clocks from "../src/components/common/Clocks";
 import { Footer } from "../src/components/footer/footer";
+import ProjectsShowcase from "../src/components/ProjectShowcase";
 
 export default function Contact() {
   const size = useWindowSize();
@@ -14,17 +15,21 @@ export default function Contact() {
     <div className="bg-floral-white">
       <NavBarPortfolio />
       <Clocks />
+
       <div>
         <div className="block p-4 px-12 m-auto md:w-1/2 lg:w-2/3 md:pt-40">
           <div className="flex flex-col gap-6 text-center">
             <p>Independent designer & creative developer</p>
-            <p className="text-5xl lg:text-7xl">
-              Exploring the intersections of visual design, motion, and code. I
-              translate ideas into immersive, intuitive, and emotionally
+            <p className="text-2xl md:text-5xl lg:text-7xl">
+              Exploring the intersections of visual design, motion, and
+              technology. I translate ideas into immersive and emotionally
               resonant digital experiences.
             </p>
           </div>
         </div>
+        {/* <section>
+          <ProjectsShowcase />
+        </section> */}
         <section className="flex flex-col md:flex-row text-sm items-start w-full gap-24 pt-40 md:pl-60">
           {/* <Image
             src="/images/ss.png"

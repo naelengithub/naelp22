@@ -13,24 +13,26 @@ function getTimeForZone(timeZone) {
 
 function Clocks() {
   const [timeBerlin, setTimeBerlin] = useState(getTimeForZone("Europe/Berlin"));
-  const [timeBarcelona, setTimeBarcelona] = useState(
-    getTimeForZone("Europe/Madrid")
+  const [timeNYC, setTimeNYC] = useState(getTimeForZone("America/New_York"));
+  const [timeCDMX, setTimeCDMX] = useState(
+    getTimeForZone("America/Mexico_City")
   );
-  // Barcelona uses same zone as Madrid (Central European Time / Central European Summer Time)
 
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeBerlin(getTimeForZone("Europe/Berlin"));
-      setTimeBarcelona(getTimeForZone("Europe/Madrid"));
+      setTimeNYC(getTimeForZone("America/New_York"));
+      setTimeCDMX(getTimeForZone("America/Mexico_City"));
     }, 1000);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <div className="text-base text-slate-grey font-light p-6">
-      <p>Berlin/{timeBerlin}</p>
-      <p>Barcelona/{timeBarcelona}</p>
+    <div className="text-xs sm:text-base text-slate-grey font-light p-6">
+      <p>Berlin / {timeBerlin}</p>
+      <p>NYC / {timeNYC}</p>
+      <p>CDMX / {timeCDMX}</p>
     </div>
   );
 }

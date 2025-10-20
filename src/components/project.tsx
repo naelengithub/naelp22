@@ -13,7 +13,7 @@ export interface WebProjectProps {
   tools: string;
   url: string;
   concept: string;
-  images: {
+  media: {
     category: string;
     sources: string[];
   }[];
@@ -30,7 +30,7 @@ export const WebProject = (props: WebProjectProps) => {
     brand,
     description,
     year,
-    images,
+    media,
     url,
     concept,
     team,
@@ -59,8 +59,8 @@ export const WebProject = (props: WebProjectProps) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Function to render the images for each category
-  const renderImages = (sources: string[]) => {
+  // Function to render the media for each category
+  const renderMedia = (sources: string[]) => {
     return sources.map((src, index) => {
       const isMbImage =
         src.includes("mb") || src.includes("mobile") || src.includes("Mobile");
@@ -166,17 +166,17 @@ export const WebProject = (props: WebProjectProps) => {
         <ArrowRightIcon className="h-4 w-6 text-gray-600" />{" "}
       </div>
       <div className="flex flex-row overflow-x-auto gap-[50px]">
-        {images.map((imageGroup, groupIndex) => (
-          <div key={groupIndex} className="mb-4 flex-shrink-0">
-            <div className="flex overflow-x-scroll gap-2">
-              {renderImages(imageGroup.sources)}
+        {Array.isArray(media) &&
+          media.map((group, groupIndex) => (
+            <div key={groupIndex} className="mb-4 flex-shrink-0">
+              <div className="flex overflow-x-scroll gap-2">
+                {renderMedia(group.sources)}
+              </div>
+              <p className="mt-2 capitalize text-sm text-slate-grey">
+                {group.category}
+              </p>
             </div>
-            <p>
-              {imageGroup.category.charAt(0).toUpperCase() +
-                imageGroup.category.slice(1)}
-            </p>
-          </div>
-        ))}
+          ))}
       </div>
     </div>
   );
