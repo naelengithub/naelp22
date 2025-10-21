@@ -157,23 +157,9 @@ export default function ProjectView() {
           </div>
 
           {/* 🎬 Main video */}
-          <div className="relative w-fit flex justify-start mb-20 sm:mb-0 self-start overflow-visible z-50">
-            <motion.div
-              key={activeIndex}
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.6,
-                ease: [0.25, 0.1, 0.25, 1],
-              }}
-              className="w-fit"
-              onAnimationComplete={(def) => {
-                // force fallback if Framer fails to animate
-                const el = document.querySelector("video");
-                if (el) (el as HTMLElement).style.opacity = "1";
-              }}
-            >
-              <div className="w-fit shadow-md">
+          <div className="relative w-fit flex justify-start mb-20 sm:mb-0 self-start">
+            <div className="relative w-fit z-50 shadow-md">
+              {isVideo ? (
                 <video
                   ref={videoRef}
                   src={src}
@@ -183,22 +169,17 @@ export default function ProjectView() {
                   autoPlay
                   preload="auto"
                   poster={src.replace(".mp4", ".png")}
-                  onLoadedData={() => {
-                    if (videoRef.current) {
-                      videoRef.current.style.opacity = "1"; // ✅ force visible
-                      videoRef.current.play().catch(() => {});
-                    }
-                  }}
-                  className="h-auto max-h-[60vh] w-auto object-contain opacity-100"
-                  style={{
-                    position: "relative",
-                    zIndex: 99999,
-                    background: "black",
-                    opacity: 1,
-                  }}
+                  onLoadedData={() => videoRef.current?.play().catch(() => {})}
+                  className="h-auto max-h-[60vh] w-auto object-contain"
                 />
-              </div>
-            </motion.div>
+              ) : (
+                <img
+                  src={src}
+                  alt={project.brand}
+                  className="h-auto w-auto object-contain"
+                />
+              )}
+            </div>
           </div>
         </div>
 
