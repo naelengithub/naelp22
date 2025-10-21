@@ -21,7 +21,7 @@ export const Footer = (props: FooterProps) => {
   console.log(JSON.stringify(screenWidthSize));
 
   return (
-    <div className="bg-charcoal flex flex-col justify-center text-floral-white items-end w-full p-6 border-t mt-24 md:mt-32">
+    <div className="bg-charcoal flex flex-col justify-end text-floral-white items-end w-full p-6 border-t mt-24 md:mt-32 min-h-[90vh] md:min-h-[40vh]">
       <div className="flex flex-col md:flex-row justify-between w-full">
         <div className="md:mb-20">
           <Link href="mailto:hello@anaelisavargas.com" target="_blank">
@@ -34,7 +34,7 @@ export const Footer = (props: FooterProps) => {
             Reach out if you&apos;d like to chat, collaborate, or grab coffee.
           </span>
         </div>
-        <div className="flex flex-col gap-2 py-12 text-right">
+        <div className="flex flex-col gap-2 py-12 md:text-right">
           <Link href="/">Index</Link>
           <Link href="mailto:hello@anaelisavargas.com" target="_blank">
             Contact

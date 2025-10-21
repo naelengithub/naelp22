@@ -183,7 +183,7 @@ export default function ProjectView() {
           </div>
         </div>
 
-        <div className="flex items-stretch w-full md:w-fit justify-between">
+        <div className="flex justify-between w-full md:w-fit h-max items-end md:items-stretch">
           {/* LEFT column */}
           <div className="flex flex-col justify-between text-left space-y-8 flex-1">
             <div>
@@ -234,11 +234,45 @@ export default function ProjectView() {
 
             <button
               onClick={handlePrev}
-              className="text-sm font-bold uppercase tracking-wide text-slate-grey hover:text-charcoal transition-colors duration-200 mt-auto text-left"
+              className="text-sm font-bold uppercase tracking-wide text-slate-grey hover:text-charcoal transition-colors duration-200 mt-4 text-left"
             >
               ← Prev
             </button>
           </div>
+
+          {/* RIGHT column */}
+          {typeof window !== "undefined" &&
+            window.innerWidth <= 768 &&
+            project.year &&
+            project.online === true && (
+              <div className="flex flex-col justify-between items-start h-full">
+                <div>
+                  {project.online &&
+                    (project.live ? (
+                      <Link
+                        href={project.url}
+                        target="_blank"
+                        className="font-black uppercase text-sm mb-2 inline-block min-w-max hover:text-charcoal transition-colors"
+                      >
+                        Visit Site
+                      </Link>
+                    ) : (
+                      <span className="font-black uppercase text-sm mb-2 inline-block min-w-max text-slate-grey/50 cursor-not-allowed select-none">
+                        Offline
+                      </span>
+                    ))}
+                  <p className="text-sm">{project.year}</p>
+                </div>
+
+                {/* align bottom */}
+                <button
+                  onClick={handleNext}
+                  className="text-sm font-bold uppercase tracking-wide text-slate-grey hover:text-charcoal transition-colors duration-200 mt-8"
+                >
+                  Next →
+                </button>
+              </div>
+            )}
         </div>
       </div>
     </main>

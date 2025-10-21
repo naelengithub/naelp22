@@ -40,14 +40,14 @@ function ForegroundPassThrough({ children }: { children: React.ReactNode }) {
       <div ref={endRef} className="h-px" />
 
       {/* spacer so ProjectView can scroll fully off before footer takes over */}
-      <div className="h-[40vh] bg-transparent" />
+      <div className="h-[87vh] md:h-[40vh] lg:h-[35vh] bg-transparent" />
     </section>
   );
 }
 
 export default function ProjectPage() {
   return (
-    <main className="relative min-h-screen md:max-h-[50vh] text-charcoal">
+    <main className="relative min-h-screen md:max-h-[50vh] text-charcoal bg-floral-white">
       {/* 🖤 Fixed footer layer (always behind) */}
       <div className="fixed z-0 bottom-0 w-full">
         <Footer />
