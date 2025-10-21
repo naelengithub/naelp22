@@ -128,7 +128,7 @@ export default function ProjectView() {
                     </Link>
                   ) : (
                     <span className="font-black uppercase text-sm mb-2 inline-block min-w-max text-slate-grey/50 cursor-not-allowed select-none">
-                      Offline
+                      Coming Soon
                     </span>
                   ))}
                 <p className="text-sm mb-6">{project.year}</p>
@@ -258,7 +258,7 @@ export default function ProjectView() {
                       </Link>
                     ) : (
                       <span className="font-black uppercase text-sm mb-2 inline-block min-w-max text-slate-grey/50 cursor-not-allowed select-none">
-                        Offline
+                        Coming Soon
                       </span>
                     ))}
                   <p className="text-sm">{project.year}</p>
