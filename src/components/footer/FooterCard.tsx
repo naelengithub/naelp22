@@ -25,10 +25,10 @@ export const Footer = (props: FooterProps) => {
       <div className="flex flex-col md:flex-row justify-between w-full">
         <div className="md:mb-20">
           <Link href="mailto:hello@anaelisavargas.com" target="_blank">
-            {/* <p className="text-[20vw] sm:text-[15vw] md:text-[10vw]">
-              Let&apos;s Talk.
-            </p> */}
-            {isMobile ? <InkCrystalShader3 /> : <InkCrystalShader />}
+            <div className="-m-2 md:-m-6">
+              {/* cancels parent p-6 only for shader */}
+              {isMobile ? <InkCrystalShader3 /> : <InkCrystalShader />}
+            </div>
           </Link>
           <span>
             Reach out if you&apos;d like to chat, collaborate, or grab coffee.
