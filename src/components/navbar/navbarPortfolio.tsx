@@ -13,8 +13,8 @@ export const NavBarPortfolio = (props: NavBarPortfolioProps) => {
   const { className } = props;
 
   return (
-    <nav className="fixed flex justify-end p-6 w-full z-50">
-      <ul className="list-none text-right text-slate-grey mix-blend-difference space-y-1">
+    <nav className="fixed flex justify-end p-6 w-full z-50 text-charcoal">
+      <ul className="list-none text-right mix-blend-difference space-y-1">
         <li>
           <Link href="/portfolio">Work</Link>
         </li>

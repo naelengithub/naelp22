@@ -1,25 +1,5 @@
 export const webProjects = [
   {
-    brand: "Sudor III",
-    online: true,
-    live: true,
-    url: "https://www.instagram.com/sudor.bln/",
-    year: 2025,
-    concept: "Design Engineer",
-    description:
-      "A visual identity and animated poster for Sudor - an underground party where sweat meets elegance. Built using custom shaders and generative effects, the piece invites people to the dancefloor through fluid, tactile visuals that shimmer and shift. Designed to be both intriguing and welcoming.",
-    tools: ["Shaders"],
-    role: "Designer & Engineer",
-    media: [
-      {
-        category: "October 2025",
-        sources: ["/videos/sudor3.mp4"],
-        orientation: "vertical",
-      },
-    ],
-    services: ["Brand Identity", "Web Design", "Web Development"],
-  },
-  {
     brand: "Humberto Cuapio",
     online: true,
     live: true,
@@ -40,7 +20,7 @@ export const webProjects = [
     services: ["Brand Identity", "Web Design", "Web Development"],
   },
   {
-    brand: "Sudor II",
+    brand: "Sudor III",
     online: true,
     live: true,
     url: "https://www.instagram.com/sudor.bln/",
@@ -52,17 +32,17 @@ export const webProjects = [
     role: "Designer & Engineer",
     media: [
       {
-        category: "July 2025",
-        sources: ["/videos/sudor2.mp4"],
+        category: "Flyer Artwork",
+        sources: ["/videos/sudor3.mp4"],
         orientation: "vertical",
       },
     ],
-    services: ["Visual Design"],
+    services: ["Brand Identity", "Web Design", "Web Development"],
   },
   {
     brand: "Niumedia Networks",
     online: true,
-    live: false,
+    live: true,
     url: "https://niumedia-web.app.anaelisavargas.com/",
     year: 2025,
     concept: "Design Engineer",
@@ -87,7 +67,7 @@ export const webProjects = [
     services: ["Web Design", "Web Development", "Animation"],
   },
   {
-    brand: "Sudor I",
+    brand: "Sudor II",
     online: true,
     live: true,
     url: "https://www.instagram.com/sudor.bln/",
@@ -99,32 +79,12 @@ export const webProjects = [
     role: "Designer & Engineer",
     media: [
       {
-        category: "April 2025",
-        sources: ["/videos/sudor1.mp4"],
+        category: "Flyer Artwork",
+        sources: ["/videos/sudor2.mp4"],
         orientation: "vertical",
       },
     ],
-    services: ["Visual Art"],
-  },
-  {
-    brand: "Alejandro Martínez",
-    online: true,
-    live: true,
-    url: "https://amvstudios.work",
-    year: 2025,
-    concept: "Design Engineer",
-    description:
-      "A digital portfolio designed to reflect Alejandro's bold, expressive style — immersive, unapologetic, and rich in color and scale. Built from scratch, it presents his work as a living archive, with an interactive shuffle feature that keeps the experience in motion.",
-    tools: ["Typescript", "React"],
-    role: "Designer & Engineer",
-    media: [
-      {
-        category: "Portfolio",
-        sources: ["/videos/alejandroMartinez.mp4"],
-        orientation: "horizontal",
-      },
-    ],
-    services: ["Brand Identity", "Web Design", "Web Development"],
+    services: ["Visual Design"],
   },
   {
     brand: "Otherside: The Others, Issue I",
@@ -151,6 +111,26 @@ export const webProjects = [
       "Podcast",
       "Creative Writing",
     ],
+  },
+  {
+    brand: "Alejandro Martínez",
+    online: true,
+    live: true,
+    url: "https://amvstudios.work",
+    year: 2025,
+    concept: "Design Engineer",
+    description:
+      "A digital portfolio designed to reflect Alejandro's bold, expressive style — immersive, unapologetic, and rich in color and scale. Built from scratch, it presents his work as a living archive, with an interactive shuffle feature that keeps the experience in motion.",
+    tools: ["Typescript", "React"],
+    role: "Designer & Engineer",
+    media: [
+      {
+        category: "Portfolio",
+        sources: ["/videos/alejandroMartinez.mp4"],
+        orientation: "horizontal",
+      },
+    ],
+    services: ["Brand Identity", "Web Design", "Web Development"],
   },
   {
     brand: "Otherside: The Others, Issue II",
@@ -197,6 +177,26 @@ export const webProjects = [
         orientation: "horizontal",
       },
     ],
+  },
+  {
+    brand: "Sudor I",
+    online: true,
+    live: true,
+    url: "https://www.instagram.com/sudor.bln/",
+    year: 2025,
+    concept: "Design Engineer",
+    description:
+      "A visual identity and animated poster for Sudor - an underground party where sweat meets elegance. Built using custom shaders and generative effects, the piece invites people to the dancefloor through fluid, tactile visuals that shimmer and shift. Designed to be both intriguing and welcoming.",
+    tools: ["Shaders"],
+    role: "Designer & Engineer",
+    media: [
+      {
+        category: "Flyer Artwork",
+        sources: ["/videos/sudor1.mp4"],
+        orientation: "vertical",
+      },
+    ],
+    services: ["Visual Art"],
   },
   {
     brand: "La Marimorena",

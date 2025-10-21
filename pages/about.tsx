@@ -11,7 +11,7 @@ export default function Contact() {
   const widthSize = size.width;
 
   return (
-    <div className="bg-floral-white">
+    <div className="bg-floral-white text-charcoal">
       <NavBarPortfolio />
       <Clocks />
 

@@ -14,7 +14,7 @@ module.exports = {
         blossom: "#FFB6C1",
         "floral-white": "#fcfcfa",
         charcoal: "#333333",
-        "slate-grey": "#64738F",
+        "slate-grey": "#8c8889",
         "bonito-brown": "#B98F85",
       },
     },
