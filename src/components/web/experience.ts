@@ -9,7 +9,7 @@ export const jobExperience = [
   },
   {
     title: "Independent Design Engineer",
-    location: "Remote/ES/DE/USA/MX",
+    location: "Remote/Worldwide",
     company: "",
     year: "2024 - Today",
     description:
