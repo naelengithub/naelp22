@@ -170,7 +170,6 @@ export default function ProjectView() {
             >
               {isVideo ? (
                 <div className="w-fit shadow-md">
-                  {" "}
                   {/* ✅ wrapper gets shadow, not oversized */}
                   <video
                     ref={videoRef}
@@ -184,7 +183,7 @@ export default function ProjectView() {
                     onLoadedData={() =>
                       videoRef.current?.play().catch(() => {})
                     }
-                    className="h-auto max-h-[60vh] w-auto object-contain"
+                    className="h-auto max-h-[60vh] w-auto object-contain z-50"
                   />
                 </div>
               ) : (
