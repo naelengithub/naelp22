@@ -20,7 +20,7 @@ export const Footer = (props: FooterProps) => {
   const isMobile = screenWidthSize < 768;
 
   return (
-    <div className="flex flex-col justify-center items-end w-full p-6 mt-24 md:mt-32">
+    <div className="flex flex-col justify-center items-end w-full p-6 mt-24 md:mt-32 text-charcoal">
       <div className="flex flex-col md:flex-row justify-between w-full">
         <div className="md:mb-20">
           <Link href="mailto:hello@anaelisavargas.com" target="_blank">
@@ -55,14 +55,12 @@ export const Footer = (props: FooterProps) => {
       </div>
 
       <div className="flex justify-between font-thin w-full">
-        <p className="text-slate-grey md:hidden">
+        <p className="md:hidden">
           Made w &hearts; in
           <br />
           Barcelona © 2025
         </p>
-        <p className="text-slate-grey hidden md:block">
-          Made w &hearts; in Barcelona © 2025
-        </p>
+        <p className="hidden md:block">Made w &hearts; in Barcelona © 2025</p>
         <button
           onClick={() => {
             window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
