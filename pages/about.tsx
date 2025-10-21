@@ -38,9 +38,7 @@ export default function Contact() {
             className="pt-28"
           /> */}
           <div className="flex flex-col p-4">
-            <span className="text-4xl">
-              <DynamicShadowText text="Experience" />
-            </span>
+            <span className="text-4xl">Experience</span>
             {jobExperience.map((job, index) => (
               <div key={index} className="flex gap-6 mt-12">
                 <div className="flex-col">
@@ -55,9 +53,7 @@ export default function Contact() {
             ))}
           </div>
           <div className="flex flex-col p-4">
-            <span className="text-4xl">
-              <DynamicShadowText text="Education" />
-            </span>
+            <span className="text-4xl">Education</span>
             {education.map((school, index) => (
               <div key={index} className="flex gap-6 mt-12">
                 <div className="flex-col">
