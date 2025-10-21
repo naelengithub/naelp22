@@ -166,34 +166,32 @@ export default function ProjectView() {
                 duration: 0.6,
                 ease: [0.25, 0.1, 0.25, 1],
               }}
-              className="relative w-fit z-50"
+              className="w-fit"
+              onAnimationComplete={(def) => {
+                // force fallback if Framer fails to animate
+                const el = document.querySelector("video");
+                if (el) (el as HTMLElement).style.opacity = "1";
+              }}
             >
-              {isVideo ? (
-                <div className="relative w-fit z-50 shadow-md overflow-visible">
-                  <video
-                    ref={videoRef}
-                    src={src}
-                    muted
-                    loop
-                    playsInline
-                    autoPlay
-                    preload="auto"
-                    poster={src.replace(".mp4", ".png")}
-                    onLoadedData={() =>
-                      videoRef.current?.play().catch(() => {})
+              <div className="w-fit shadow-md">
+                <video
+                  ref={videoRef}
+                  src={src}
+                  muted
+                  loop
+                  playsInline
+                  autoPlay
+                  preload="auto"
+                  poster={src.replace(".mp4", ".png")}
+                  onLoadedData={() => {
+                    if (videoRef.current) {
+                      videoRef.current.style.opacity = "1"; // ✅ force visible
+                      videoRef.current.play().catch(() => {});
                     }
-                    className="relative z-50 h-auto max-h-[60vh] w-auto object-contain"
-                  />
-                </div>
-              ) : (
-                <div className="relative w-fit z-50 shadow-md overflow-visible">
-                  <img
-                    src={src}
-                    alt={project.brand}
-                    className="relative z-50 h-auto w-auto object-contain"
-                  />
-                </div>
-              )}
+                  }}
+                  className="h-auto max-h-[60vh] w-auto object-contain opacity-100"
+                />
+              </div>
             </motion.div>
           </div>
         </div>
