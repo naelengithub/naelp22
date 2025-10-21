@@ -18,24 +18,27 @@ export const Footer = (props: FooterProps) => {
   const size = useWindowSize();
   const screenWidthSize = size.width;
   const isMobile = screenWidthSize < 768;
-  console.log(JSON.stringify(screenWidthSize));
 
   return (
     <div className="flex flex-col justify-center items-end w-full p-6 mt-24 md:mt-32">
       <div className="flex flex-col md:flex-row justify-between w-full">
         <div className="md:mb-20">
           <Link href="mailto:hello@anaelisavargas.com" target="_blank">
-            {/* <p className="text-[20vw] sm:text-[15vw] md:text-[10vw]">
-              Let&apos;s Talk.
-            </p> */}
-            {isMobile ? <InkCrystalShader3 /> : <InkCrystalShader />}
+            <div className="-m-2 md:-m-6">
+              {/* cancels parent p-6 only for shader */}
+              {isMobile ? <InkCrystalShader3 /> : <InkCrystalShader />}
+            </div>
           </Link>
           <span>
             Reach out if you&apos;d like to chat, collaborate, or grab coffee.
           </span>
         </div>
+
         <div className="flex flex-col gap-2 py-12 text-right">
           <Link href="/">Index</Link>
+          <Link href="mailto:hello@anaelisavargas.com" target="_blank">
+            Contact
+          </Link>
           <Link
             target="_blank"
             href="https://www.linkedin.com/in/anaelisavargas"
@@ -50,6 +53,7 @@ export const Footer = (props: FooterProps) => {
           </Link>
         </div>
       </div>
+
       <div className="flex justify-between font-thin w-full">
         <p className="text-slate-grey md:hidden">
           Made w &hearts; in

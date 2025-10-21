@@ -5,7 +5,6 @@ import { education } from "../src/components/web/education";
 import { NavBarPortfolio } from "../src/components/navbar/navbarPortfolio";
 import Clocks from "../src/components/common/Clocks";
 import { Footer } from "../src/components/footer/footer";
-import ProjectsShowcase from "../src/components/ProjectShowcase";
 
 export default function Contact() {
   const size = useWindowSize();

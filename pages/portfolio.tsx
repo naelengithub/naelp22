@@ -16,12 +16,6 @@ export default function Home() {
       <Clocks />
       {/* <InkCrystalShader /> */}
       <ProjectsShowcase />
-
-      <div className="fixed bottom-24 md:bottom-1/3 right-8 pl-6 pb-6 text-6xl">
-        <Link href="/about">
-          <DynamicShadowText text="info" />
-        </Link>
-      </div>
       <footer>
         <Footer />
       </footer>
