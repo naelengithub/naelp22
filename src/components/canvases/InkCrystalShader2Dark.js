@@ -145,7 +145,7 @@ export default function InkCrystalShader({ className = "" }) {
     screen.fill("#fcfcfa");
     screen.textSize(200);
     screen.textAlign(p5.CENTER, p5.CENTER);
-    screen.text("Hit me up", w / 2, h / 2);
+    screen.text("Let's talk.", w / 2, h / 2);
 
     p5.shader(inkShader);
 
