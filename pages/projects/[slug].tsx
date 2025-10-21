@@ -40,7 +40,7 @@ function ForegroundPassThrough({ children }: { children: React.ReactNode }) {
       <div ref={endRef} className="h-px" />
 
       {/* spacer so ProjectView can scroll fully off before footer takes over */}
-      <div className="h-[87vh] md:h-[40vh] lg:h-[35vh] bg-transparent" />
+      <div className="h-[87vh] md:h-[40vh] lg:h-[40vh] bg-transparent" />
     </section>
   );
 }
