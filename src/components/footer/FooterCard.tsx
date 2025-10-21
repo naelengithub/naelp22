@@ -35,6 +35,7 @@ export const Footer = (props: FooterProps) => {
           </span>
         </div>
         <div className="flex flex-col gap-2 py-12 text-right">
+          <Link href="/">Index</Link>
           <Link
             target="_blank"
             href="https://www.linkedin.com/in/anaelisavargas"

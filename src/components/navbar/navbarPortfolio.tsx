@@ -13,21 +13,20 @@ export const NavBarPortfolio = (props: NavBarPortfolioProps) => {
   const { className } = props;
 
   return (
-    <nav className="fixed flex justify-end p-6 w-full font-extrabold z-50">
-      <div className="text-right text-slate-grey mix-blend-difference">
-        <span>
-          <Link href="/">Index</Link>
-        </span>
-        <p>
+    <nav className="fixed flex justify-end p-6 w-full z-50">
+      <ul className="list-none text-right text-slate-grey mix-blend-difference space-y-1">
+        <li>
+          <Link href="/portfolio">Work</Link>
+        </li>
+        <li>
+          <Link href="/about">About</Link>
+        </li>
+        <li>
           <Link href="mailto:hello@anaelisavargas.com" target="_blank">
             Contact
           </Link>
-          {/* /
-        <Link className="pl-2" href="">
-          the old relic
-        </Link> */}
-        </p>
-      </div>
+        </li>
+      </ul>
     </nav>
   );
 };
