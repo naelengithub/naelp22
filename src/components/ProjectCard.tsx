@@ -80,6 +80,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <>
       <motion.div
+        id={slug}
         ref={ref}
         style={{ scale, y }}
         className="relative mx-auto flex justify-center"
@@ -87,10 +88,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         onMouseLeave={handleMouseLeave}
         onMouseMove={handleMouseMove}
       >
-        <Link
-          href={`/projects/${slug}`}
-          className="relative inline-block border border-black"
-        >
+        <Link href={`/projects/${slug}`} className="relative inline-block">
           {src.endsWith(".mp4") ? (
             <video
               ref={videoRef}
@@ -98,7 +96,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               muted
               loop
               playsInline
-              className={mediaClass}
+              className={`${mediaClass} bg-floral-white`}
+              poster={src.replace(".mp4", ".png")}
             />
           ) : (
             <img

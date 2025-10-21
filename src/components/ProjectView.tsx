@@ -1,4 +1,3 @@
-// src/components/ProjectView.tsx
 "use client";
 
 import { useRouter } from "next/router";
@@ -32,12 +31,6 @@ export default function ProjectView() {
     setReady(true);
   }, [router.isReady, slug]);
 
-  // 🎬 autoplay when video changes
-  useEffect(() => {
-    const v = videoRef.current;
-    if (v) v.play().catch(() => {});
-  }, [activeIndex]);
-
   // ⌨️ handle arrow key navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -51,7 +44,7 @@ export default function ProjectView() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [activeIndex, isTransitioning]); // depends on these
+  }, [activeIndex, isTransitioning]);
 
   if (!ready || activeIndex === null) {
     return (
@@ -104,16 +97,19 @@ export default function ProjectView() {
   const isVideo = src.endsWith(".mp4");
 
   return (
-    <main className="bg-floral-white flex flex-col md:flex-row-reverse items-center md:gap-12 justify-start md:justify-center md:items-end px-6 md:px-16 py-20 md:py-0 relative overflow-hidden h-screen">
+    <main className="bg-floral-white flex flex-col md:flex-row-reverse items-center md:gap-12 justify-start md:justify-center md:items-end px-6 md:px-16 py-20 md:py-0 relative overflow-visible min-h-screen">
       {/* Back */}
       <Link
-        href="/portfolio"
+        href={`/portfolio#${project.brand
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/(^-|-$)/g, "")}`}
         className="absolute top-8 left-8 text-sm hover:text-charcoal transition-colors"
       >
         ← Back
       </Link>
 
-      <div className="flex flex-col md:flex-row-reverse items-center md:gap-12 justify-start md:justify-center md:items-end px-6 md:px-16 py-20 md:py-0 md:pb-20 relative overflow-hidden h-fit">
+      <div className="flex flex-col md:flex-row-reverse items-center md:gap-12 justify-start md:justify-center md:items-end px-6 md:px-16 py-20 md:py-0 md:pb-20 relative overflow-visible h-fit">
         {/* DATA ON DESKTOP */}
         {typeof window !== "undefined" &&
           window.innerWidth >= 768 &&
@@ -121,15 +117,20 @@ export default function ProjectView() {
           project.online === true && (
             <div className="flex flex-col justify-between h-full items-start">
               <div>
-                {project.online && (
-                  <Link
-                    href={project.url}
-                    target="_blank"
-                    className="font-black uppercase text-sm mb-2 inline-block"
-                  >
-                    Visit Site
-                  </Link>
-                )}
+                {project.online &&
+                  (project.live ? (
+                    <Link
+                      href={project.url}
+                      target="_blank"
+                      className="font-black uppercase text-sm mb-2 inline-block min-w-max hover:text-charcoal transition-colors"
+                    >
+                      Visit Site
+                    </Link>
+                  ) : (
+                    <span className="font-black uppercase text-sm mb-2 inline-block min-w-max text-slate-grey/50 cursor-not-allowed select-none">
+                      Offline
+                    </span>
+                  ))}
                 <p className="text-sm mb-6">{project.year}</p>
               </div>
 
@@ -154,6 +155,7 @@ export default function ProjectView() {
             </div>
             <p className="text-base md:text-lg/90">{project.description}</p>
           </div>
+
           {/* 🎬 Main video */}
           <div className="relative w-fit flex justify-start mb-20 sm:mb-0 self-start">
             <motion.div
@@ -164,23 +166,35 @@ export default function ProjectView() {
                 duration: 0.6,
                 ease: [0.25, 0.1, 0.25, 1],
               }}
+              className="w-fit" // ✅ ensures wrapper fits content
             >
               {isVideo ? (
-                <video
-                  ref={videoRef}
-                  src={src}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-auto max-h-[60vh] object-contain shadow-md"
-                />
+                <div className="w-fit shadow-md">
+                  {" "}
+                  {/* ✅ wrapper gets shadow, not oversized */}
+                  <video
+                    ref={videoRef}
+                    src={src}
+                    muted
+                    loop
+                    playsInline
+                    autoPlay
+                    preload="auto"
+                    poster={src.replace(".mp4", ".png")}
+                    onLoadedData={() =>
+                      videoRef.current?.play().catch(() => {})
+                    }
+                    className="h-auto max-h-[60vh] w-auto object-contain"
+                  />
+                </div>
               ) : (
-                <img
-                  src={src}
-                  alt={project.brand}
-                  className="w-full h-auto object-contain shadow-md"
-                />
+                <div className="w-fit shadow-md">
+                  <img
+                    src={src}
+                    alt={project.brand}
+                    className="h-auto w-auto object-contain"
+                  />
+                </div>
               )}
             </motion.div>
           </div>
@@ -190,7 +204,6 @@ export default function ProjectView() {
           {/* LEFT column */}
           <div className="flex flex-col justify-between text-left space-y-8 flex-1">
             <div>
-              {/* WORK / TECHNOLOGY / TEAM */}
               {project.services && project.services.length > 0 && (
                 <div>
                   <h3 className="font-black uppercase text-sm mb-2">Work:</h3>
@@ -236,7 +249,6 @@ export default function ProjectView() {
               )}
             </div>
 
-            {/* Prev at bottom */}
             <button
               onClick={handlePrev}
               className="text-sm font-bold uppercase tracking-wide text-slate-grey hover:text-charcoal transition-colors duration-200 mt-auto text-left"
@@ -244,35 +256,6 @@ export default function ProjectView() {
               ← Prev
             </button>
           </div>
-
-          {/* RIGHT column */}
-          {typeof window !== "undefined" &&
-            window.innerWidth <= 768 &&
-            project.year &&
-            project.online === true && (
-              <div className="flex flex-col justify-between flex-1">
-                <div>
-                  {project.online && (
-                    <Link
-                      href={project.url}
-                      target="_blank"
-                      className="font-black uppercase text-sm mb-2 inline-block"
-                    >
-                      Visit Site
-                    </Link>
-                  )}
-                  <p className="text-sm">{project.year}</p>
-                </div>
-
-                {/* Next pinned bottom */}
-                <button
-                  onClick={handleNext}
-                  className="text-sm font-bold uppercase tracking-wide text-slate-grey hover:text-charcoal transition-colors duration-200 mt-auto text-right"
-                >
-                  Next →
-                </button>
-              </div>
-            )}
         </div>
       </div>
     </main>
