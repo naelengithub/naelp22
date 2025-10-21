@@ -190,6 +190,12 @@ export default function ProjectView() {
                     }
                   }}
                   className="h-auto max-h-[60vh] w-auto object-contain opacity-100"
+                  style={{
+                    position: "relative",
+                    zIndex: 99999,
+                    background: "black",
+                    opacity: 1,
+                  }}
                 />
               </div>
             </motion.div>
